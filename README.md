@@ -1,2 +1,2 @@
-Pokemon MiniGO
+Pokemon MiniGo
 ==============

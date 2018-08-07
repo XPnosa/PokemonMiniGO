@@ -18,7 +18,7 @@ function start() {
 }
 
 function printShop() {
-	var content = "<table style='text-align:center;'><thead><tr><th class='cell'>Objeto</th><th class='cell'>Precio</th><th class='cell'>Cantidad</th></tr></thead><tbody><tr>" + 
+	var content = "<table style='text-align:center;margin-top:0'><thead><tr><th class='cell'>Objeto</th><th class='cell'>Precio</th><th class='cell'>Cantidad</th></tr></thead><tbody><tr>" + 
 	"<td class='cell'><img style='height:50px' src='img/ball_1.png'>" +
 	"</td><td class='cell'><span id='p1' title='200'>200</span></td><td class='cell'><span id='c1'>0</span>" +
 	"</td><td><input onclick='mas(1);' class='stock' type='button' value='+'><br><input onclick='menos(1);' class='stock' type='button' value='-'></td></tr>" +
@@ -62,7 +62,7 @@ function comprar() {
 		window.localStorage.setItem("superball", superballs+unidades_s);
 		window.localStorage.setItem("ultraball", ultraballs+unidades_u);
 		window.localStorage.setItem("dinero", fondos-total);
-		location.href = "..";
+		location.href = "./main.html";
 	}
 }
 

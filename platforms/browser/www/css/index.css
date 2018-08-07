@@ -240,7 +240,7 @@ td {
 }
 #msg, #sub {
 	opacity: 0.9;
-	font-size: 1em;
+	font-size: 1.25em;
 	background: #CCC;
 	border: 5px outset #333;
 	border-radius: 10px;
@@ -260,7 +260,6 @@ td {
 	border: 3px outset silver;
 }
 #comprar {
-	width: 30px;
 	background: goldenrod;
 	border: 3px outset darkgoldenrod;
 	border-radius: 10px;
@@ -372,6 +371,15 @@ td {
 	}
 	#loading-mini {
 		height: 1.5em;
+	}
+	#shop {
+		font-size: 1.5em;
+	}
+	.stock {
+		height: 30px;
+	}
+	.cell {
+		height: 70px;
 	}
 	::-webkit-scrollbar {
 		width: 0.75em;

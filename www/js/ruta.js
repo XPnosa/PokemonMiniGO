@@ -128,7 +128,7 @@ function wildRun() {
 		} else if ( state == 4 ) {
 			state = 5;
 		} else if ( state == 5 ) {
-			location.href = "..";
+			location.href = "./main.html";
 		} else {
 			state = 1;
 		}
