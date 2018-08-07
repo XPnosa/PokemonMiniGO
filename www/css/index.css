@@ -452,6 +452,9 @@ td {
 	.status > tbody > tr > td {
 		padding: 3px;
 	}
+	.status > tbody > tr > td.stat {
+		padding: 7px;
+	}
 }
 
 /* ANIMATION */
