@@ -28,6 +28,7 @@ function ready() {
 		window.localStorage.setItem("ultraball", 0);
 		window.localStorage.setItem("dinero", 3000);
 		window.localStorage.setItem("lider", 0);
+		window.localStorage.setItem("ganar", 1);
 		window.localStorage.setItem("total", 1);
 	}
 	printMenu();
@@ -55,11 +56,11 @@ function showPokedex() {
 }
 
 function showBag() {
-	alert("Disponible proximamente");
+	location.href="./bolsa.html";
 }
 
 function showPokemon() {
-	alert("Disponible proximamente");
+	location.href="./pokemon.html";
 }
 
 function showShop() {

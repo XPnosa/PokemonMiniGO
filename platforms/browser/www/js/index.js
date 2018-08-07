@@ -41,3 +41,7 @@ function setXpDict(base) {
 	xp_dict = exp;
 	setCpDict("json/cp.json");
 }
+
+function bye() {
+	location.href = "./main.html";
+}

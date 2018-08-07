@@ -174,6 +174,36 @@ td {
 	white-space:nowrap;
 	transform: scaleX(0.75) scaleY(0.75) !important;
 }
+.status{
+	margin: 10px;
+}
+.status > tbody > tr > td {
+	padding: 5px;
+	font-size: 1.25em;
+}
+
+/* SHOP */
+#fondos, #precio, #comprar {
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	color: black;
+	background: whitesmoke;
+	border: 3px outset silver;
+}
+#comprar {
+	background: goldenrod;
+	border: 3px outset darkgoldenrod;
+	border-radius: 10px;
+}
+#comprar:active {
+	background: darkgoldenrod;
+	border: 3px outset goldenrod;
+}
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
 
 /* OTHERS */
 #list {
@@ -227,50 +257,28 @@ td {
 	max-height: 75%;
 	overflow-y: auto;
 }
-
-/* WILD */
-#wild {
-	height: auto;
-}
 #msg {
 	height: 50px;
 }
 #sub {
 	height: 100px;
 }
-#msg, #sub {
+#msg, #sub, #content {
 	opacity: 0.9;
 	font-size: 1.25em;
 	background: #CCC;
 	border: 5px outset #333;
 	border-radius: 10px;
 }
-#path {
+#content {
+	font-size: 1em;
+}
+#wild, #partner {
+	height: auto;
+}
+#path, #pokemon, #bag {
 	padding: 20px;
 	margin: 0%;
-}
-
-/* SHOP */
-#fondos, #precio, #comprar {
-	display: inline-block;
-	margin: 5px;
-	padding: 5px;
-	color: black;
-	background: whitesmoke;
-	border: 3px outset silver;
-}
-#comprar {
-	background: goldenrod;
-	border: 3px outset darkgoldenrod;
-	border-radius: 10px;
-}
-#comprar:active {
-	background: darkgoldenrod;
-	border: 3px outset goldenrod;
-}
-.disabled {
-	opacity: 0.5;
-	pointer-events: none;
 }
 
 /* TYPES */
@@ -352,6 +360,9 @@ td {
 	}
 	#info {
 		font-size: 1.75em;
+	}
+	#content {
+		font-size: 1.25em;
 	}
 	table {
 		margin-top: 1em;

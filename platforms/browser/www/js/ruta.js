@@ -69,7 +69,7 @@ function encounter() {
 }
 
 function wildEnter(pkmn,lvl,cp) {
-	wild_pkmn = [pkmn,lvl,cp]
+	offset = 1; wild_pkmn = [pkmn,lvl,cp]
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
 	var message = "<center style='height:99%font-size: 20px;position: relative;top: +12px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
@@ -146,7 +146,9 @@ function updateLevel(xp) {
 	var lider = window.localStorage.getItem("lider");
 	var lvl = parseInt(window.localStorage.getItem("lv"+lider),10);
 	var exp = parseInt(window.localStorage.getItem("xp"+lider),10);
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
 	window.localStorage.setItem("xp"+lider, exp+xp);
+	window.localStorage.setItem("ganar", ganar+1);
 	if ( exp+xp >= xp_dict[lvl+1] ) {
 		window.localStorage.setItem("lv"+lider, lvl+1);
 		return true;
@@ -154,7 +156,7 @@ function updateLevel(xp) {
 }
 
 function updatePokedex() {
-	var total = parseInt(window.localStorage.getItem("total"),10)
+	var total = parseInt(window.localStorage.getItem("total"),10);
 	window.localStorage.setItem("pk"+total, wild_pkmn[0]);
 	window.localStorage.setItem("lv"+total, wild_pkmn[1]);
 	window.localStorage.setItem("cp"+total, wild_pkmn[2]);
