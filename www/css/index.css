@@ -178,7 +178,7 @@ td {
 	margin: 10px;
 }
 .status > tbody > tr > td {
-	padding: 5px;
+	padding: 7px;
 	font-size: 1.25em;
 }
 
@@ -367,6 +367,9 @@ td {
 	table {
 		margin-top: 1em;
 	}
+	.status > tbody > tr > td {
+		padding: 3px;
+	}
 	.active > div {
 		width: 150px;
 	}
@@ -445,6 +448,9 @@ td {
 	}
 	.extra {
 		display: none;
+	}
+	.status > tbody > tr > td {
+		padding: 3px;
 	}
 }
 
