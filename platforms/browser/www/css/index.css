@@ -362,7 +362,7 @@ td {
 		font-size: 1.75em;
 	}
 	#content {
-		font-size: 1.25em;
+		font-size: 1.5em;
 	}
 	table {
 		margin-top: 1em;
@@ -414,7 +414,7 @@ td {
 		font-size: 3em;
 		border-radius: 3em;
 	}
-	#info {
+	#info, #content {
 		font-size: 2em;
 	}
 }
@@ -442,6 +442,9 @@ td {
 	}
 	#fondos, #precio {
 		width: 30%;
+	}
+	.extra {
+		display: none;
 	}
 }
 

@@ -31,9 +31,9 @@ function printBag() {
 	'<tr><td style="width:64%"><b>Dinero en la bolsa</b>:</td><td>'+dinero+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Pokeballs restantes</b>:</td><td>'+pokeball+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Superballs restantes</b>:</td><td>'+superball+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Ultraballs restantes</b>:</td><td>'+ultraball+'</td></tr></table><hr><table class="status">' + 
+	'<tr><td style="width:64%"><b>Ultraballs restantes</b>:</td><td>'+ultraball+'</td></tr></table><hr><table class="status extra">' + 
 	'<tr><td style="width:64%"><b>Pokemon derrotados</b>:</td><td>'+ganar+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokemon capturados</b>:</td><td>'+total+'</td></tr></table><hr><table class="status">' + 
+	'<tr><td style="width:64%"><b>Pokemon capturados</b>:</td><td>'+total+'</td></tr></table><hr class="extra"><table class="status">' + 
 	'<tr><td style="width:64%"><b>Especies vistas</b>:</td><td>'+vistas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Especies capturadas</b>:</td><td>'+capturadas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Pokedex completada</b>:</td><td>'+comptelado+'%</td></tr></table>';
