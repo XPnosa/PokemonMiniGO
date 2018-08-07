@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>Pokedex</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<link href="css/index.css" rel="stylesheet">
+	</head>
+	<body id="body">
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			var app = {
+				initialize: function() {
+					this.bindEvents();
+				},
+				bindEvents: function() {
+					document.addEventListener('deviceready', this.onDeviceReady, false);
+				},
+				onDeviceReady: function() {
+					app.receivedEvent('deviceready');
+				},
+				receivedEvent: function(id) {
+					location.href="main.html"
+				}
+			}; app.initialize();
+		</script>
+	</body>
+</html>

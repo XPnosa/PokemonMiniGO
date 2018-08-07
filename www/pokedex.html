@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>Pokedex</title>
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<link href="css/index.css" rel="stylesheet">
+	</head>
+	<body id="body">
+		<fieldset id="pkdex" style="padding-right: 0.5em;"></fieldset>
+		<img id="loading-mini" ondblclick="location.href='ee.html'" src="img/favicon.gif" />
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/pokedex.js"></script>
+		<script type="text/javascript">app.initialize();</script>
+		<div id="gallery" onclick="closeImage();" style="display:none;z-index:1000000000"><img id="photo-full" /></div>
+		<div id="details" onclick="closeDetails();" style="display:none;"><img id="photo" /><div id="info"></div></div>
+	</body>
+</html>
