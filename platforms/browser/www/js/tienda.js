@@ -58,7 +58,7 @@ function comprar() {
 		var unidades_p = parseInt(document.getElementById("c1").innerHTML,10);
 		var unidades_s = parseInt(document.getElementById("c2").innerHTML,10);
 		var unidades_u = parseInt(document.getElementById("c3").innerHTML,10);
-		window.localStorage.setItem("pokerball", pokeballs+unidades_p);
+		window.localStorage.setItem("pokeball", pokeballs+unidades_p);
 		window.localStorage.setItem("superball", superballs+unidades_s);
 		window.localStorage.setItem("ultraball", ultraballs+unidades_u);
 		window.localStorage.setItem("dinero", fondos-total);
