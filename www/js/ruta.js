@@ -4,6 +4,8 @@ var run = false;
 
 var state = 0;
 
+var offset = 1;
+
 var app = {
 	initialize: function() {
 		this.bindEvents();
@@ -54,7 +56,11 @@ function encounter() {
 	var pkmn = getRandId(last_pokemon);
 	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
-	while ( my_cp < cp * 2 ) {
+	var ratio = 2;
+	if ( my_lv >= 25 ) ratio = 1.5;
+	if ( my_lv >= 50 ) ratio = 1;
+	if ( my_lv >= 75 ) ratio = 0.5;
+	while ( my_cp < cp * ratio ) {
 		pkmn = getRandId(last_pokemon);
 		lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 		cp = cp_dict[pkmn]["CP"] * lvl;
@@ -96,6 +102,7 @@ function wildCapture(ball) {
 			} else {
 				var message = "¡El lanzamiento falló!"
 				document.getElementById("msg_txt").innerHTML = message;
+				offset++;
 			}
 		} else {
 			var message = "¡No quedan unidades!"
@@ -175,9 +182,11 @@ function catched(ball) {
 	var lider = window.localStorage.getItem("lider");
 	var my_lv = window.localStorage.getItem("lv"+lider);
 	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
-	var rnd = Math.floor( Math.random() * 1000 ) + 1;
-	var dif = my_cp - wild_pkmn[2]
-	if ( ( rnd + 1000 ) * ball > dif ) return true;
+	var rnd = Math.floor( Math.random() * my_cp + my_lv * 10 + offset * 100 ) + 1;
+	var dif = wild_pkmn[2]
+	if ( ball == 2 ) ball = 1.5;
+	if ( ball == 3 ) ball = 2;
+	if ( rnd * ball > dif ) return true;
 	else return false;
 }
 
