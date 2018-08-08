@@ -147,10 +147,12 @@ function updateLevel(xp) {
 	var lvl = parseInt(window.localStorage.getItem("lv"+lider),10);
 	var exp = parseInt(window.localStorage.getItem("xp"+lider),10);
 	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
-	window.localStorage.setItem("xp"+lider, exp+xp);
 	window.localStorage.setItem("ganar", ganar+1);
+	if ( lvl == 100 ) return false;
+	window.localStorage.setItem("xp"+lider, exp+xp);
 	if ( exp+xp >= xp_dict[lvl+1] ) {
 		window.localStorage.setItem("lv"+lider, lvl+1);
+		if ( lvl == 99 ) window.localStorage.setItem("xp"+lider, xp_dict[lvl+1]);
 		return true;
 	} else return false;
 }
