@@ -20,7 +20,7 @@ function ready() {
 	if ( window.localStorage.getItem("pk0") == null ) {
 		window.localStorage.setItem("pk0", "025");
 		window.localStorage.setItem("lv0", 5);
-		window.localStorage.setItem("xp0", xp_dict[5]);
+		window.localStorage.setItem("xp0", 250);
 		window.localStorage.setItem("cp0", cp_dict["025"]["CP"]);
 		window.localStorage.setItem("dx025", "capturado");
 		window.localStorage.setItem("pokeball", 10);

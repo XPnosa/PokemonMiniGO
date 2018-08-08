@@ -36,7 +36,7 @@ function setXpDict(base) {
 		for (j=1;j<=i;j++) {
 			xp += base[j]
 		}
-		exp[i] = Math.floor(xp+(i-1)*i/33)
+		exp[i] = Math.floor((xp+(i-1)*i/33)*250/43);
 	}
 	xp_dict = exp;
 	setCpDict("json/cp.json");

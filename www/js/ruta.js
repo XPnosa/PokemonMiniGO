@@ -113,8 +113,8 @@ function wildCapture(ball) {
 
 function wildRun() {
 	if ( run ) {
-		var exp = Math.floor(wild_pkmn[2]/50);
-		var cash = Math.floor(wild_pkmn[2]/10);
+		var exp = Math.floor(wild_pkmn[2]/24);
+		var cash = Math.floor(wild_pkmn[2]/7);
 		if ( state == 1 ) {
 			var msg = "Experiencia ganada: " + exp;
 			document.getElementById("msg_txt").innerHTML = msg;
