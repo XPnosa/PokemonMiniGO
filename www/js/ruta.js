@@ -72,9 +72,9 @@ function wildEnter(pkmn,lvl,cp) {
 	offset = 1; wild_pkmn = [pkmn,lvl,cp]
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
-	var message = "<center style='height:99%font-size: 20px;position: relative;top: +12px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
+	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
 	document.getElementById("msg").innerHTML = message;
-	window.localStorage.setItem("dx"+pkmn, "visto");
+	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
 	fitPath(); document.getElementById("path").style.display = "";
 }
 

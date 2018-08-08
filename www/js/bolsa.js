@@ -18,22 +18,22 @@ function start() {
 }
 
 function printBag() {
-	var dinero = window.localStorage.getItem("dinero");
-	var pokeball = window.localStorage.getItem("pokeball");
-	var superball = window.localStorage.getItem("superball");
-	var ultraball = window.localStorage.getItem("ultraball");
+	var dinero = parseInt(window.localStorage.getItem("dinero"),10);
+	var pokeball = parseInt(window.localStorage.getItem("pokeball"),10);
+	var superball = parseInt(window.localStorage.getItem("superball"),10);
+	var ultraball = parseInt(window.localStorage.getItem("ultraball"),10);
 	var ganar = parseInt(window.localStorage.getItem("ganar"),10)-1;
 	var total = parseInt(window.localStorage.getItem("total"),10)-1;
 	var vistas = getVistas();
 	var capturadas = getCapturadas();
 	var comptelado = Math.floor((100*(vistas+capturadas))/(last_pokemon*2))
 	var content = '<table class="status">' +
-	'<tr><td style="width:64%"><b>Dinero en la bolsa</b>:</td><td>'+dinero+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokeballs restantes</b>:</td><td>'+pokeball+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Superballs restantes</b>:</td><td>'+superball+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Ultraballs restantes</b>:</td><td>'+ultraball+'</td></tr></table><hr><table class="status extra">' + 
-	'<tr><td style="width:64%"><b>Pokemon derrotados</b>:</td><td>'+ganar+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokemon capturados</b>:</td><td>'+total+'</td></tr></table><hr class="extra"><table class="status">' + 
+	'<tr><td style="width:64%"><b>Dinero en la bolsa</b>:</td><td>'+dinero.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Pokeballs restantes</b>:</td><td>'+pokeball.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Superballs restantes</b>:</td><td>'+superball.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Ultraballs restantes</b>:</td><td>'+ultraball.toLocaleString()+'</td></tr></table><hr><table class="status extra">' + 
+	'<tr><td style="width:64%"><b>Pokemon derrotados</b>:</td><td>'+ganar.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Pokemon capturados</b>:</td><td>'+total.toLocaleString()+'</td></tr></table><hr class="extra"><table class="status">' + 
 	'<tr><td style="width:64%"><b>Especies vistas</b>:</td><td>'+vistas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Especies capturadas</b>:</td><td>'+capturadas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Pokedex completada</b>:</td><td>'+comptelado+'%</td></tr></table>';
