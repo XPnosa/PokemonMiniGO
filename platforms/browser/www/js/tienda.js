@@ -36,13 +36,21 @@ function printShop() {
 
 function mas(n) {
 	var cantidad = parseInt(document.getElementById("c"+n).innerHTML,10)
-	if ( cantidad<999 ) document.getElementById("c"+n).innerHTML = cantidad + 1;
+	if ( cantidad < 900 ) {
+		if ( cantidad > 99 )document.getElementById("c"+n).innerHTML = cantidad + 100;
+		else if ( cantidad > 9 ) document.getElementById("c"+n).innerHTML = cantidad + 10;
+		else document.getElementById("c"+n).innerHTML = cantidad + 1;
+	}
 	fixTotal();
 }
 
 function menos(n) {
 	var cantidad = parseInt(document.getElementById("c"+n).innerHTML,10)
-	if ( cantidad > 0 ) document.getElementById("c"+n).innerHTML = cantidad - 1;
+	if ( cantidad > 0 ) {
+		if ( cantidad > 100 )document.getElementById("c"+n).innerHTML = cantidad - 100;
+		else if ( cantidad > 10 ) document.getElementById("c"+n).innerHTML = cantidad - 10;
+		else document.getElementById("c"+n).innerHTML = cantidad - 1;
+	}
 	fixTotal();
 }
 

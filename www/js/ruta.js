@@ -75,6 +75,7 @@ function wildEnter(pkmn,lvl,cp) {
 	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
+	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg").className += " gold";
 	fitPath(); document.getElementById("path").style.display = "";
 }
 
@@ -102,6 +103,10 @@ function wildCapture(ball) {
 			} else {
 				var message = "¡El lanzamiento falló!"
 				document.getElementById("msg_txt").innerHTML = message;
+				document.getElementById("pkmn").className += " fault";
+				timeout = setTimeout(function() {
+					document.getElementById("pkmn").className = "";
+				}, 500);
 				offset++;
 			}
 		} else {
@@ -113,8 +118,8 @@ function wildCapture(ball) {
 
 function wildRun() {
 	if ( run ) {
-		var exp = Math.floor(wild_pkmn[2]/24);
-		var cash = Math.floor(wild_pkmn[2]/7);
+		var exp = Math.floor(wild_pkmn[2]/25);
+		var cash = Math.floor(wild_pkmn[2]/10);
 		if ( state == 1 ) {
 			var msg = "Experiencia ganada: " + exp;
 			document.getElementById("msg_txt").innerHTML = msg;

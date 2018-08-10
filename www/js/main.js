@@ -45,8 +45,8 @@ function printMenu() {
 	'<input type="button" class="menu yellow" value="Bolsa" onclick="showBag();">' + 
 	'<input type="button" class="menu green" value="Pokemon" onclick="showPokemon();">' + 
 	'<input type="button" class="menu cyan" value="Tienda" onclick="showShop();">' + 
-	'<input type="button" class="menu blue" value="Pasear" onclick="showPath();">' + 
-	'<input type="button" class="menu purple" value="Salir" onclick="navigator.app.exitApp();">';
+	'<input type="button" class="menu blue" value="Ruta" onclick="showPath();">' + 
+	'<hr class="vs"><input type="button" class="menu black" value="Salir" onclick="closeApp();">';
 	document.getElementById("list").innerHTML = content;
 	document.getElementById("menu").style.display = "";
 }
@@ -69,6 +69,11 @@ function showShop() {
 
 function showPath() {
 	location.href="./ruta.html";
+}
+
+function closeApp() {
+	var exit = confirm("¿Salir de la aplicación?")
+	if ( exit ) navigator.app.exitApp();
 }
 
 function dontBack(){
