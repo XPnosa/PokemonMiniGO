@@ -105,7 +105,7 @@ function wildCapture(ball) {
 				document.getElementById("msg_txt").innerHTML = message;
 				document.getElementById("pkmn").className += " fault";
 				timeout = setTimeout(function() {
-					document.getElementById("pkmn").className = "";
+					document.getElementById("pkmn").className = document.getElementById("pkmn").className.replace(" fault","");
 				}, 500);
 				offset++;
 			}
