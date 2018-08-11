@@ -81,10 +81,17 @@ function wildEnter(pkmn,lvl,cp) {
 
 function wildDefeat() {
 	if ( !run ) {
-		var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje derrotado!"
-		document.getElementById("msg_txt").innerHTML = message;
-		document.getElementById("pkmn").className += " defeat";
-		run = true;
+		if ( defeated() ) {
+			var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje derrotado!"
+			document.getElementById("msg_txt").innerHTML = message;
+			document.getElementById("pkmn").className += " defeat";
+			run = true;
+		} else {
+			var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje huyó!"
+			document.getElementById("msg_txt").innerHTML = message;
+			document.getElementById("pkmn").className += " evade";
+			state = 4; run = true;
+		}
 	}
 }
 
@@ -118,8 +125,8 @@ function wildCapture(ball) {
 
 function wildRun() {
 	if ( run ) {
-		var exp = Math.floor(wild_pkmn[2]/25);
-		var cash = Math.floor(wild_pkmn[2]/10);
+		var exp = Math.floor(wild_pkmn[2]/(100/3));
+		var cash = Math.floor(wild_pkmn[2]/(50/3));
 		if ( state == 1 ) {
 			var msg = "Experiencia ganada: " + exp;
 			document.getElementById("msg_txt").innerHTML = msg;
@@ -191,11 +198,22 @@ function catched(ball) {
 	var lider = window.localStorage.getItem("lider");
 	var my_lv = window.localStorage.getItem("lv"+lider);
 	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
-	var rnd = Math.floor( Math.random() * my_cp + my_lv * 10 + offset * 100 ) + 1;
+	var rnd = Math.floor( Math.random() * my_cp + my_lv * 10 + offset * 100 );
 	var dif = wild_pkmn[2]
 	if ( ball == 2 ) ball = 1.5;
 	if ( ball == 3 ) ball = 2;
 	if ( rnd * ball > dif ) return true;
+	else return false;
+}
+
+function defeated() {
+	var lider = window.localStorage.getItem("lider");
+	var my_lv = window.localStorage.getItem("lv"+lider);
+	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
+	var rnd = Math.floor( Math.random() * my_cp + my_lv * 10 + offset * 100 );
+	var fac = Math.floor( 5 - ( my_lv / 50 ) );
+	var dif = wild_pkmn[2]
+	if ( rnd * fac > dif ) return true;
 	else return false;
 }
 

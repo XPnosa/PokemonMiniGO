@@ -481,12 +481,8 @@ td {
 	animation-direction: normal;
 	filter: grayscale(100%);
 }
-@keyframes defeated{
+@keyframes defeated {
 	0%   {filter: grayscale(0%);}
-	20%  {filter: grayscale(20%);}
-	40%  {filter: grayscale(40%);}
-	60%  {filter: grayscale(60%);}
-	80%  {filter: grayscale(80%);}
 	100% {filter: grayscale(100%);}
 }
 .catch {
@@ -497,12 +493,8 @@ td {
 	animation-direction: normal;
 	transform: translateY(-50%) scale(0) !important;
 }
-@keyframes catched{
+@keyframes catched {
 	0%   {transform: translateY(-50%) scale(1);}
-	20%  {transform: translateY(-50%) scale(.8);}
-	40%  {transform: translateY(-50%) scale(.6);}
-	60%  {transform: translateY(-50%) scale(.4);}
-	80%  {transform: translateY(-50%) scale(.2);}
 	100% {transform: translateY(-50%) scale(0);}
 }
 .ball_1 { background-image: url(../img/ball_1.png); }
@@ -517,12 +509,8 @@ td {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-@keyframes balled{
+@keyframes balled {
 	0%   {opacity:0;}
-	20%  {opacity:.2;}
-	40%  {opacity:.4;}
-	60%  {opacity:.6;}
-	80%  {opacity:.8;}
 	100% {opacity:1;}
 }
 .fault {
@@ -532,8 +520,20 @@ td {
 	animation-iteration-count: 1;
 	animation-direction: normal;
 }
-@keyframes faulted{
+@keyframes faulted {
 	0%   {transform: translateY(-50%) scaleX(1);}
-	50%   {transform: translateY(-50%) scaleX(-1);}
+	50%  {transform: translateY(-50%) scaleX(-1);}
 	100% {transform: translateY(-50%) scaleX(1);}
+}
+.evade {
+	animation-name: evaded;
+	animation-duration: 500ms;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	opacity: 0;
+}
+@keyframes evaded {
+	0%   {opacity: 1;}
+	100% {opacity: 0;}
 }
