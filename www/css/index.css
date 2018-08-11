@@ -6,7 +6,6 @@ html {
 body {
 	margin: 0;
 	height: 100%;
-	user-select: none;
 }
 fieldset {
 	margin: 0% 1%;
@@ -71,6 +70,7 @@ td {
 	width: 30px;
 	height: 30px;
 	background: whitesmoke;
+	font-size: 1em;
 }
 
 /* POKEMON */
@@ -116,8 +116,8 @@ td {
 .yellow { background-color: #EEC; color: #991;}
 .purple { background-color: #ECE; color: #919;}
 .cyan { background-color: #CEE; color: #199;}
-.black { background-color: #333; color: #EEE; border-radius: 10px; }
-.white { background-color: #EEE; color: #333; border-radius: 10px; }
+.black { background-color: #333; color: #EEE; }
+.white { background-color: #EEE; color: #333; }
 
 /* TYPE BUTTONS */
 .pk_types {
@@ -370,7 +370,7 @@ td {
 	#info {
 		font-size: 1.75em;
 	}
-	#content {
+	#content, #shop {
 		font-size: 1.5em;
 	}
 	table {
@@ -394,9 +394,6 @@ td {
 	}
 	#loading-mini {
 		height: 1.5em;
-	}
-	#shop {
-		font-size: 1.5em;
 	}
 	.stock {
 		height: 30px;
@@ -439,6 +436,9 @@ td {
 		margin: 3% 5%;
 		padding: 3% 5%;
 	}
+	.black, .white {
+		border-radius: 10px;
+	}
 	th.cell {
 		height: 60px;
 	}
@@ -479,11 +479,11 @@ td {
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-direction: normal;
-	filter: grayscale(100%);
+	filter: grayscale(100%) blur(10px);
 }
 @keyframes defeated {
-	0%   {filter: grayscale(0%);}
-	100% {filter: grayscale(100%);}
+	0%   {filter: grayscale(0%) blur(0px);}
+	100% {filter: grayscale(100%) blur(10px);}
 }
 .catch {
 	animation-name: catched;
@@ -491,11 +491,11 @@ td {
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-direction: normal;
-	transform: translateY(-50%) scale(0) !important;
+	transform: translateY(-50%) scale(0) rotate(360deg) !important;
 }
 @keyframes catched {
-	0%   {transform: translateY(-50%) scale(1);}
-	100% {transform: translateY(-50%) scale(0);}
+	0%   {transform: translateY(-50%) scale(1) rotate(0deg);}
+	100% {transform: translateY(-50%) scale(0) rotate(360deg);}
 }
 .ball_1 { background-image: url(../img/ball_1.png); }
 .ball_2 { background-image: url(../img/ball_2.png); }
@@ -513,18 +513,6 @@ td {
 	0%   {opacity:0;}
 	100% {opacity:1;}
 }
-.fault {
-	animation-name: faulted;
-	animation-duration: 500ms;
-	animation-timing-function: ease-in;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-}
-@keyframes faulted {
-	0%   {transform: translateY(-50%) scaleX(1);}
-	50%  {transform: translateY(-50%) scaleX(-1);}
-	100% {transform: translateY(-50%) scaleX(1);}
-}
 .evade {
 	animation-name: evaded;
 	animation-duration: 500ms;
@@ -536,4 +524,16 @@ td {
 @keyframes evaded {
 	0%   {opacity: 1;}
 	100% {opacity: 0;}
+}
+.fault {
+	animation-name: faulted;
+	animation-duration: 500ms;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+}
+@keyframes faulted {
+	0%   {transform: translateY(-50%) scaleX(1);}
+	50%  {transform: translateY(-50%) scaleX(-1);}
+	100% {transform: translateY(-50%) scaleX(1);}
 }
