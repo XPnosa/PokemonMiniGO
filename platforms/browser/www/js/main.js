@@ -39,7 +39,7 @@ function start() {
 }
 
 function printMenu() {
-	document.getElementById("menu").innerHTML = "<center><legend style='padding: 10px;'><b class='subtitle'>Menu Principal</b></legend></center><div id='list'></div>";
+	document.getElementById("menu").innerHTML = "<center><legend style='padding: 10px;'><b class='subtitle'>Pokemon Mini Go</b></legend></center><div id='list'></div>";
 	var content = '<br />' + 
 	'<input type="button" class="menu red" value="Pokedex" onclick="showPokedex();">' + 
 	'<input type="button" class="menu yellow" value="Bolsa" onclick="showBag();">' + 

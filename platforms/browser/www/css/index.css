@@ -364,8 +364,8 @@ td {
 		font-size: 1.25em;
 	}
 	.menu, .subtitle {
-		font-size: 2em;
-		border-radius: 2em;
+		font-size: 1.75em;
+		border-radius: 1.75em;
 	}
 	#info {
 		font-size: 1.75em;
@@ -420,8 +420,8 @@ td {
 		display: inline-block;
 	}
 	.menu, .subtitle {
-		font-size: 3em;
-		border-radius: 3em;
+		font-size: 2.5em;
+		border-radius: 2.5em;
 	}
 	#info, #content {
 		font-size: 2em;
