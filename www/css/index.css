@@ -479,11 +479,11 @@ td {
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-direction: normal;
-	filter: grayscale(100%) blur(10px);
+	filter: grayscale(100%);
 }
 @keyframes defeated {
-	0%   {filter: grayscale(0%) blur(0px);}
-	100% {filter: grayscale(100%) blur(10px);}
+	0%   {filter: grayscale(0%);}
+	100% {filter: grayscale(100%);}
 }
 .catch {
 	animation-name: catched;
