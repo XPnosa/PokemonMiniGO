@@ -53,6 +53,9 @@ function encounter() {
 	var lider = window.localStorage.getItem("lider");
 	var my_lv = window.localStorage.getItem("lv"+lider);
 	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
+	var total = parseInt(window.localStorage.getItem("total"),10);
+	var help = Math.floor( ( ganar + total ) / 1000 ) + 1;
 	var pkmn = getRandId(last_pokemon);
 	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
@@ -63,11 +66,12 @@ function encounter() {
 	if ( my_lv >= 50 ) ratio = 1;
 	if ( my_lv >= 75 ) ratio = 0.5;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
-	while ( my_cp < cp * ratio || ( !first && retry < my_lv ) ) {
+	while ( my_cp < cp * ratio || ( !first && retry < help ) ) {
 		pkmn = getRandId(last_pokemon);
-		if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
 		lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 		cp = cp_dict[pkmn]["CP"] * lvl;
+		if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
+		else first = false;
 		retry++;
 	}
 	wildEnter(pkmn,lvl,cp);
