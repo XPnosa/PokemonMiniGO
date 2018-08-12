@@ -57,13 +57,18 @@ function encounter() {
 	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
 	var ratio = 2;
+	var retry = 0;
+	var first = false;
 	if ( my_lv >= 25 ) ratio = 1.5;
 	if ( my_lv >= 50 ) ratio = 1;
 	if ( my_lv >= 75 ) ratio = 0.5;
-	while ( my_cp < cp * ratio ) {
+	if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
+	while ( my_cp < cp * ratio || ( !first && retry < my_lv ) ) {
 		pkmn = getRandId(last_pokemon);
+		if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
 		lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 		cp = cp_dict[pkmn]["CP"] * lvl;
+		retry++;
 	}
 	wildEnter(pkmn,lvl,cp);
 }
