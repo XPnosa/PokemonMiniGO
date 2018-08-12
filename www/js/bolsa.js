@@ -22,8 +22,8 @@ function printBag() {
 	var pokeball = parseInt(window.localStorage.getItem("pokeball"),10);
 	var superball = parseInt(window.localStorage.getItem("superball"),10);
 	var ultraball = parseInt(window.localStorage.getItem("ultraball"),10);
-	var ganar = parseInt(window.localStorage.getItem("ganar"),10)-1;
-	var total = parseInt(window.localStorage.getItem("total"),10)-1;
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
+	var total = parseInt(window.localStorage.getItem("total"),10);
 	var vistas = getVistas();
 	var capturadas = getCapturadas();
 	var comptelado = Math.floor((100*(vistas+capturadas))/(last_pokemon*2))

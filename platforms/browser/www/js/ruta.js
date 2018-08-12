@@ -32,19 +32,25 @@ function start() {
 }
 
 function printSubmenu() {
+	var pokeballs = parseInt(window.localStorage.getItem("pokeball"),10);
+	var superballs = parseInt(window.localStorage.getItem("superball"),10);
+	var ultraballs = parseInt(window.localStorage.getItem("ultraball"),10);
+	if ( pokeballs > 999 ) pokeballs = "<i>999+</i>";
+	if ( superballs > 999 ) superballs = "<i>999+</i>";
+	if ( ultraballs > 999 ) ultraballs = "<i>999+</i>";
 	var content = "<center style='height:100%;'><b>" + 
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(1)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_1.png' />" + 
 	"<br><span id='ball1' style='position: relative;top: -5px;'>" + 
-	window.localStorage.getItem("pokeball") + "</span></div>" +
+	pokeballs + "</span></div>" +
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(2)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_2.png' />" + 
 	"<br><span id='ball2' style='position: relative;top: -5px;'>" + 
-	window.localStorage.getItem("superball") + "</span></div>" +
+	superballs + "</span></div>" +
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(3)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_3.png' />" + 
 	"<br><span id='ball3' style='position: relative;top: -5px;'>" + 
-	window.localStorage.getItem("ultraball") + "</span></div>" +
+	ultraballs + "</span></div>" +
 	"</b></center>";
 	document.getElementById("sub").innerHTML = content;
 }
@@ -53,25 +59,25 @@ function encounter() {
 	var lider = window.localStorage.getItem("lider");
 	var my_lv = window.localStorage.getItem("lv"+lider);
 	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
-	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
-	var total = parseInt(window.localStorage.getItem("total"),10);
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10) + 1;
+	var total = parseInt(window.localStorage.getItem("total"),10) + 1;
 	var help = Math.floor( ( ganar + total ) / 1000 ) + 1;
 	var pkmn = getRandId(last_pokemon);
 	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
 	var ratio = 2;
 	var retry = 0;
-	var first = false;
+	var logged = false;
 	if ( my_lv >= 25 ) ratio = 1.5;
 	if ( my_lv >= 50 ) ratio = 1;
 	if ( my_lv >= 75 ) ratio = 0.5;
-	if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
-	while ( my_cp < cp * ratio || ( !first && retry < help ) ) {
+	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) logged = true;
+	while ( my_cp < cp * ratio || ( logged && retry < help ) ) {
 		pkmn = getRandId(last_pokemon);
 		lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 		cp = cp_dict[pkmn]["CP"] * lvl;
-		if ( window.localStorage.getItem("dx"+pkmn) == null ) first = true;
-		else first = false;
+		if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) logged = true;
+		else logged = false;
 		retry++;
 	}
 	wildEnter(pkmn,lvl,cp);
@@ -151,7 +157,9 @@ function wildRun() {
 		} else if ( state == 3 ) {
 			var msg = "Dinero encontrado: " + cash;
 			document.getElementById("msg_txt").innerHTML = msg;
-			window.localStorage.setItem("dinero", parseInt(window.localStorage.getItem("dinero"),10)+cash);
+			var dinero = parseInt(window.localStorage.getItem("dinero"),10)+cash
+			if ( dinero > 9999999 ) dinero = 9999999;
+			window.localStorage.setItem("dinero", dinero);
 			state = 5;
 		} else if ( state == 4 ) {
 			state = 5;
@@ -167,8 +175,9 @@ function updateLevel(xp) {
 	var lider = window.localStorage.getItem("lider");
 	var lvl = parseInt(window.localStorage.getItem("lv"+lider),10);
 	var exp = parseInt(window.localStorage.getItem("xp"+lider),10);
-	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
-	window.localStorage.setItem("ganar", ganar+1);
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10)+1;
+	if ( ganar > 9999999 ) ganar = 9999999;
+	window.localStorage.setItem("ganar", ganar);
 	if ( lvl == 100 ) return false;
 	window.localStorage.setItem("xp"+lider, exp+xp);
 	if ( exp+xp >= xp_dict[lvl+1] ) {
@@ -179,13 +188,14 @@ function updateLevel(xp) {
 }
 
 function updatePokedex() {
-	var total = parseInt(window.localStorage.getItem("total"),10);
+	var total = parseInt(window.localStorage.getItem("total"),10)+1;
+	if ( total > 9999999 ) total = 9999999;
 	window.localStorage.setItem("pk"+total, wild_pkmn[0]);
 	window.localStorage.setItem("lv"+total, wild_pkmn[1]);
 	window.localStorage.setItem("cp"+total, wild_pkmn[2]);
 	window.localStorage.setItem("xp"+total, xp_dict[wild_pkmn[1]]);
 	window.localStorage.setItem("dx"+wild_pkmn[0], "capturado");
-	window.localStorage.setItem("total", total+1);
+	window.localStorage.setItem("total", total);
 }
 
 function launch(ball) {
@@ -199,7 +209,9 @@ function launch(ball) {
 		var cantidad = parseInt(window.localStorage.getItem("ultraball"));
 		window.localStorage.setItem("ultraball", cantidad-1);
 	}
-	document.getElementById("ball"+ball).innerHTML = cantidad-1
+	cantidad = cantidad - 1;
+	if ( cantidad > 999 ) cantidad = "<i>999+</i>";
+	document.getElementById("ball"+ball).innerHTML = cantidad
 	return catched(ball);
 }
 
