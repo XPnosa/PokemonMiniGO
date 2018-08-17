@@ -85,12 +85,13 @@ function encounter() {
 
 function wildEnter(pkmn,lvl,cp) {
 	offset = 1; wild_pkmn = [pkmn,lvl,cp]
+	var ball = "<img src='img/ball_4.png' style='height: 20px; margin-left: 10px; padding-right: 10px; vertical-align: middle;'>";
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
 	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
-	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg_txt").innerHTML = "◓ " + document.getElementById("msg_txt").innerHTML;
+	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg_txt").innerHTML = ball + document.getElementById("msg_txt").innerHTML + ball;
 	fitPath(); document.getElementById("path").style.display = "";
 }
 
