@@ -62,6 +62,23 @@ td {
 	color: whitesmoke;
 	transform: scaleX(0.75) scaleY(1.25);
 }
+.box > div {
+	width: 50px;
+}
+.order {
+	width: 100px;
+}
+.delete {
+	width: 75px;
+}
+.order {
+	background-color: limegreen;
+	border-bottom: 3px solid darkgreen;
+}
+.delete {
+	background-color: firebrick;
+	border-bottom: 3px solid darkred;
+}
 .cell {
 	width: 30%;
 	height: 30px;
@@ -99,6 +116,15 @@ td {
 	font-size: 1em;
 	color: whitesmoke;
 	background: transparent;
+}
+.pk_cp {
+	left: 40%;
+	display: inline-block;
+}
+.pk_check {
+	margin: 0px;
+	right: 10px;
+	width: 20px;
 }
 .pk_img {
 	float: left;

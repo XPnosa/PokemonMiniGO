@@ -32,13 +32,21 @@ function printPokemon() {
 	if ( nivel == 100 ) var sig = 0;
 	else var sig = xp_dict[parseInt(nivel,10)+1]-parseInt(exp,10);
 	var msg = '<center style="height:99%font-size: 20px;position: relative;top: +15px;"><b id="msg_txt">Tu compañero es '+nombre+'</b></center>';
-	var partner = '<center style="height:99%"><img id="pkmn" style="height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);" src="pkmn/'+pkmn+'.png" /></center>';
+	var partner = '<center style="height:99%"><img id="pkmn" onclick="showBox();" style="height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);" src="pkmn/'+pkmn+'.png" /></center>';
 	var sub = '<table class="status"><tr><td class="stat"><b>Nivel</b>: '+nivel+'</td><td class="stat"><b>CP</b>: '+cp.toLocaleString()+'</td></tr><tr><td class="stat"><b>Exp</b>: '+exp.toLocaleString()+'</td><td class="stat"><b>Sig</b>: '+sig.toLocaleString()+'</td></tr></table>';
 	document.getElementById("msg").innerHTML = msg;
 	document.getElementById("partner").innerHTML = partner;
 	document.getElementById("sub").innerHTML = sub;
+	document.getElementById("pkmn").addEventListener('touchend', function(e){e.stopPropagation();}, false);
 	document.getElementById("pokemon").style.display = "";
 	fitPartner();
+}
+
+function showBox() {
+	if (!e) var e = window.event;
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	location.href = "caja.html";
 }
 
 function fitPartner() {

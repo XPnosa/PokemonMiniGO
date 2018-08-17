@@ -44,7 +44,7 @@ function readJson(filePath) {
 				var pkmn = i<10?"00"+i:i<100?"0"+i:i
 				if ( i <= ( len ) ) {
 					printPokedex(pkmn);
-					if ( i == len ) {
+					if ( i == len && !load_completed ) {
 						showDex(0);
 						load_completed = true;
 						document.getElementById("loading").style.display = 'none';
