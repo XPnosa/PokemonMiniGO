@@ -2,6 +2,8 @@ var wild_pkmn;
 
 var run = false;
 
+var wait = false;
+
 var state = 0;
 
 var offset = 1;
@@ -84,14 +86,15 @@ function encounter() {
 }
 
 function wildEnter(pkmn,lvl,cp) {
-	offset = 1; wild_pkmn = [pkmn,lvl,cp]
-	var ball = "<img src='img/ball_4.png' style='height: 20px; margin-left: 10px; padding-right: 10px; vertical-align: middle;'>";
+	offset = 1; 
+	wild_pkmn = [pkmn,lvl,cp]
+	var ball = "";
+	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/ball_4.png' style='height: 20px; margin: 0 10px; vertical-align: middle;'>";
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
-	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
+	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'>"+ball+"<b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b>"+ball+"</center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
-	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg_txt").innerHTML = ball + document.getElementById("msg_txt").innerHTML + ball;
 	fitPath(); document.getElementById("path").style.display = "";
 }
 
@@ -122,12 +125,17 @@ function wildCapture(ball) {
 				document.getElementById("msg_txt").innerHTML = message;
 				document.getElementById("pkmn").className += " catch";
 				document.getElementById("wild").className += " ball_"+ball;
+				if ( window.localStorage.getItem("dx"+wild_pkmn[0]) != "capturado" ) {
+					timeout1 = setTimeout(function() {
+						document.getElementById("wild").className += " shiny";
+					}, 1000);
+				}
 				updatePokedex(); state = 4; run = true; 
 			} else {
 				var message = "¡El lanzamiento falló!"
 				document.getElementById("msg_txt").innerHTML = message;
 				document.getElementById("pkmn").className += " fault";
-				timeout = setTimeout(function() {
+				timeout2 = setTimeout(function() {
 					document.getElementById("pkmn").className = document.getElementById("pkmn").className.replace(" fault","");
 				}, 500);
 				offset++;
@@ -237,6 +245,22 @@ function defeated() {
 	var dif = wild_pkmn[2]
 	if ( rnd * fac > dif ) return true;
 	else return false;
+}
+
+function showStats() {
+	if ( !wait && state == 0 ) {
+		var aux = document.getElementById("msg_txt").innerHTML
+		var lv = wild_pkmn[1]
+		var cp = wild_pkmn[2]
+		if ( lv < 5 ) lv = 5;
+		message = "Nivel: " + lv;
+		document.getElementById("msg_txt").innerHTML = message;
+		timeout3 = setTimeout(function() {
+			document.getElementById("msg_txt").innerHTML = aux;
+			wait = false;
+		}, 1000);
+		wait = true;
+	}
 }
 
 function getRandId(l) {

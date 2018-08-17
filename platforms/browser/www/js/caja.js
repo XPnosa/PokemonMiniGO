@@ -1,3 +1,5 @@
+var selected = []
+
 var collection = []
 
 var load_completed = false;
@@ -38,7 +40,7 @@ function loadBox() {
 			}
 			if ( i == total && !load_completed ) {
 				var legend = '<div onclick="searchBox();" class="active box"><div>Caja</div></div>' +
-				'<div onclick="orderBox()" class="inactive order"><div id="orden">Fecha ▲</div></div>' + 
+				'<div onclick="orderBox()" class="inactive order"><div id="orden">CP ▼</div></div>' + 
 				'<div onclick="freePkmn()" class="inactive delete"id="libre"><div>Liberar</div></div>';
 				document.getElementById("loading").style.display = 'none';
 				document.getElementById("legend").innerHTML = legend;
@@ -47,7 +49,7 @@ function loadBox() {
 				for(i=0; i<list.length; i++) list[i].classList.add("visible");
 				load_completed = true;
 			}
-		} else clearInterval(refreshIntervalId);
+		} else { clearInterval(refreshIntervalId); orderBox(); }
 		i++
 	}, 0);
 }
@@ -73,8 +75,12 @@ function printLegend() {
 }
 
 function setLeader(idx) {
-	window.localStorage.setItem("lider", idx);
-	window.history.back();
+	var pkmn = window.localStorage.getItem("pk"+idx);
+	var change = confirm("¿Seleccionar a " + pk_dict[pkmn].nombre + " como tu acompañante?")
+	if ( change ) {
+		window.localStorage.setItem("lider", idx);
+		window.history.back();
+	}
 }
 
 function printBox(idx) {
@@ -97,7 +103,9 @@ function printBox(idx) {
 	pokemon += "<img onclick='setLeader("+idx+")' class='pk_img' src='pkmn/"+pkmn+".png' />"
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name' value='Nivel: "+lv+"' />";
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name pk_cp' value='CP: "+(cp*lv).toLocaleString()+"' />";
-	if ( idx != lider ) pokemon += "<input type='checkbox' onclick='check(this);' class='pk_name pk_check' id='"+idx+"' value="+pkmn+" />";
+	var checked = "";
+	if ( selected.indexOf(idx) >= 0 ) checked = "checked"; 
+	if ( idx != lider ) pokemon += "<input type='checkbox' "+checked+" onclick='check();' class='pk_name pk_check' id='"+idx+"' value="+pkmn+" />";
 	pokemon += "</div>";
 	var newcontent = document.createElement('div');
 	newcontent.innerHTML = pokemon;
@@ -145,13 +153,10 @@ function orderBox() {
 	for ( i = 0 ; i < collection.length ; i++ ) printBox(collection[i][0]);
 	var list = document.getElementsByClassName('pkmn');
 	for(i=0; i<list.length; i++) list[i].classList.add("visible");
+	check();
 }
 
 function freePkmn() {
-	var selected = []
-	var all = document.getElementsByClassName("pk_check");
-	for ( i = 0 ; i < all.length ; i++ ) 
-		if ( all[i].checked ) selected.push(  parseInt(all[i].id, 10) )
 	var exit = confirm("¿Liberar " + selected.length.toLocaleString() + " Pokemon?")
 	if ( exit ) {
 		for ( i = 0 ; i < selected.length ; i++ ) {
@@ -176,11 +181,16 @@ function searchBox() {
 			document.getElementById("id_"+collection[i][0]).style.display = "";
 }
 
-function check(obj) {
-	var selected = []
+function check() {
+	selected = []
 	var all = document.getElementsByClassName("pk_check");
-	for ( i = 0 ; i < all.length ; i++ ) 
-		if ( all[i].checked ) selected.push(  parseInt(all[i].id, 10) )
+	for ( i = 0 ; i < all.length ; i++ ) {
+		var idx = parseInt(all[i].id, 10);
+		if ( all[i].checked ) {
+			selected.push( idx );
+			document.getElementById("id_"+idx).style.backgroundColor = "#444";
+		} else document.getElementById("id_"+idx).style.backgroundColor = "#222";
+	}
 	if ( selected.length > 0 ) document.getElementById("libre").className = "inactive delete";
 	else document.getElementById("libre").className = "inactive delete disabled";
 }
