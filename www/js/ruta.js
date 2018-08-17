@@ -90,7 +90,7 @@ function wildEnter(pkmn,lvl,cp) {
 	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b></center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
-	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg").className += " gold";
+	else if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) document.getElementById("msg_txt").innerHTML = "◓ " + document.getElementById("msg_txt").innerHTML;
 	fitPath(); document.getElementById("path").style.display = "";
 }
 
