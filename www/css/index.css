@@ -384,6 +384,11 @@ td {
 		font-size: initial;
 		text-shadow: 2px 2px 2px black;
 	}
+	.pk_check {
+		margin: 0px;
+		right: 20px;
+		width: 40px;
+	}
 	.title {
 		margin-top: 0.25em;
 		margin-bottom: 0.5em;
@@ -418,6 +423,16 @@ td {
 	.init {
 		top: -16px !important;
 	}
+	.box > div {
+		width: 100px;
+	}
+	.order {
+		width: 200px;
+	}
+	.delete {
+		width: 150px;
+	}
+	
 	#loading-mini {
 		height: 1.5em;
 	}

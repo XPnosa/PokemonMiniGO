@@ -152,7 +152,7 @@ function freePkmn() {
 	var all = document.getElementsByClassName("pk_check");
 	for ( i = 0 ; i < all.length ; i++ ) 
 		if ( all[i].checked ) selected.push(  parseInt(all[i].id, 10) )
-	var exit = confirm("¿Liberar " + selected.length + " Pokenon?")
+	var exit = confirm("¿Liberar " + selected.length.toLocaleString() + " Pokemon?")
 	if ( exit ) {
 		for ( i = 0 ; i < selected.length ; i++ ) {
 			var idx = selected[i];
