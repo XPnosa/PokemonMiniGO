@@ -40,7 +40,7 @@ function loadBox() {
 			}
 			if ( i == total && !load_completed ) {
 				var legend = '<div onclick="searchBox();" class="active box"><div>Caja</div></div>' +
-				'<div onclick="orderBox()" class="inactive order"><div id="orden">CP ▼</div></div>' + 
+				'<div onclick="orderBox()" class="inactive order"><div id="orden">Fecha ▲</div></div>' + 
 				'<div onclick="freePkmn()" class="inactive delete"id="libre"><div>Liberar</div></div>';
 				document.getElementById("loading").style.display = 'none';
 				document.getElementById("legend").innerHTML = legend;
@@ -117,35 +117,35 @@ function orderBox() {
 	var orden = document.getElementById("orden").innerHTML;
 	switch (orden) {
 		case "Fecha ▲":
-			collection.sort(function(a,b){return a[1]-b[1];});
+			collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return a[1]-b[1];});
 			document.getElementById("orden").innerHTML = "Número ▲";
 			break;
 		case "Fecha ▼":
-			collection.sort(function(a,b){return b[1]-a[1];});
+			collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return b[1]-a[1];});
 			document.getElementById("orden").innerHTML = "Número ▼";
 			break;
 		case "Número ▲":
-			collection.sort(function(a,b){return a[2]-b[2];});
+			collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return a[2]-b[2];});
 			document.getElementById("orden").innerHTML = "Nivel ▲";
 			break;
 		case "Número ▼":
-			collection.sort(function(a,b){return b[2]-a[2];});
+			collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return b[2]-a[2];});
 			document.getElementById("orden").innerHTML = "Nivel ▼";
 			break;
 		case "Nivel ▲":
-			collection.sort(function(a,b){return a[3]-b[3];});
+			collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return a[3]-b[3];});
 			document.getElementById("orden").innerHTML = "CP ▲";
 			break;
 		case "Nivel ▼":
-			collection.sort(function(a,b){return b[3]-a[3];});
+			collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return b[3]-a[3];});
 			document.getElementById("orden").innerHTML = "CP ▼";
 			break;
 		case "CP ▲":
-			collection.sort(function(a,b){return b[0]-a[0];});
+			collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return b[0]-a[0];});
 			document.getElementById("orden").innerHTML = "Fecha ▼";
 			break;
 		case "CP ▼":
-			collection.sort(function(a,b){return a[0]-b[0];});
+			collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return a[0]-b[0];});
 			document.getElementById("orden").innerHTML = "Fecha ▲";
 			break;
 	}
