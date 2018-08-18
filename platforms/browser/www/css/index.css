@@ -67,15 +67,11 @@ td {
 }
 .order {
 	width: 100px;
-}
-.delete {
-	width: 75px;
-}
-.order {
-	background-color: limegreen;
+	background-color: forestgreen;
 	border-bottom: 3px solid darkgreen;
 }
 .delete {
+	width: 75px;
 	background-color: firebrick;
 	border-bottom: 3px solid darkred;
 }

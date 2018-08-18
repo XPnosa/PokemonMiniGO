@@ -53,7 +53,7 @@ function fitPartner() {
 	var h1 = document.getElementById("body").offsetHeight-222;
 	var w1 = document.getElementById("body").offsetWidth-22;
 	document.getElementById("partner").style.height = h1+"px";
-	if ( h1 < 100 ) document.getElementById("partner").style.opacity = 0;
+	if ( h1 < 50 ) document.getElementById("partner").style.opacity = 0;
 	else document.getElementById("partner").style.opacity = 1;
 	try {
 		if ( h1 < w1 ) document.getElementById("pkmn").style.height = h1+"px";

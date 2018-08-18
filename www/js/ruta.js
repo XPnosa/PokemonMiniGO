@@ -8,6 +8,8 @@ var state = 0;
 
 var offset = 1;
 
+var last_message;
+
 var app = {
 	initialize: function() {
 		this.bindEvents();
@@ -61,9 +63,10 @@ function encounter() {
 	var lider = window.localStorage.getItem("lider");
 	var my_lv = window.localStorage.getItem("lv"+lider);
 	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
-	var ganar = parseInt(window.localStorage.getItem("ganar"),10) + 1;
-	var total = parseInt(window.localStorage.getItem("total"),10) + 1;
-	var help = Math.floor( ( ganar + total ) / 1000 ) + 1;
+	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
+	var total = parseInt(window.localStorage.getItem("total"),10);
+	var libre = getLibres();
+	var help = Math.floor( ( ganar + total + libre ) / 1000 ) + 1;
 	var pkmn = getRandId(last_pokemon);
 	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
@@ -89,10 +92,10 @@ function wildEnter(pkmn,lvl,cp) {
 	offset = 1; 
 	wild_pkmn = [pkmn,lvl,cp]
 	var ball = "";
-	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/favicon.gif' style='height: 20px; margin: 0 15px; vertical-align: middle; float:'>";
+	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/favicon.gif' style='height: 20px; margin: 10px; vertical-align: middle; float:'>";
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
-	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'>"+ball.replace("float:","float: left;")+"<b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b>"+ball.replace("float:","float: right;")+"</center>"
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'>"+ball.replace("float:","float: left;").replace("margin","margin-left")+"<b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b>"+ball.replace("float:","float: right;").replace("margin","margin-right")+"</center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
 	fitPath(); document.getElementById("path").style.display = "";
@@ -133,12 +136,13 @@ function wildCapture(ball) {
 				updatePokedex(); state = 4; run = true; 
 			} else {
 				var message = "¡El lanzamiento falló!"
+				last_message = message;
 				document.getElementById("msg_txt").innerHTML = message;
 				document.getElementById("pkmn").className += " fault";
 				timeout2 = setTimeout(function() {
 					document.getElementById("pkmn").className = document.getElementById("pkmn").className.replace(" fault","");
 				}, 500);
-				offset++;
+				offset++; state = -1;
 			}
 		} else {
 			var message = "¡No quedan unidades!"
@@ -249,14 +253,14 @@ function defeated() {
 
 function showStats() {
 	if ( !wait && state == 0 ) {
-		var aux = document.getElementById("msg_txt").innerHTML
+		last_message = document.getElementById("msg_txt").innerHTML
 		var lv = wild_pkmn[1]
 		var cp = wild_pkmn[2]
 		if ( lv < 5 ) lv = 5;
 		message = "Nivel: " + lv;
 		document.getElementById("msg_txt").innerHTML = message;
 		timeout3 = setTimeout(function() {
-			document.getElementById("msg_txt").innerHTML = aux;
+			if ( state == 0 ) document.getElementById("msg_txt").innerHTML = last_message;
 			wait = false;
 		}, 1000);
 		wait = true;
@@ -269,11 +273,20 @@ function getRandId(l) {
 	return r;
 }
 
+function getLibres() {
+	var c = 0;
+	var total = parseInt(window.localStorage.getItem("total"),10);
+	for (i=0;i<=total;i++){
+		if ( window.localStorage.getItem("st"+i) == 'ko' ) c++;
+	}
+	return c;
+}
+
 function fitPath() {
 	var h1 = document.getElementById("body").offsetHeight-222;
 	var w1 = document.getElementById("body").offsetWidth-22;
 	document.getElementById("wild").style.height = h1+"px";
-	if ( h1 < 100 ) document.getElementById("wild").style.opacity = 0;
+	if ( h1 < 50 ) document.getElementById("wild").style.opacity = 0;
 	else document.getElementById("wild").style.opacity = 1;
 	try {
 		if ( h1 < w1 ) document.getElementById("pkmn").style.height = h1+"px";

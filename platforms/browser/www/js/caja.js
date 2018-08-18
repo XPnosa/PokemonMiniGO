@@ -39,7 +39,7 @@ function loadBox() {
 				printBox(i);
 			}
 			if ( i == total && !load_completed ) {
-				var legend = '<div onclick="searchBox();" class="active box"><div>Caja</div></div>' +
+				var legend = '<div onclick="searchBox();" class="active box" style="background-color: navy;"><div>Caja</div></div>' +
 				'<div onclick="orderBox()" class="inactive order"><div id="orden">Fecha ▲</div></div>' + 
 				'<div onclick="freePkmn()" class="inactive delete"id="libre"><div>Liberar</div></div>';
 				document.getElementById("loading").style.display = 'none';
@@ -49,7 +49,9 @@ function loadBox() {
 				for(i=0; i<list.length; i++) list[i].classList.add("visible");
 				load_completed = true;
 			}
-		} else { clearInterval(refreshIntervalId); orderBox(); }
+		} else { 
+			clearInterval(refreshIntervalId); 
+		}
 		i++
 	}, 0);
 }
