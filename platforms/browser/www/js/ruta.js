@@ -89,10 +89,10 @@ function wildEnter(pkmn,lvl,cp) {
 	offset = 1; 
 	wild_pkmn = [pkmn,lvl,cp]
 	var ball = "";
-	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/ball_4.png' style='height: 20px; margin: 0 10px; vertical-align: middle;'>";
+	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/favicon.gif' style='height: 20px; margin: 0 15px; vertical-align: middle; float:'>";
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
-	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'>"+ball+"<b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b>"+ball+"</center>"
+	var message = "<center style='height:99%font-size: 20px;position: relative;top: +15px;'>"+ball.replace("float:","float: left;")+"<b id='msg_txt'>¡"+pk_dict[pkmn]["nombre"]+" salvaje apareció!</b>"+ball.replace("float:","float: right;")+"</center>"
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
 	fitPath(); document.getElementById("path").style.display = "";
