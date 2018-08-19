@@ -120,7 +120,7 @@ function showDex(n) {
 		generation = n;
 		var list = document.querySelectorAll('.pkmn');
 		for(i=0; i<list.length; i++) list[i].style.display = "none";
-		document.getElementById("body").style.background = getBackground(n);
+		//document.getElementById("body").style.background = getBackground(n);
 		if (n==0) var legend = '<div onclick="shearchDex(\'Nacional\');" class="active"><div>Nacional</div></div>';
 		else var legend = '<div title="Pokedex Nacional" onclick="showDex(0);" class="inactive"><div>#</div></div>';
 		for (i=1;i<=7;i++) {

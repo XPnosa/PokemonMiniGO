@@ -32,7 +32,6 @@ function loadBox() {
 	fitBox();
 	var total = parseInt(window.localStorage.getItem("total"),10);
 	var i = 0;
-	var p
 	var refreshIntervalId = setInterval(function() {
 		if ( i <= ( total ) ) {
 			if ( window.localStorage.getItem("pk"+i) != null && window.localStorage.getItem("st"+i) != "ko" ) {
@@ -42,6 +41,7 @@ function loadBox() {
 				var legend = '<div onclick="searchBox();" class="active box" style="background-color: navy;"><div>Caja</div></div>' +
 				'<div onclick="orderBox()" class="inactive order"><div id="orden">Fecha ▲</div></div>' + 
 				'<div onclick="freePkmn()" class="inactive delete"id="libre"><div>Liberar</div></div>';
+				document.getElementById("loading-mini").style.display='none';
 				document.getElementById("loading").style.display = 'none';
 				document.getElementById("legend").innerHTML = legend;
 				document.getElementById("libre").className += " disabled";
@@ -70,7 +70,7 @@ function fitBox() {
 }
 
 function printLegend() {
-	var legend = '<div style="cursor:default;" class="active"><div>Cargando</div></div>' +
+	var legend = '<div style="background-color: #111;" class="active"><div style="width:250px;">Accediendo al PC</div></div>' +
 	'<div class="init inactive"><div class="init">&nbsp;</div></div>'
 	document.getElementById("pkbox").innerHTML = "<legend id='legend'>"+legend+"</legend>" + 
 	"<div id='list'><img id='loading' title='Cargando...' src='img/loading.gif' /></div>";
@@ -116,46 +116,50 @@ function printBox(idx) {
 }
 
 function orderBox() {
-	var orden = document.getElementById("orden").innerHTML;
-	switch (orden) {
-		case "Fecha ▲":
-			collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return a[1]-b[1];});
-			document.getElementById("orden").innerHTML = "Número ▲";
-			break;
-		case "Fecha ▼":
-			collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return b[1]-a[1];});
-			document.getElementById("orden").innerHTML = "Número ▼";
-			break;
-		case "Número ▲":
-			collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return a[2]-b[2];});
-			document.getElementById("orden").innerHTML = "Nivel ▲";
-			break;
-		case "Número ▼":
-			collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return b[2]-a[2];});
-			document.getElementById("orden").innerHTML = "Nivel ▼";
-			break;
-		case "Nivel ▲":
-			collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return a[3]-b[3];});
-			document.getElementById("orden").innerHTML = "CP ▲";
-			break;
-		case "Nivel ▼":
-			collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return b[3]-a[3];});
-			document.getElementById("orden").innerHTML = "CP ▼";
-			break;
-		case "CP ▲":
-			collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return b[0]-a[0];});
-			document.getElementById("orden").innerHTML = "Fecha ▼";
-			break;
-		case "CP ▼":
-			collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return a[0]-b[0];});
-			document.getElementById("orden").innerHTML = "Fecha ▲";
-			break;
-	}
-	document.getElementById("list").innerHTML = "";
-	for ( i = 0 ; i < collection.length ; i++ ) printBox(collection[i][0]);
-	var list = document.getElementsByClassName('pkmn');
-	for(i=0; i<list.length; i++) list[i].classList.add("visible");
-	check();
+	document.getElementById("loading-mini").style.display='';
+	setTimeout(function(){
+		var orden = document.getElementById("orden").innerHTML;
+		switch (orden) {
+			case "Fecha ▲":
+				collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return a[1]-b[1];});
+				document.getElementById("orden").innerHTML = "Número ▲";
+				break;
+			case "Fecha ▼":
+				collection.sort(function(a,b){ if (a[1]==b[1]) return b[3]-a[3]; return b[1]-a[1];});
+				document.getElementById("orden").innerHTML = "Número ▼";
+				break;
+			case "Número ▲":
+				collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return a[2]-b[2];});
+				document.getElementById("orden").innerHTML = "Nivel ▲";
+				break;
+			case "Número ▼":
+				collection.sort(function(a,b){ if (a[2]==b[2]) return a[1]-b[1]; return b[2]-a[2];});
+				document.getElementById("orden").innerHTML = "Nivel ▼";
+				break;
+			case "Nivel ▲":
+				collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return a[3]-b[3];});
+				document.getElementById("orden").innerHTML = "CP ▲";
+				break;
+			case "Nivel ▼":
+				collection.sort(function(a,b){ if (a[3]==b[3]) return a[1]-b[1]; return b[3]-a[3];});
+				document.getElementById("orden").innerHTML = "CP ▼";
+				break;
+			case "CP ▲":
+				collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return b[0]-a[0];});
+				document.getElementById("orden").innerHTML = "Fecha ▼";
+				break;
+			case "CP ▼":
+				collection.sort(function(a,b){ if (a[0]==b[0]) return b[3]-a[3]; return a[0]-b[0];});
+				document.getElementById("orden").innerHTML = "Fecha ▲";
+				break;
+		}
+		document.getElementById("list").innerHTML = "";
+		for ( i = 0 ; i < collection.length ; i++ ) printBox(collection[i][0]);
+		var list = document.getElementsByClassName('pkmn');
+		for(i=0; i<list.length; i++) list[i].classList.add("visible");
+		document.getElementById("loading-mini").style.display='none';
+		check(); 
+	}, 0);
 }
 
 function freePkmn() {
