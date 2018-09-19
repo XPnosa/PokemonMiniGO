@@ -78,7 +78,7 @@ function printLegend() {
 
 function setLeader(idx) {
 	var pkmn = window.localStorage.getItem("pk"+idx);
-	var change = confirm("¿Seleccionar a " + pk_dict[pkmn].nombre + " como tu acompañante?")
+	var change = confirm("Tu compañero será " + pk_dict[pkmn].nombre);
 	if ( change ) {
 		window.localStorage.setItem("lider", idx);
 		window.history.back();

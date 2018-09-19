@@ -1,12 +1,14 @@
 var wild_pkmn;
 
+var state = 0;
+
+var offset = 1;
+
 var run = false;
 
 var wait = false;
 
-var state = 0;
-
-var offset = 1;
+var click = false;
 
 var last_message;
 
@@ -60,15 +62,15 @@ function printSubmenu() {
 }
 
 function encounter() {
-	var lider = window.localStorage.getItem("lider");
-	var my_lv = window.localStorage.getItem("lv"+lider);
-	var my_cp = window.localStorage.getItem("cp"+lider) * my_lv;
+	var lider = parseInt(window.localStorage.getItem("lider"),10);
+	var my_lv = parseInt(window.localStorage.getItem("lv"+lider),10);
+	var my_cp = parseInt(window.localStorage.getItem("cp"+lider),10) * my_lv;
 	var ganar = parseInt(window.localStorage.getItem("ganar"),10);
 	var total = parseInt(window.localStorage.getItem("total"),10);
 	var libre = getLibres();
 	var help = Math.floor( ( ganar + total + libre ) / 1000 ) + 1;
 	var pkmn = getRandId(last_pokemon);
-	var lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
+	var lvl = Math.floor( Math.random() * Math.floor( my_lv / 2 ) ) + Math.floor( my_lv / 2 ) + 1;
 	var cp = cp_dict[pkmn]["CP"] * lvl;
 	var ratio = 2;
 	var retry = 0;
@@ -99,21 +101,24 @@ function wildEnter(pkmn,lvl,cp) {
 	document.getElementById("msg").innerHTML = message;
 	if ( window.localStorage.getItem("dx"+pkmn) == null ) window.localStorage.setItem("dx"+pkmn, "visto");
 	fitPath(); document.getElementById("path").style.display = "";
+	setTimeout(function() { click = true; }, 500);
 }
 
 function wildDefeat() {
-	if ( !run ) {
+	if ( !run && click ) {
+		click = false;
 		if ( defeated() ) {
 			var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje derrotado!"
 			document.getElementById("msg_txt").innerHTML = message;
 			document.getElementById("pkmn").className += " defeat";
-			run = true;
+			state = 1; run = true;
 		} else {
 			var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje huyó!"
 			document.getElementById("msg_txt").innerHTML = message;
 			document.getElementById("pkmn").className += " evade";
-			state = 4; run = true;
+			state = 5; run = true;
 		}
+		setTimeout(function() { click = true; }, 500);
 	}
 }
 
@@ -123,26 +128,30 @@ function wildCapture(ball) {
 		else if ( ball == 2 ) var cantidad = parseInt(window.localStorage.getItem("superball"));
 		else if ( ball == 3 ) var cantidad = parseInt(window.localStorage.getItem("ultraball"));
 		if ( cantidad > 0 ) {
-			if ( launch(ball) ) {
-				var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje capturado!"
-				document.getElementById("msg_txt").innerHTML = message;
-				document.getElementById("pkmn").className += " catch";
-				document.getElementById("wild").className += " ball_"+ball;
-				if ( window.localStorage.getItem("dx"+wild_pkmn[0]) != "capturado" ) {
-					timeout1 = setTimeout(function() {
-						document.getElementById("wild").className += " shiny";
-					}, 1000);
+			if ( click ) {
+				click = false;
+				if ( launch(ball) ) {
+					var message = "¡"+pk_dict[wild_pkmn[0]]["nombre"]+" salvaje capturado!"
+					document.getElementById("msg_txt").innerHTML = message;
+					document.getElementById("pkmn").className += " catch";
+					document.getElementById("wild").className += " ball_"+ball;
+					if ( window.localStorage.getItem("dx"+wild_pkmn[0]) != "capturado" ) {
+						timeout1 = setTimeout(function() {
+							document.getElementById("wild").className += " shiny";
+						}, 1000);
+					}
+					updatePokedex(); state = 5; run = true; 
+				} else {
+					var message = "¡El lanzamiento falló!"
+					last_message = message;
+					document.getElementById("msg_txt").innerHTML = message;
+					document.getElementById("pkmn").className += " fault";
+					timeout2 = setTimeout(function() {
+						document.getElementById("pkmn").className = document.getElementById("pkmn").className.replace(" fault","");
+					}, 500);
+					offset++; state = -1;
 				}
-				updatePokedex(); state = 4; run = true; 
-			} else {
-				var message = "¡El lanzamiento falló!"
-				last_message = message;
-				document.getElementById("msg_txt").innerHTML = message;
-				document.getElementById("pkmn").className += " fault";
-				timeout2 = setTimeout(function() {
-					document.getElementById("pkmn").className = document.getElementById("pkmn").className.replace(" fault","");
-				}, 500);
-				offset++; state = -1;
+				setTimeout(function() { click = true; }, 1000);
 			}
 		} else {
 			var message = "¡No quedan unidades!"
@@ -152,14 +161,18 @@ function wildCapture(ball) {
 }
 
 function wildRun() {
-	if ( run ) {
+	if ( run && click ) {
+		click = false;
+		var lider = parseInt(window.localStorage.getItem("lider"),10);
+		var nivel = parseInt(window.localStorage.getItem("lv"+lider),10);
 		var exp = Math.floor(wild_pkmn[2]/50);
-		var cash = Math.floor(wild_pkmn[2]/20);
+		var cash = Math.floor(wild_pkmn[2]/25) - nivel;
 		if ( state == 1 ) {
 			var msg = "Experiencia ganada: " + exp;
 			document.getElementById("msg_txt").innerHTML = msg;
 			if ( updateLevel(exp) ) state = 2;
 			else state = 3;
+			setTimeout(function() { click = true; }, 250);
 		} else if ( state == 2 ) {
 			var lider = window.localStorage.getItem("lider");
 			var pkm = pk_dict[window.localStorage.getItem("pk"+lider)]["nombre"];
@@ -167,6 +180,7 @@ function wildRun() {
 			var msg = "¡" + pkm  + " subió al nivel " + lvl + "!";
 			document.getElementById("msg_txt").innerHTML = msg;
 			state = 3;
+			setTimeout(function() { click = true; }, 500);
 		} else if ( state == 3 ) {
 			var msg = "Dinero encontrado: " + cash;
 			document.getElementById("msg_txt").innerHTML = msg;
@@ -174,12 +188,13 @@ function wildRun() {
 			if ( dinero > 9999999 ) dinero = 9999999;
 			window.localStorage.setItem("dinero", dinero);
 			state = 5;
+			setTimeout(function() { click = true; }, 250);
 		} else if ( state == 4 ) {
-			state = 5;
+			state = 5; click = true;
 		} else if ( state == 5 ) {
-			location.href = "./main.html";
+			bye()
 		} else {
-			state = 1;
+			state = 1; click = true;
 		}
 	}
 }
@@ -252,7 +267,8 @@ function defeated() {
 }
 
 function showStats() {
-	if ( !wait && state == 0 ) {
+	if ( !wait && click && state == 0 ) {
+		click = false;
 		last_message = document.getElementById("msg_txt").innerHTML
 		var lv = wild_pkmn[1]
 		var cp = wild_pkmn[2]
@@ -261,7 +277,7 @@ function showStats() {
 		document.getElementById("msg_txt").innerHTML = message;
 		timeout3 = setTimeout(function() {
 			if ( state == 0 ) document.getElementById("msg_txt").innerHTML = last_message;
-			wait = false;
+			click = true; wait = false;
 		}, 1000);
 		wait = true;
 	}

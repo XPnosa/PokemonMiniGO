@@ -16,22 +16,8 @@ var app = {
 };
 
 function ready() { 
-	//window.localStorage.clear();
-	if ( window.localStorage.getItem("pk0") == null ) {
-		window.localStorage.setItem("pk0", "025");
-		window.localStorage.setItem("lv0", 5);
-		window.localStorage.setItem("xp0", 250);
-		window.localStorage.setItem("cp0", cp_dict["025"]["CP"]);
-		window.localStorage.setItem("dx025", "capturado");
-		window.localStorage.setItem("pokeball", 10);
-		window.localStorage.setItem("superball", 0);
-		window.localStorage.setItem("ultraball", 0);
-		window.localStorage.setItem("dinero", 3000);
-		window.localStorage.setItem("lider", 0);
-		window.localStorage.setItem("ganar", 0);
-		window.localStorage.setItem("total", 0);
-	}
-	printMenu();
+	if ( window.localStorage.getItem("pk0") == null ) location.href="./inicial.html";
+	else printMenu();
 }
 
 function start() {
@@ -87,7 +73,3 @@ function dontBack(){
 function onBackKeyDown(e) {
 	e.preventDefault();
 }
-
-$(window).bind('resize',function(e) { null; });
-
-$(window).bind('orientationchange',function(e) { null; });

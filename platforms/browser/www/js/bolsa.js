@@ -69,7 +69,3 @@ function getCapturadas() {
 	}
 	return c;
 }
-
-$(window).bind('resize',function(e) { fitPartner(); });
-
-$(window).bind('orientationchange',function(e) { fitPartner(); });

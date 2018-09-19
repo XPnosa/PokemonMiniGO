@@ -232,6 +232,9 @@ td {
 	background: darkgoldenrod;
 	border: 3px outset goldenrod;
 }
+.bolsa {
+	display: none;
+}
 .disabled {
 	opacity: 0.5;
 	pointer-events: none;
@@ -292,10 +295,10 @@ td {
 #msg {
 	height: 50px;
 }
-#sub {
+#sub, #set {
 	height: 100px;
 }
-#msg, #sub, #content {
+#msg, #sub, #set, #content {
 	opacity: 0.9;
 	font-size: 1.25em;
 	background: #CCC;
@@ -311,6 +314,14 @@ td {
 #path, #pokemon, #bag {
 	padding: 10px;
 	margin: 0%;
+}
+#set {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+#set > center > div > img {
+	transition-timing-function: linear !important;
 }
 
 /* TYPES */
@@ -401,6 +412,16 @@ td {
 	#content, #shop {
 		font-size: 1.5em;
 	}
+	td.cell {
+		height: 120px !important;
+	}
+	.cell {
+		width: 20%;
+	}
+	.bolsa {
+		display: table-cell;
+		width: 25%;
+	}
 	table {
 		margin-top: 1em;
 	}
@@ -434,10 +455,8 @@ td {
 		height: 1.5em;
 	}
 	.stock {
-		height: 30px;
-	}
-	.cell {
-		height: 70px;
+		width: 45px;
+		height: 45px;
 	}
 	::-webkit-scrollbar {
 		width: 0.75em;
@@ -461,8 +480,17 @@ td {
 		font-size: 2.5em;
 		border-radius: 2.5em;
 	}
+	.cell {
+		font-size: 1.25em;
+	}
+	th.cell {
+		height: 60px !important;
+	}
 	#info, #content {
 		font-size: 2em;
+	}
+	#set > center > div > img {
+		padding: 0 1px !important;
 	}
 }
 
@@ -486,6 +514,9 @@ td {
 	#fondos, #precio {
 		width: 90%;
 	}
+	#set > center > div > img {
+		padding: 0 1px;
+	}
 }
 
 /* HORIZONTAL */
@@ -499,6 +530,13 @@ td {
 	#fondos, #precio {
 		width: 30%;
 	}
+	.cell {
+		width: 20%;
+	}
+	.bolsa {
+		display: table-cell;
+		width: 25%;
+	}
 	.extra, .vs {
 		display: none;
 	}
@@ -507,6 +545,9 @@ td {
 	}
 	.status > tbody > tr > td.stat {
 		padding: 7px;
+	}
+	#set > center > div > img {
+		padding: 0 3.333px;
 	}
 }
 
