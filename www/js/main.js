@@ -17,7 +17,10 @@ var app = {
 
 function ready() { 
 	if ( window.localStorage.getItem("pk0") == null ) location.href="./inicial.html";
-	else printMenu();
+	else {
+		if ( window.localStorage.getItem("carameloNormal") == null ) for (t=0;t<pk_types.length;t++) window.localStorage.setItem("caramelo"+pk_types[t], 0);
+		printMenu();
+	}
 }
 
 function start() {
@@ -32,7 +35,8 @@ function printMenu() {
 	'<input type="button" class="menu green" value="Pokemon" onclick="showPokemon();">' + 
 	'<input type="button" class="menu cyan" value="Tienda" onclick="showShop();">' + 
 	'<input type="button" class="menu blue" value="Ruta" onclick="showPath();">' + 
-	'<hr class="vs"><input type="button" class="menu black" value="Salir" onclick="closeApp();">';
+	'<hr class="vs">' + 
+	'<input type="button" class="menu black" value="Salir" onclick="closeApp();">';
 	document.getElementById("list").innerHTML = content;
 	document.getElementById("menu").style.display = "";
 }

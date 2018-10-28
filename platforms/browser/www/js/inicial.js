@@ -1,6 +1,6 @@
 var initial = 0;
 
-var choices = 3*7;
+var choices = 21;
 
 var app = {
 	initialize: function() {

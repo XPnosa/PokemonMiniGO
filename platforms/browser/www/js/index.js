@@ -1,6 +1,8 @@
 var xmlhttp = new XMLHttpRequest();
 
-var pk_dict, cp_dict, xp_dict;
+var pk_types = ["Normal","Fuego","Agua","Eléctrico","Planta","Hielo","Lucha","Veneno","Tierra","Volador","Psíquico","Bicho","Roca","Fantasma","Dragón","Acero","Siniestro","Hada"]
+
+var pk_dict, ev_dict, cp_dict, xp_dict;
 
 var last_pokemon = 807;
 
@@ -15,12 +17,23 @@ function setPkDict(filePath) {
 	xmlhttp.send();
 }
 
+function setEvDict(filePath) {
+	xmlhttp.open("GET", filePath, true);
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+			ev_dict = JSON.parse(xmlhttp.responseText);
+			setPkDict("json/pokedex.json");
+		}
+	};
+	xmlhttp.send();
+}
+
 function setCpDict(filePath) {
 	xmlhttp.open("GET", filePath, true);
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			cp_dict = JSON.parse(xmlhttp.responseText);
-			setPkDict("json/pokedex.json");
+			setEvDict("json/evol.json");
 		}
 	};
 	xmlhttp.send();

@@ -117,10 +117,16 @@ td {
 	left: 40%;
 	display: inline-block;
 }
-.pk_check {
+.pk_check, .pk_evol {
 	margin: 0px;
+}
+.pk_check {
 	right: 10px;
 	width: 20px;
+}
+.pk_evol {
+	right: 30px;
+	width: 30px;
 }
 .pk_img {
 	float: left;
@@ -175,6 +181,14 @@ td {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+.ev_type {
+	display: inline-block;
+	text-align: center;
+	margin: 10px;
+	font-size: 1em;
+	border: 3px solid;
+	border-radius: 100%;
+}
 
 /* INFO */
 .title {
@@ -211,11 +225,20 @@ td {
 	font-size: 1.25em;
 }
 
-/* SHOP */
+/* SHOP & ITEMS */
 #shop {
 	font-size: 1.25em;
 }
-#fondos, #precio, #comprar {
+#title {
+	height: 40px;
+	line-height: 30px;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 0px 10px black;
+}
+#fondos, #precio, #comprar, #caramelos {
 	display: inline-block;
 	margin: 5px;
 	padding: 5px;
@@ -223,14 +246,29 @@ td {
 	background: whitesmoke;
 	border: 3px outset silver;
 }
-#comprar {
+#comprar, #caramelos {
 	background: goldenrod;
 	border: 3px outset darkgoldenrod;
 	border-radius: 10px;
 }
-#comprar:active {
+#caramelos {
+	margin: 5px 10px 0px;
+}
+#comprar:active, #caramelos:active {
 	background: darkgoldenrod;
 	border: 3px outset goldenrod;
+}
+.candy {
+	display: inline-block;
+	margin: 4px;
+	padding: 2px;
+	font-size: 1em;
+	font-weight: bold;
+	border: 2px solid;
+	border-radius: 100%;
+	overflow: hidden;
+	word-break: keep-all;
+	text-overflow: ellipsis;
 }
 .bolsa {
 	display: none;
@@ -238,6 +276,9 @@ td {
 .disabled {
 	opacity: 0.5;
 	pointer-events: none;
+}
+.imposible {
+	filter: grayscale(100%);
 }
 
 /* OTHERS */
@@ -393,8 +434,12 @@ td {
 		text-shadow: 2px 2px 2px black;
 	}
 	.pk_check {
-		margin: 0px;
 		right: 20px;
+	}
+	.pk_evol {
+		right: 80px;
+	}
+	.pk_check, .pk_evol {
 		width: 40px;
 	}
 	.title {
@@ -502,6 +547,13 @@ td {
 		margin: 3% 5%;
 		padding: 3% 5%;
 	}
+	.ev_type {
+		height: 100px;
+		width: 90%;
+	}
+	.candy {
+		width: 25%;
+	}
 	.black, .white {
 		border-radius: 10px;
 	}
@@ -526,6 +578,13 @@ td {
 		height: 20%;
 		margin: 2% 5%;
 		padding: 2% 5%;
+	}
+	.ev_type {
+		height: 50px;
+		width: 45%;
+	}
+	.candy {
+		width: 15%;
 	}
 	#fondos, #precio {
 		width: 30%;
@@ -627,4 +686,9 @@ td {
 	0%   {filter: brightness(100%);}
 	50%  {filter: brightness(200%);}
 	100% {filter: brightness(100%);}
+}
+
+/* EXTRA */
+*:focus {
+	outline: none;
 }

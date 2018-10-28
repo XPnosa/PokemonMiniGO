@@ -47,16 +47,13 @@ function printSubmenu() {
 	var content = "<center style='height:100%;'><b>" + 
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(1)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_1.png' />" + 
-	"<br><span id='ball1' style='position: relative;top: -5px;'>" + 
-	pokeballs + "</span></div>" +
+	"<br><span id='ball1' style='position: relative;top: -5px;'>" + pokeballs + "</span></div>" +
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(2)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_2.png' />" + 
-	"<br><span id='ball2' style='position: relative;top: -5px;'>" + 
-	superballs + "</span></div>" +
+	"<br><span id='ball2' style='position: relative;top: -5px;'>" + superballs + "</span></div>" +
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(3)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_3.png' />" + 
-	"<br><span id='ball3' style='position: relative;top: -5px;'>" + 
-	ultraballs + "</span></div>" +
+	"<br><span id='ball3' style='position: relative;top: -5px;'>" + ultraballs + "</span></div>" +
 	"</b></center>";
 	document.getElementById("sub").innerHTML = content;
 }
@@ -72,27 +69,43 @@ function encounter() {
 	var pkmn = getRandId(last_pokemon);
 	var lvl = Math.floor( Math.random() * Math.floor( my_lv / 2 ) ) + Math.floor( my_lv / 2 ) + 1;
 	var cp = cp_dict[pkmn]["CP"] * lvl;
+	var ev = ev_dict[pkmn]["form"]
 	var ratio = 2;
+	var forma = 0;
 	var retry = 0;
 	var logged = false;
-	if ( my_lv >= 25 ) ratio = 1.5;
-	if ( my_lv >= 50 ) ratio = 1;
-	if ( my_lv >= 75 ) ratio = 0.5;
+	if ( my_lv >= 25 ) { ratio = 1.5; forma = 1; }
+	if ( my_lv >= 50 ) { ratio = 1; forma = 2; }
+	if ( my_lv >= 75 ) { ratio = 0.5; forma = 3; }
 	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) logged = true;
-	while ( my_cp < cp * ratio || ( logged && retry < help ) ) {
+	while ( my_cp < cp * ratio || ev > forma || ( logged && retry < help ) ) {
 		pkmn = getRandId(last_pokemon);
 		lvl = Math.floor( Math.random() * ( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 		cp = cp_dict[pkmn]["CP"] * lvl;
+		ev = ev_dict[pkmn]["form"]
 		if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) logged = true;
 		else logged = false;
 		retry++;
 	}
-	wildEnter(pkmn,lvl,cp);
+	wild_pkmn = [pkmn,lvl,cp]
+	var item = Math.floor( Math.random() * 10 );
+	if ( item > 0 ) wildEnter(pkmn,lvl,cp);
+	else wildCandy(pk_dict[pkmn]["tipo"][0])
+}
+
+function wildCandy(tipo) {
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Caramelo "+tipo+"!</b></center>";
+	document.getElementById("msg").innerHTML = message;
+	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/candy.png' /></center>"
+	document.getElementById("wild").innerHTML = wild;
+	fitPath(); document.getElementById("path").style.display = "";
+	var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipo));
+	if ( cantidad < 999 ) window.localStorage.setItem("caramelo"+tipo, cantidad+1);
+	state = 5; setTimeout(function() { run = true; click = true; }, 500);
 }
 
 function wildEnter(pkmn,lvl,cp) {
 	offset = 1; 
-	wild_pkmn = [pkmn,lvl,cp]
 	var ball = "";
 	if ( window.localStorage.getItem("dx"+pkmn) == "capturado" ) ball = "<img src='img/favicon.gif' style='height: 20px; margin: 10px; vertical-align: middle; float:'>";
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='pkmn/"+pkmn+".png' /></center>"
@@ -171,7 +184,7 @@ function wildRun() {
 			var msg = "Experiencia ganada: " + exp;
 			document.getElementById("msg_txt").innerHTML = msg;
 			if ( updateLevel(exp) ) state = 2;
-			else state = 3;
+			else state = 4;
 			setTimeout(function() { click = true; }, 250);
 		} else if ( state == 2 ) {
 			var lider = window.localStorage.getItem("lider");
@@ -182,6 +195,11 @@ function wildRun() {
 			state = 3;
 			setTimeout(function() { click = true; }, 500);
 		} else if ( state == 3 ) {
+			var msg = "¡Has obtenido caramelos!";
+			document.getElementById("msg_txt").innerHTML = msg;
+			state = 4;
+			setTimeout(function() { click = true; }, 500);
+		} else if ( state == 4 ) {
 			var msg = "Dinero encontrado: " + cash;
 			document.getElementById("msg_txt").innerHTML = msg;
 			var dinero = parseInt(window.localStorage.getItem("dinero"),10)+cash
@@ -189,8 +207,6 @@ function wildRun() {
 			window.localStorage.setItem("dinero", dinero);
 			state = 5;
 			setTimeout(function() { click = true; }, 250);
-		} else if ( state == 4 ) {
-			state = 5; click = true;
 		} else if ( state == 5 ) {
 			bye()
 		} else {
@@ -204,6 +220,7 @@ function updateLevel(xp) {
 	var lvl = parseInt(window.localStorage.getItem("lv"+lider),10);
 	var exp = parseInt(window.localStorage.getItem("xp"+lider),10);
 	var ganar = parseInt(window.localStorage.getItem("ganar"),10)+1;
+	var tipos = pk_dict[window.localStorage.getItem("pk"+lider)]["tipo"];
 	if ( ganar > 9999999 ) ganar = 9999999;
 	window.localStorage.setItem("ganar", ganar);
 	if ( lvl == 100 ) return false;
@@ -211,6 +228,18 @@ function updateLevel(xp) {
 	if ( exp+xp >= xp_dict[lvl+1] ) {
 		window.localStorage.setItem("lv"+lider, lvl+1);
 		if ( lvl == 99 ) window.localStorage.setItem("xp"+lider, xp_dict[lvl+1]);
+		if ( tipos.length == 1 ) {
+			var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+3;
+			if ( cantidad > 999 ) cantidad = 999;
+			window.localStorage.setItem("caramelo"+tipos[0],cantidad);
+		} else {
+			var cantidad1 = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+2;
+			if ( cantidad1 > 999 ) cantidad1 = 999;
+			window.localStorage.setItem("caramelo"+tipos[0],cantidad1);
+			var cantidad2 = parseInt(window.localStorage.getItem("caramelo"+tipos[1]))+1;
+			if ( cantidad2 > 999 ) cantidad2 = 999;
+			window.localStorage.setItem("caramelo"+tipos[1],cantidad2);
+		}
 		return true;
 	} else return false;
 }

@@ -106,8 +106,10 @@ function printBox(idx) {
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name' value='Nivel: "+lv+"' />";
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name pk_cp' value='CP: "+(cp*lv).toLocaleString()+"' />";
 	var checked = "";
+	var evolution = ev_dict[pkmn]["form"]
 	if ( selected.indexOf(idx) >= 0 ) checked = "checked"; 
 	if ( idx != lider ) pokemon += "<input type='checkbox' "+checked+" onclick='check();' class='pk_name pk_check' id='"+idx+"' value="+pkmn+" />";
+	if ( evolution == 0 || evolution == 1 ) pokemon += "<input type='button' onclick='evol("+idx+");' class='pk_name pk_evol' id='ev"+idx+"' value='🍬' />";
 	pokemon += "</div>";
 	var newcontent = document.createElement('div');
 	newcontent.innerHTML = pokemon;
@@ -168,8 +170,29 @@ function freePkmn() {
 		for ( i = 0 ; i < selected.length ; i++ ) {
 			var idx = selected[i];
 			window.localStorage.setItem("st"+idx, "ko");
+			getCandy(idx);
 		}
+		confirm("¡Has obtenido caramelos!")
 		location.reload();
+	}
+}
+
+function getCandy(idx) {
+	var nivel = Math.floor(parseInt(window.localStorage.getItem("lv"+idx),10)/25)+1;
+	var tipos = pk_dict[window.localStorage.getItem("pk"+idx)]["tipo"];
+	if ( tipos.length == 1 ) {
+		var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[0]));
+		var obtenido = Math.pow(2, nivel) * 3;
+		total = cantidad + obtenido;
+		if ( total > 999 ) total = 999;
+		window.localStorage.setItem("caramelo"+tipos[0],total);
+	}
+	else for (j=0;j<tipos.length;j++) {
+		var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[j]));
+		var obtenido = Math.pow(2, nivel) * (2-j);
+		total = cantidad + obtenido;
+		if ( total > 999 ) total = 999;
+		window.localStorage.setItem("caramelo"+tipos[j],total);
 	}
 }
 
@@ -199,6 +222,10 @@ function check() {
 	}
 	if ( selected.length > 0 ) document.getElementById("libre").className = "inactive delete";
 	else document.getElementById("libre").className = "inactive delete disabled";
+}
+
+function evol(idx) {
+	location.href="./evolucion.html?idx="+idx;
 }
 
 $(window).bind('resize',function(e) { fitBox(); });
