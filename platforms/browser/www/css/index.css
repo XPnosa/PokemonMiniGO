@@ -186,8 +186,8 @@ td {
 	text-align: center;
 	margin: 10px;
 	font-size: 1em;
-	border: 3px solid;
-	border-radius: 100%;
+	border: 5px solid;
+	border-radius: 10px;
 }
 
 /* INFO */
@@ -689,6 +689,6 @@ td {
 }
 
 /* EXTRA */
-*:focus {
+*:focus { 
 	outline: none;
 }
