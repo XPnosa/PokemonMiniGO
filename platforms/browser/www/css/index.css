@@ -550,6 +550,7 @@ td {
 	.ev_type {
 		height: 100px;
 		width: 90%;
+		font-size: 1.5em;
 	}
 	.candy {
 		width: 25%;
@@ -689,14 +690,20 @@ td {
 }
 
 /* EXTRA */
-*:focus { 
-	outline: none;
-}
+*:focus { outline: none; }
 @media (orientation: portrait) and (min-width:640px) {
 	.ev_type {
 		height: 240px;
 		font-size: 2.5em;
 		border-width: 12px;
 		border-radius: 50px;
+	}
+}
+@media (orientation: landscape) and (min-width:1200px) {
+	.ev_type {
+		height: 210px;
+		font-size: 2em;
+		border-width: 10px;
+		border-radius: 40px;
 	}
 }
