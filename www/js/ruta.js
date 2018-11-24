@@ -37,6 +37,10 @@ function start() {
 	setXpDict({0:0});
 }
 
+function cap(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function printSubmenu() {
 	var pokeballs = parseInt(window.localStorage.getItem("pokeball"),10);
 	var superballs = parseInt(window.localStorage.getItem("superball"),10);
@@ -88,19 +92,56 @@ function encounter() {
 		retry++;
 	}
 	wild_pkmn = [pkmn,lvl,cp]
-	var item = Math.floor( Math.random() * 10 );
-	if ( item > 0 ) wildEnter(pkmn,lvl,cp);
-	else wildCandy(pk_dict[pkmn]["tipo"][0])
+	var item = Math.floor( Math.random() * 100 );
+	if ( item < 10 ) wildCandy(pk_dict[pkmn]["tipo"]);
+	else if ( item < 20 ) wildMoney(my_lv);
+	else if ( item < 25 ) wildBalls(my_lv);
+	else wildEnter(pkmn,lvl,cp);
 }
 
-function wildCandy(tipo) {
-	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Caramelo "+tipo+"!</b></center>";
+function wildCandy(tipos) {
+	var tipo = ( tipos.length == 2 )?tipos[1]:tipos[0]
+	var caramelos = Math.floor( ( wild_pkmn[1] - 1 ) / 10 ) + 1;
+	var fix_name = ( caramelos == 1 )?"Caramelo":"Caramelos";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>"+caramelos+" "+fix_name+" "+tipo+"</b></center>";
 	document.getElementById("msg").innerHTML = message;
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/candy.png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
 	fitPath(); document.getElementById("path").style.display = "";
-	var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipo));
-	if ( cantidad < 999 ) window.localStorage.setItem("caramelo"+tipo, cantidad+1);
+	var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipo),10) + caramelos;
+	if ( cantidad < 999 ) window.localStorage.setItem("caramelo"+tipo, cantidad);
+	else window.localStorage.setItem("caramelo"+tipo, 999);
+	state = 5; setTimeout(function() { run = true; click = true; }, 500);
+}
+
+function wildMoney(nivel) {
+	var money = nivel * ( 20 + Math.floor( nivel / 10 ) )
+	var coins = ( money < 1000 )?"100":"1000";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Dinero recogido: "+money.toLocaleString()+"</b></center>";
+	document.getElementById("msg").innerHTML = message;
+	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/money_"+coins+".png' /></center>"
+	document.getElementById("wild").innerHTML = wild;
+	fitPath(); document.getElementById("path").style.display = "";
+	var cantidad = parseInt(window.localStorage.getItem("dinero"),10) + money;
+	if ( cantidad > 9999999 ) cantidad = 9999999;
+	window.localStorage.setItem("dinero", cantidad);
+	state = 5; setTimeout(function() { run = true; click = true; }, 500);
+}
+
+function wildBalls(nivel) {
+	var tipo, balls;
+	if ( nivel < 25 ) { tipo = "pokeball"; balls = Math.floor( nivel / 5 ); }
+	else if ( nivel < 50 ) { tipo = "superball"; balls = Math.floor( nivel / 10 ); }
+	else { tipo = "ultraball"; balls = Math.floor( nivel / 20 ); }
+	var fix = ( balls > 1 )?"s":"";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Encontraste "+balls+" "+cap(tipo+fix)+"</b></center>";
+	document.getElementById("msg").innerHTML = message;
+	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/"+tipo+".png' /></center>"
+	document.getElementById("wild").innerHTML = wild;
+	fitPath(); document.getElementById("path").style.display = "";
+	var cantidad = parseInt(window.localStorage.getItem(tipo),10) + balls;
+	if ( cantidad > 999 ) cantidad = 999;
+	window.localStorage.setItem(tipo, cantidad);
 	state = 5; setTimeout(function() { run = true; click = true; }, 500);
 }
 
