@@ -103,7 +103,7 @@ function wildCandy(tipos) {
 	var tipo = ( tipos.length == 2 )?tipos[1]:tipos[0]
 	var caramelos = Math.floor( ( wild_pkmn[1] - 1 ) / 10 ) + 1;
 	var fix_name = ( caramelos == 1 )?"Caramelo":"Caramelos";
-	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>"+caramelos+" "+fix_name+" "+tipo+"</b></center>";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Recibes "+caramelos+" "+fix_name+" "+tipo+"</b></center>";
 	document.getElementById("msg").innerHTML = message;
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/candy.png' /></center>"
 	document.getElementById("wild").innerHTML = wild;

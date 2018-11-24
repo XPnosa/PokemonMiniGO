@@ -31,11 +31,18 @@ function start() {
 function loadBox() {
 	fitBox();
 	var total = parseInt(window.localStorage.getItem("total"),10);
+	try { var tipo = decodeURI(window.location.search.substr(1).split("=")[1]) } catch(err) { null; }
 	var i = 0;
 	var refreshIntervalId = setInterval(function() {
 		if ( i <= ( total ) ) {
-			if ( window.localStorage.getItem("pk"+i) != null && window.localStorage.getItem("st"+i) != "ko" ) {
-				printBox(i);
+			if ( tipo == "undefined" ) {
+				if ( window.localStorage.getItem("pk"+i) != null && window.localStorage.getItem("st"+i) != "ko" ) {
+					printBox(i);
+				}
+			} else {
+				if ( window.localStorage.getItem("pk"+i) != null && pk_dict[window.localStorage.getItem("pk"+i)].tipo.indexOf(tipo) >= 0 && window.localStorage.getItem("st"+i) != "ko" ) {
+					printBox(i);
+				}
 			}
 			if ( i == total && !load_completed ) {
 				var legend = '<div onclick="searchBox();" class="active box" style="background-color: navy;"><div>Caja</div></div>' +
@@ -81,7 +88,7 @@ function setLeader(idx) {
 	var change = confirm("Tu compañero será " + pk_dict[pkmn].nombre);
 	if ( change ) {
 		window.localStorage.setItem("lider", idx);
-		window.history.back();
+		window.history.go(-2);
 	}
 }
 

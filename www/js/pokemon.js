@@ -46,7 +46,7 @@ function showBox() {
 	if (!e) var e = window.event;
 	e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
-	location.href = "caja.html";
+	location.href = "tipos.html";
 }
 
 function fitPartner() {
