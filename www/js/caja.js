@@ -1,3 +1,5 @@
+var candies = []
+
 var selected = []
 
 var collection = []
@@ -61,6 +63,7 @@ function loadBox() {
 		}
 		i++
 	}, 0);
+	for (c=0;c<pk_types.length;c++) candies[c] = 0;
 }
 
 function fitBox() {
@@ -179,8 +182,8 @@ function freePkmn() {
 			window.localStorage.setItem("st"+idx, "ko");
 			getCandy(idx);
 		}
-		confirm("¡Has obtenido caramelos!")
-		location.reload();
+		for ( c = 0 ; c < candies.length ; c++ ) if ( candies[c] > 999 ) candies[c] = 999;
+		location.href = './resumen.html?caramelos='+candies;
 	}
 }
 
@@ -193,6 +196,7 @@ function getCandy(idx) {
 		total = cantidad + obtenido;
 		if ( total > 999 ) total = 999;
 		window.localStorage.setItem("caramelo"+tipos[0],total);
+		candies[pk_types.indexOf(tipos[0])] += obtenido;
 	}
 	else for (j=0;j<tipos.length;j++) {
 		var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[j]));
@@ -200,6 +204,7 @@ function getCandy(idx) {
 		total = cantidad + obtenido;
 		if ( total > 999 ) total = 999;
 		window.localStorage.setItem("caramelo"+tipos[j],total);
+		candies[pk_types.indexOf(tipos[j])] += obtenido;
 	}
 }
 

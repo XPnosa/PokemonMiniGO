@@ -27,9 +27,9 @@ function printCandy() {
 	var content = '<div class="status"><center>'
 	for (i=0;i<pk_types.length;i++) {
 		caramelos.push(parseInt(window.localStorage.getItem("caramelo"+pk_types[i]),10));
-		content += '<input style="color: white; text-shadow: 1px 1px 1px black;" type="button" id="c'+i+'" title="'+pk_types[i]+'" onclick="switchInfo(this,'+i+')" class="candy '+pk_types[i]+'" value=" '+caramelos[i]+' "/>';
+		content += '<input style="color: white; text-shadow: 1px 1px 1px black;" type="button" id="c'+i+'" title="'+pk_types[i]+'" onclick="switchInfo(this,'+i+')" class="candy '+pk_types[i]+'" value=" x '+caramelos[i]+' "/>';
 		content += '<img id="n'+i+'" title="'+pk_types[i]+'" onclick="switchInfo(document.getElementById(\'c'+i+'\'),'+i+')" class="candy '+pk_types[i]+'" style=';
-		content += '"filter: brightness(50%) saturate(50%); border: 0; margin: 0; padding: 0; position: absolute; opacity: 0;" src="img/candy_go.png" />';
+		content += '"filter: brightness(75%) saturate(75%); border: 0; margin: 0; padding: 0; position: absolute; opacity: 0;" src="img/candy_go.png" />';
 	}
 	content += '</center></div>';
 	document.getElementById("content").innerHTML = content;
@@ -38,8 +38,8 @@ function printCandy() {
 }
 
 function switchInfo(obj,idx) {
-	if (obj.value.indexOf(' ') >= 0 ) obj.value = obj.title;
-	else  obj.value = ' ' + caramelos[idx] + ' ';
+	if (obj.value.indexOf(' x ') >= 0 ) obj.value = obj.title;
+	else obj.value = ' x ' + caramelos[idx] + ' ';
 }
 
 function fitContent() {

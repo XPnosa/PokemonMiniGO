@@ -244,7 +244,7 @@ td {
 	color: white;
 	text-shadow: 0px 0px 10px black;
 }
-#fondos, #precio, #comprar, #caramelos {
+#fondos, #precio, #comprar, #caramelos, #resumen {
 	display: inline-block;
 	margin: 5px;
 	padding: 5px;
@@ -257,12 +257,23 @@ td {
 	border: 3px outset darkgoldenrod;
 	border-radius: 10px;
 }
-#caramelos {
-	margin: 5px 10px 0px;
-}
 #comprar:active, #caramelos:active {
 	background: darkgoldenrod;
 	border: 3px outset goldenrod;
+}
+#caramelos {
+	margin: 5px 10px 0px;
+}
+#resumen {
+	color: white;
+	font-size: 1.25em;
+	font-weight: bold;
+	margin: 0px 10px 5px;
+	background: transparent;
+	border-color: transparent;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-shadow: 1px 1px 1px black;
 }
 .candy {
 	display: inline-block;
@@ -407,6 +418,9 @@ td {
 @media (max-width: 400px) {
 	.pk_types {
 		display: none;
+	}
+	.summary > tbody > tr > td {
+		line-height: 0.5;
 	}
 }
 
@@ -556,8 +570,8 @@ td {
 	.alt {
 		width: 42.5%;
 		height: 10%;
-		margin: 1% 3%;
-		padding: 1% 3%;
+		margin:1.5%;
+		padding: 2%;
 		font-size: 1em;
 	}
 	.ev_type {
@@ -596,8 +610,8 @@ td {
 	.alt {
 		width: 14%;
 		height: 7%;
-		margin: 1% 1%;
-		padding: 1% 1%;
+		margin: 0.75%;
+		padding: 1%;
 		font-size: 0.6em;
 	}
 	.ev_type {
