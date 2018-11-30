@@ -66,33 +66,14 @@ function loadBox() {
 	for (c=0;c<pk_types.length;c++) candies[c] = 0;
 }
 
-function fitBox() {
-	var h1 = document.getElementById("body").offsetHeight-50;
-	document.getElementById("pkbox").style.height = h1+"px";
-	if ( document.getElementById("legend").offsetHeight > 50 ) var h2 = document.getElementById("pkbox").offsetHeight-60;
-	else var h2 = document.getElementById("pkbox").offsetHeight-45;
-	document.getElementById("list").style.height = h2+"px";
-	var h3 = document.getElementById("body").offsetWidth-50;
-	try {
-		if ( h3 <= 350 ) document.getElementById("num").style.display = 'none';
-		else document.getElementById("num").style.display = '';
-	} catch(err) { null; }
-}
-
 function printLegend() {
-	var legend = '<div style="background-color: #111;" class="active"><div style="width:250px;">Accediendo al PC</div></div>' +
+	try { var tipo = decodeURI(window.location.search.substr(1).split("=")[1]) } catch(err) { null; }
+	if ( tipo == "undefined" ) var title = "Accediendo a todas las Cajas";
+	else var title = "Accediendo a la Caja " + tipo;
+	var legend = '<div style="background-color: #111;" class="active"><div style="width:250px;">'+title+'</div></div>' +
 	'<div class="init inactive"><div class="init">&nbsp;</div></div>'
 	document.getElementById("pkbox").innerHTML = "<legend id='legend'>"+legend+"</legend>" + 
 	"<div id='list'><img id='loading' title='Cargando...' src='img/loading.gif' /></div>";
-}
-
-function setLeader(idx) {
-	var pkmn = window.localStorage.getItem("pk"+idx);
-	var change = confirm("Tu compañero será " + pk_dict[pkmn].nombre);
-	if ( change ) {
-		window.localStorage.setItem("lider", idx);
-		window.history.go(-2);
-	}
 }
 
 function printBox(idx) {
@@ -174,6 +155,15 @@ function orderBox() {
 	}, 0);
 }
 
+function setLeader(idx) {
+	var pkmn = window.localStorage.getItem("pk"+idx);
+	var change = confirm("Tu compañero será " + pk_dict[pkmn].nombre);
+	if ( change ) {
+		window.localStorage.setItem("lider", idx);
+		window.history.go(-2);
+	}
+}
+
 function freePkmn() {
 	var exit = confirm("¿Liberar " + selected.length.toLocaleString() + " Pokemon?")
 	if ( exit ) {
@@ -238,6 +228,21 @@ function check() {
 
 function evol(idx) {
 	location.href="./evolucion.html?idx="+idx;
+}
+
+function fitBox() {
+	var h1 = document.getElementById("body").offsetHeight-50;
+	document.getElementById("pkbox").style.height = h1+"px";
+	if ( document.getElementById("legend").offsetHeight > 50 ) var h2 = document.getElementById("pkbox").offsetHeight-60;
+	else var h2 = document.getElementById("pkbox").offsetHeight-45;
+	document.getElementById("list").style.height = h2+"px";
+	var h3 = document.getElementById("body").offsetWidth-50;
+	try {
+		if ( h3 <= 350 ) document.getElementById("num").style.display = 'none';
+		else document.getElementById("num").style.display = '';
+	} catch(err) {
+		null;
+	}
 }
 
 $(window).bind('resize',function(e) { fitBox(); });

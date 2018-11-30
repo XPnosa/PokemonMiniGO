@@ -16,6 +16,7 @@ var app = {
 function start() {
 	fitContent();
 	printBag();
+	fitContent();
 }
 
 function printBag() {
@@ -31,15 +32,15 @@ function printBag() {
 	var comptelado = Math.floor((100*(vistas+capturadas))/(last_pokemon*2))
 	var content = '<table class="status">' +
 	'<tr><td style="width:64%"><b>Dinero en la bolsa</b>:</td><td>'+dinero.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
-	'<tr><td style="width:64%"><b>Pokeballs restantes</b>:</td><td>'+pokeball.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Pokéballs restantes</b>:</td><td>'+pokeball.toLocaleString()+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Superballs restantes</b>:</td><td>'+superball.toLocaleString()+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Ultraballs restantes</b>:</td><td>'+ultraball.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
-	'<tr><td style="width:64%"><b>Pokemon derrotados</b>:</td><td>'+ganar.toLocaleString()+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokemon capturados</b>:</td><td>'+total.toLocaleString()+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokemon liberados</b>:</td><td>'+libre.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
+	'<tr><td style="width:64%"><b>Pokémon derrotados</b>:</td><td>'+ganar.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Pokémon capturados</b>:</td><td>'+total.toLocaleString()+'</td></tr>' + 
+	'<tr><td style="width:64%"><b>Pokémon liberados</b>:</td><td>'+libre.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
 	'<tr><td style="width:64%"><b>Especies vistas</b>:</td><td>'+vistas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Especies capturadas</b>:</td><td>'+capturadas+'/'+last_pokemon+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokedex completada</b>:</td><td>'+comptelado+'%</td></tr></table>';
+	'<tr><td style="width:64%"><b>Pokédex completada</b>:</td><td>'+comptelado+'%</td></tr></table>';
 	var buttons = '<center><div onclick="getCandy()" id="caramelos">🍬</div></center>';
 	document.getElementById("content").innerHTML = content;
 	document.getElementById("bag").innerHTML += buttons;
@@ -52,6 +53,7 @@ function getLibres() {
 	for (i=0;i<=total;i++){
 		if ( window.localStorage.getItem("st"+i) == 'ko' ) c++;
 	}
+	if ( c > 9999999 ) c = 9999999;
 	return c;
 }
 
@@ -78,8 +80,10 @@ function getCandy() {
 }
 
 function fitContent() {
-	var h1 = document.getElementById("body").offsetHeight-75;
-	document.getElementById("content").style.height = h1+"px";
+	var h1 = document.getElementById("body").offsetHeight;
+	try { var h2 = document.getElementById("caramelos").offsetHeight; }
+	catch(err) { var h2 = 0; }
+	document.getElementById("content").style.height = (h1-h2-45)+"px";
 }
 
 $(window).bind('resize',function(e) { fitContent(); });

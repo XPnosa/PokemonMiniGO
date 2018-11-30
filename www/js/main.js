@@ -28,11 +28,11 @@ function start() {
 }
 
 function printMenu() {
-	document.getElementById("menu").innerHTML = "<center><legend style='padding: 10px;'><b class='subtitle'>Pokemon Mini Go</b></legend></center><div id='list'></div>";
+	document.getElementById("menu").innerHTML = "<center><legend style='padding: 10px;'><b class='subtitle'>Pokémon Mini Go</b></legend></center><div id='list'></div>";
 	var content = '<br />' + 
-	'<input type="button" class="menu red" value="Pokedex" onclick="showPokedex();">' + 
+	'<input type="button" class="menu red" value="Pokédex" onclick="showPokedex();">' + 
 	'<input type="button" class="menu yellow" value="Bolsa" onclick="showBag();">' + 
-	'<input type="button" class="menu green" value="Pokemon" onclick="showPokemon();">' + 
+	'<input type="button" class="menu green" value="Pokémon" onclick="showPokemon();">' + 
 	'<input type="button" class="menu cyan" value="Tienda" onclick="showShop();">' + 
 	'<input type="button" class="menu blue" value="Ruta" onclick="showPath();">' + 
 	'<hr class="vs">' + 

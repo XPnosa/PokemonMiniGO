@@ -84,7 +84,7 @@ function doEvo(evo,cpo,ev1,ev2) {
 	var cpn = parseInt(cpo)+parseInt(cp_dict[evo]["CP"])-parseInt(cp_dict[pkmn]["CP"]);
 	var ev = [ev1,ev2];
 	var p = pk_dict[pkmn]["nombre"];
-	if ( bool[0] || bool[1] ) confirm('Te faltan caramelos...');
+	if ( bool[0] || bool[1] ) confirm('Caramelos insuficientes...');
 	else if (confirm('¿Evolucionar a '+p+'?')) {
 		for (c=0;c<tipos.length;c++) {
 			var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[c]),10)-ev[c];

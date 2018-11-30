@@ -45,9 +45,12 @@ function printSubmenu() {
 	var pokeballs = parseInt(window.localStorage.getItem("pokeball"),10);
 	var superballs = parseInt(window.localStorage.getItem("superball"),10);
 	var ultraballs = parseInt(window.localStorage.getItem("ultraball"),10);
-	if ( pokeballs > 999 ) pokeballs = "<i>999+</i>";
-	if ( superballs > 999 ) superballs = "<i>999+</i>";
-	if ( ultraballs > 999 ) ultraballs = "<i>999+</i>";
+	if ( pokeballs > 999999 ) pokeballs = Math.floor( pokeballs / 1000000 ) + " M";
+	else if ( pokeballs > 999 ) pokeballs = Math.floor( pokeballs / 1000 ) + " K";
+	if ( superballs > 999999 ) superballs = Math.floor( superballs / 1000000 ) + " M";
+	else if ( superballs > 999 ) superballs = Math.floor( superballs / 1000 ) + " K";
+	if ( ultraballs > 999999 ) ultraballs = Math.floor( ultraballs / 1000000 ) + " M";
+	else if ( ultraballs > 999 ) ultraballs = Math.floor( ultraballs / 1000 ) + " K";
 	var content = "<center style='height:100%;'><b>" + 
 	"<div style='height:100%;display:inline-block;' onclick='wildCapture(1)'>" + 
 	"<img style='margin:10px; height:50px;' src='img/ball_1.png' />" + 
@@ -92,10 +95,10 @@ function encounter() {
 		retry++;
 	}
 	wild_pkmn = [pkmn,lvl,cp]
-	var item = Math.floor( Math.random() * 100 );
-	if ( item < 10 ) wildCandy(pk_dict[pkmn]["tipo"]);
-	else if ( item < 20 ) wildMoney(my_lv);
-	else if ( item < 25 ) wildBalls(my_lv);
+	var item = Math.floor( Math.random() * 50 );
+	if ( item < 2 ) wildCandy(pk_dict[pkmn]["tipo"]);
+	else if ( item < 4 ) wildMoney(my_lv);
+	else if ( item < 5 ) wildBalls(my_lv);
 	else wildEnter(pkmn,lvl,cp);
 }
 
@@ -103,7 +106,7 @@ function wildCandy(tipos) {
 	var tipo = ( tipos.length == 2 )?tipos[1]:tipos[0]
 	var caramelos = Math.floor( ( wild_pkmn[1] - 1 ) / 10 ) + 1;
 	var fix_name = ( caramelos == 1 )?"Caramelo":"Caramelos";
-	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Recibes "+caramelos+" "+fix_name+" "+tipo+"</b></center>";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Recibes "+caramelos+" "+fix_name+" "+tipo+"!</b></center>";
 	document.getElementById("msg").innerHTML = message;
 	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/candy.png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
@@ -116,10 +119,10 @@ function wildCandy(tipos) {
 
 function wildMoney(nivel) {
 	var money = nivel * ( 20 + Math.floor( nivel / 10 ) )
-	var coins = ( money < 1000 )?"100":"1000";
 	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Dinero recogido: "+money.toLocaleString()+"</b></center>";
 	document.getElementById("msg").innerHTML = message;
-	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/money_"+coins+".png' /></center>"
+	var filter = (money<=1000)?"hue-rotate(-45deg)grayscale(10%)":(money<=2000)?"grayscale(100%)":"grayscale(10%)"
+	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);filter:"+filter+";' src='img/coin.png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
 	fitPath(); document.getElementById("path").style.display = "";
 	var cantidad = parseInt(window.localStorage.getItem("dinero"),10) + money;
@@ -129,18 +132,18 @@ function wildMoney(nivel) {
 }
 
 function wildBalls(nivel) {
-	var tipo, balls;
-	if ( nivel < 25 ) { tipo = "pokeball"; balls = Math.floor( nivel / 5 ); }
-	else if ( nivel < 50 ) { tipo = "superball"; balls = Math.floor( nivel / 10 ); }
-	else { tipo = "ultraball"; balls = Math.floor( nivel / 20 ); }
+	var idx, tipo, balls;
+	if ( nivel < 25 ) { idx = 1; tipo = "pokeball"; balls = Math.floor( nivel / 5 ); }
+	else if ( nivel < 50 ) { idx = 2; tipo = "superball"; balls = Math.floor( nivel / 10 ); }
+	else { idx = 3; tipo = "ultraball"; balls = Math.floor( nivel / 20 ); }
 	var fix = ( balls > 1 )?"s":"";
-	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>Encontraste "+balls+" "+cap(tipo+fix)+"</b></center>";
+	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Has encontrado "+balls+" "+cap(tipo+fix).replace('Poke','Poké')+"!</b></center>";
 	document.getElementById("msg").innerHTML = message;
-	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/"+tipo+".png' /></center>"
+	var wild = "<center style='height:99%'><img id='pkmn' style='height:99%;width:auto;max-width:99%;position:relative;top:50%;transform:translateY(-50%);' src='img/ball_"+idx+""+balls+".png' /></center>"
 	document.getElementById("wild").innerHTML = wild;
 	fitPath(); document.getElementById("path").style.display = "";
 	var cantidad = parseInt(window.localStorage.getItem(tipo),10) + balls;
-	if ( cantidad > 999 ) cantidad = 999;
+	if ( cantidad > 9999999 ) cantidad = 9999999;
 	window.localStorage.setItem(tipo, cantidad);
 	state = 5; setTimeout(function() { run = true; click = true; }, 500);
 }
@@ -219,10 +222,10 @@ function wildRun() {
 		click = false;
 		var lider = parseInt(window.localStorage.getItem("lider"),10);
 		var nivel = parseInt(window.localStorage.getItem("lv"+lider),10);
-		var exp = Math.floor(wild_pkmn[2]/50);
+		var exp = Math.floor(wild_pkmn[2]/50) + nivel;
 		var cash = Math.floor(wild_pkmn[2]/25) - nivel;
 		if ( state == 1 ) {
-			var msg = "Experiencia ganada: " + exp;
+			var msg = "Experiencia ganada: " + exp.toLocaleString();
 			document.getElementById("msg_txt").innerHTML = msg;
 			if ( updateLevel(exp) ) state = 2;
 			else state = 4;
@@ -236,12 +239,12 @@ function wildRun() {
 			state = 3;
 			setTimeout(function() { click = true; }, 500);
 		} else if ( state == 3 ) {
-			var msg = "¡Has obtenido caramelos!";
+			var msg = "¡Has obtenido 3 Caramelos!";
 			document.getElementById("msg_txt").innerHTML = msg;
 			state = 4;
 			setTimeout(function() { click = true; }, 500);
 		} else if ( state == 4 ) {
-			var msg = "Dinero encontrado: " + cash;
+			var msg = "Dinero recogido: " + cash.toLocaleString();
 			document.getElementById("msg_txt").innerHTML = msg;
 			var dinero = parseInt(window.localStorage.getItem("dinero"),10)+cash
 			if ( dinero > 9999999 ) dinero = 9999999;
@@ -308,7 +311,8 @@ function launch(ball) {
 		window.localStorage.setItem("ultraball", cantidad-1);
 	}
 	cantidad = cantidad - 1;
-	if ( cantidad > 999 ) cantidad = "<i>999+</i>";
+	if ( cantidad > 999999 ) cantidad = Math.floor( cantidad / 1000000 ) + " M";
+	else if ( cantidad > 999 ) cantidad = Math.floor( cantidad / 1000 ) + " K";
 	document.getElementById("ball"+ball).innerHTML = cantidad
 	return catched(ball);
 }
