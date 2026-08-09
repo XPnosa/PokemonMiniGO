@@ -8473,5 +8473,2314 @@
     "peso": "44,5 kg",
     "nombre": "Zeraora",
     "altura": "1,5 m"
+  },
+  "808": {
+    "info_y": "Su cuerpo está compuesto de acero líquido. Funde las partículas de hierro y otros metales del subsuelo para luego absorberlas.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "Su cuerpo está compuesto de acero líquido. Funde las partículas de hierro y otros metales del subsuelo para luego absorberlas.",
+    "peso": "8,0 kg",
+    "nombre": "Meltan",
+    "altura": "0,2 m"
+  },
+  "809": {
+    "info_y": "En la antigüedad se le veneraba por su poder de crear hierro. Después de tres milenios, ha regresado misteriosamente.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "En la antigüedad se le veneraba por su poder de crear hierro. Después de tres milenios, ha regresado misteriosamente.",
+    "peso": "800,0 kg",
+    "nombre": "Melmetal",
+    "altura": "2,5 m"
+  },
+  "810": {
+    "info_y": "Al golpear con su baqueta todo lo que ve, se deja llevar por la emoción y su ritmo se vuelve cada vez más animado.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "La baqueta que posee Grookey se vuelve más flexible y resistente cuando absorbe la energía que emana de su cuerpo.",
+    "peso": "5,0 kg",
+    "nombre": "Grookey",
+    "altura": "0,3 m"
+  },
+  "811": {
+    "info_y": "Se concentra tanto en marcar un ritmo frenético que a veces ni oye las órdenes de su Entrenador.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Usa con habilidad sus dos baquetas, no solo para marcar ritmos contundentes, sino también para aporrear a sus adversarios en combate.",
+    "peso": "14,0 kg",
+    "nombre": "Thwackey",
+    "altura": "0,7 m"
+  },
+  "812": {
+    "info_y": "Cuando el líder del grupo es desafiado por otro, comienza una batalla de percusión tras la cual el vencedor se proclama líder.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Es de carácter tranquilo, pero no tolera a aquellos que quebrantan la armonía y los disciplina hasta que aprenden la lección.",
+    "peso": "90,0 kg",
+    "nombre": "Rillaboom",
+    "altura": "2,1 m"
+  },
+  "813": {
+    "info_y": "Las almohadillas de las patas concentran energía ígnea y, cuando alcanzan temperaturas muy altas, pueden causar un gran daño a sus adversarios.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "Desata su verdadera fuerza cuando su cuerpo entra en calor. Por eso hace ejercicios de calentamiento.",
+    "peso": "4,5 kg",
+    "nombre": "Scorbunny",
+    "altura": "0,3 m"
+  },
+  "814": {
+    "info_y": "Se enorgullece de sus variadas técnicas con los pies, pero, cuando su frente se calienta por las llamas, también propina tremendos cabezazos.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "Su suave pelaje le permite calentar energía ígnea con mayor facilidad y así expulsar llamas todavía más potentes.",
+    "peso": "9,0 kg",
+    "nombre": "Raboot",
+    "altura": "0,6 m"
+  },
+  "815": {
+    "info_y": "Maneja los balones de fuego que crea para mantener a raya a sus adversarios o cegarlos.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "Es de temperamento irascible, pero da lo mejor de sí mismo en combate cuando cuenta con un Entrenador en el que confía.",
+    "peso": "33,0 kg",
+    "nombre": "Cinderace",
+    "altura": "1,4 m"
+  },
+  "816": {
+    "info_y": "Es tan precavido que, cuando no le queda más remedio que combatir, siempre se camufla antes de atacar.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Dispara proyectiles de agua por la boca para hacer caer bayas de los árboles y comérselas. Su puntería es infalible.",
+    "peso": "4,0 kg",
+    "nombre": "Sobble",
+    "altura": "0,3 m"
+  },
+  "817": {
+    "info_y": "Pese a su falta de interés en general, es muy inteligente y protege su hogar colocando trampas.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Extiende su larga lengua recubierta de una sustancia viscosa a una velocidad imperceptible para abatir a sus presas hábilmente.",
+    "peso": "11,5 kg",
+    "nombre": "Drizzile",
+    "altura": "0,7 m"
+  },
+  "818": {
+    "info_y": "Muestra un comportamiento educado, pero en el fondo sigue siendo perezoso. En cuanto su Entrenador se gira, se pone a holgazanear.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Gracias a las lentes especiales de sus ojos, es capaz de percibir la temperatura corporal del adversario y así atacar sus puntos débiles.",
+    "peso": "45,2 kg",
+    "nombre": "Inteleon",
+    "altura": "1,9 m"
+  },
+  "819": {
+    "info_y": "Por mucho que se hinche a comer, le preocupa que le vuelva a entrar hambre, así que se guarda bayas en los carrillos y en la cola.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Guarda bayas en los carrillos. Cuando no le quedan, mete en su lugar piedras pequeñas para lidiar con el antojo.",
+    "peso": "2,5 kg",
+    "nombre": "Skwovet",
+    "altura": "0,3 m"
+  },
+  "820": {
+    "info_y": "Su cola es el doble de larga que su cuerpo. Envuelve con ella las bayas que tira de los árboles para llevárselas consigo.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Incluso en medio de un combate, si ve un árbol con bayas, no duda ni un segundo en ir a recolectarlas.",
+    "peso": "6,0 kg",
+    "nombre": "Greedent",
+    "altura": "0,6 m"
+  },
+  "821": {
+    "info_y": "Las hembras son más susceptibles que los machos y acribillarán a picotazos en un arrebato de furia a todo aquel que les manche las alas.",
+    "tipo": [
+      "Volador"
+    ],
+    "info_x": "Es de carácter valiente y temerario. Las marcas blancas que tiene alrededor de los ojos le sirven para espantar a los Pokémon más miedosos.",
+    "peso": "1,8 kg",
+    "nombre": "Rookidee",
+    "altura": "0,2 m"
+  },
+  "822": {
+    "info_y": "Gracias a su inteligencia, aprenderá a utilizar enseguida cualquier herramienta que sea capaz de manejar con el pico o con las patas.",
+    "tipo": [
+      "Volador"
+    ],
+    "info_x": "Dicen que su inteligencia superior se debe a que posee un cerebro más grande que el de otros Pokémon pájaro.",
+    "peso": "16,0 kg",
+    "nombre": "Corvisquire",
+    "altura": "0,8 m"
+  },
+  "823": {
+    "info_y": "Parte de sus alas se ha convertido en acero, pero es capaz de surcar los cielos con facilidad a pesar de su peso.",
+    "tipo": [
+      "Volador",
+      "Acero"
+    ],
+    "info_x": "El acero en el que se han convertido sus alas es de tal dureza que le permite surcar los cielos con brío sin inmutarse ante los ataques que reciba.",
+    "peso": "75,0 kg",
+    "nombre": "Corviknight",
+    "altura": "2,2 m"
+  },
+  "824": {
+    "info_y": "Es habitual verlo en el campo. Los pelos que tiene son sensores con los que percibe lo que ocurre a su alrededor.",
+    "tipo": [
+      "Bicho"
+    ],
+    "info_x": "Siempre está recopilando información, por lo que es muy inteligente, aunque su fuerza deja bastante que desear.",
+    "peso": "8,0 kg",
+    "nombre": "Blipbug",
+    "altura": "0,4 m"
+  },
+  "825": {
+    "info_y": "Está en constante crecimiento dentro del caparazón. Mientras se prepara para evolucionar, examina el exterior con sus poderes psíquicos.",
+    "tipo": [
+      "Bicho",
+      "Psíquico"
+    ],
+    "info_x": "Apenas se mueve, pero está vivo. Se cree que adquiere poderes psíquicos mientras permanece recluido en su caparazón sin comer ni beber.",
+    "peso": "19,5 kg",
+    "nombre": "Dottler",
+    "altura": "0,4 m"
+  },
+  "826": {
+    "info_y": "Se sirve de sus poderes psíquicos, con los que es capaz de percibir lo que ocurre en un radio de 10 km, para examinar sus alrededores.",
+    "tipo": [
+      "Bicho",
+      "Psíquico"
+    ],
+    "info_x": "Este Pokémon es conocido por su inteligencia. El gran tamaño de su cerebro es un indicio de la magnitud de sus poderes psíquicos.",
+    "peso": "40,8 kg",
+    "nombre": "Orbeetle",
+    "altura": "0,4 m"
+  },
+  "827": {
+    "info_y": "Prudente y astuto, borra con la cola las huellas que deja al huir tras robarle el alimento a otro Pokémon.",
+    "tipo": [
+      "Siniestro"
+    ],
+    "info_x": "Se sustenta con el alimento que roba a otros Pokémon. Las almohadillas de sus patas son tan blandas que no hace ningún ruido al caminar.",
+    "peso": "8,9 kg",
+    "nombre": "Nickit",
+    "altura": "0,6 m"
+  },
+  "828": {
+    "info_y": "Un Pokémon ágil y de afiladas garras que se alimenta de huevos y comida robados. Los Boltund son su enemigo natural.",
+    "tipo": [
+      "Siniestro"
+    ],
+    "info_x": "Marca a su presa sin ser advertido. Sigue el olor y, cuando el otro Pokémon baja la guardia, aprovecha para robarle.",
+    "peso": "19,9 kg",
+    "nombre": "Thievul",
+    "altura": "1,2 m"
+  },
+  "829": {
+    "info_y": "Muchos los crían tras quedar prendados de lo adorables que resultan cuando cantan dando vueltas empujados por la brisa.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Si planta su única extremidad inferior en la tierra y se expone a abundante luz solar, sus pétalos cobran un color vivo.",
+    "peso": "2,2 kg",
+    "nombre": "Gossifleur",
+    "altura": "0,4 m"
+  },
+  "830": {
+    "info_y": "El hilo fabricado a partir de su algodón es muy bello y brillante; uno de los productos estrella de la región de Galar.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Las semillas que tiene entre la pelusa son muy nutritivas. Arrastradas por el viento, devuelven la vitalidad a la flora y a otros Pokémon.",
+    "peso": "2,5 kg",
+    "nombre": "Eldegoss",
+    "altura": "0,5 m"
+  },
+  "831": {
+    "info_y": "Si le crece el pelo demasiado, no puede moverse. Las telas confeccionadas con lana de Wooloo son sorprendentemente resistentes.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Su lana rizada es tan acolchada que no se hace daño ni aunque se caiga por un precipicio.",
+    "peso": "6,0 kg",
+    "nombre": "Wooloo",
+    "altura": "0,6 m"
+  },
+  "832": {
+    "info_y": "Sus espléndidos cuernos sirven de reclamo para atraer al sexo opuesto. No los utiliza como arma.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Su lana es muy flexible. Las alfombras tejidas con ella adoptan una textura similar a la de las camas elásticas.",
+    "peso": "43,0 kg",
+    "nombre": "Dubwool",
+    "altura": "1,3 m"
+  },
+  "833": {
+    "info_y": "Un juego popular entre los niños consiste en levantar las ramas que estén mordiendo los Chewtle y ver cuál aguanta más en el aire.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Su gran incisivo no le ha terminado de salir. Cuando le molesta, juguetea con uno de sus compañeros mordisqueándole el cuerno.",
+    "peso": "8,5 kg",
+    "nombre": "Chewtle",
+    "altura": "0,3 m"
+  },
+  "834": {
+    "info_y": "Acecha a la orilla del agua. Cuando una presa se acerca a beber, estira el cuello y le pega un buen mordisco.",
+    "tipo": [
+      "Agua",
+      "Roca"
+    ],
+    "info_x": "Con sus fuertes mandíbulas serradas es capaz de destrozar rocas de un mordisco. Tiene un temperamento extremadamente violento.",
+    "peso": "115,5 kg",
+    "nombre": "Drednaw",
+    "altura": "1,0 m"
+  },
+  "835": {
+    "info_y": "Son muy glotones, por lo que ayudan a la gente a cambio de comida. Echan chispas al correr.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Al correr, genera electricidad por la base de la cola. Es muy popular entre los pastores de Galar.",
+    "peso": "13,5 kg",
+    "nombre": "Yamper",
+    "altura": "0,3 m"
+  },
+  "836": {
+    "info_y": "La electricidad le confiere una enorme fuerza en las patas. Su velocidad punta puede superar los 90 km/h sin problema.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "La electricidad que genera y envía a sus patas le ayuda a desplazarse rápidamente. Puede correr sin descanso durante tres días y tres noches.",
+    "peso": "34,0 kg",
+    "nombre": "Boltund",
+    "altura": "1,0 m"
+  },
+  "837": {
+    "info_y": "Las partes envejecidas de la corteza que se le desprenden se utilizan como combustible en lugar del carbón.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "En días despejados, sale a corretear por los prados y se come las hierbas que se le queden enredadas en su pata con forma de rueda.",
+    "peso": "12,0 kg",
+    "nombre": "Rolycoly",
+    "altura": "0,3 m"
+  },
+  "838": {
+    "info_y": "La montaña de carbón que lleva a lomos no se derrumba por mucho que corra debido al alquitrán que produce dentro de ella.",
+    "tipo": [
+      "Roca",
+      "Fuego"
+    ],
+    "info_x": "Su temperatura corporal asciende cuando se emociona. Corre de un lado a otro frenéticamente escupiendo fuego.",
+    "peso": "78,0 kg",
+    "nombre": "Carkol",
+    "altura": "1,1 m"
+  },
+  "839": {
+    "info_y": "Es de disposición amable, pero resulta temible si se enfada. Aplasta a sus adversarios con su cuerpo, que arde a 1500 ºC, y los calcina.",
+    "tipo": [
+      "Roca",
+      "Fuego"
+    ],
+    "info_x": "Intimida a sus adversarios con sus exagerados movimientos que esparcen a su alrededor el carbón de su ardiente espalda.",
+    "peso": "310,5 kg",
+    "nombre": "Coalossal",
+    "altura": "2,8 m"
+  },
+  "840": {
+    "info_y": "Vive dentro de una manzana. Si se separa de ella, su cuerpo se deshidrata y se queda sin fuerzas.",
+    "tipo": [
+      "Planta",
+      "Dragón"
+    ],
+    "info_x": "Crece alimentándose de la carne de una manzana, cuya piel refuerza con sus propios fluidos corporales para que no se pudra.",
+    "peso": "0,5 kg",
+    "nombre": "Applin",
+    "altura": "0,2 m"
+  },
+  "841": {
+    "info_y": "Usa fluidos corporales para reparar su manzana. Las de los más fuertes y curtidos en combate se vuelven de un color terroso.",
+    "tipo": [
+      "Planta",
+      "Dragón"
+    ],
+    "info_x": "Revolotea hasta encontrar una brecha en la defensa del rival, que aprovecha para atacar con un fluido tan ácido que puede disolver metales.",
+    "peso": "1,0 kg",
+    "nombre": "Flapple",
+    "altura": "0,3 m"
+  },
+  "842": {
+    "info_y": "Escupen una sustancia pegajosa para ahuyentar a los Lechonk que se acercan a lamerles el dulce néctar de la espalda.",
+    "tipo": [
+      "Planta",
+      "Dragón"
+    ],
+    "info_x": "Se alimenta principalmente de manzanas dulces, pero también de pequeños Pokémon de tipo Bicho que se sienten atraídos por su dulce néctar.",
+    "peso": "13,0 kg",
+    "nombre": "Appletun",
+    "altura": "0,4 m"
+  },
+  "843": {
+    "info_y": "Puesto que sus enormes orificios nasales están especializados en la expulsión de arena, no percibe bien los olores.",
+    "tipo": [
+      "Tierra"
+    ],
+    "info_x": "La saca del cuello, que puede inflarse y desinflarse como un globo, se vuelve más elástica con cada muda de piel.",
+    "peso": "7,6 kg",
+    "nombre": "Silicobra",
+    "altura": "2,2 m"
+  },
+  "844": {
+    "info_y": "La grava puntiaguda que mezcla con la arena que escupe se forma a partir de arena que ha compactado irregularmente con su saliva.",
+    "tipo": [
+      "Tierra"
+    ],
+    "info_x": "Estira y contrae su cuerpo al máximo para expulsar arena con tal potencia que puede mover incluso un camión.",
+    "peso": "65,5 kg",
+    "nombre": "Sandaconda",
+    "altura": "3,8 m"
+  },
+  "845": {
+    "info_y": "Si bien es sumamente desmemoriado, reducir al mínimo indispensable la energía que suministra al cerebro le permite destinar el resto al combate.",
+    "tipo": [
+      "Volador",
+      "Agua"
+    ],
+    "info_x": "Tiene por costumbre engullir todo de un bocado. Es más temible cuando está intentando ingerir una presa demasiado grande.",
+    "peso": "18,0 kg",
+    "nombre": "Cramorant",
+    "altura": "0,8 m"
+  },
+  "846": {
+    "info_y": "Carga contra sus presas con su dura y afilada mandíbula para acabar con ellas, pero es habitual que falle debido a su mala visión.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Solo puede nadar rápido en línea recta. Las bandadas de Wattrel atacan primero a los que les cuesta moverse por haber comido de más.",
+    "peso": "1,0 kg",
+    "nombre": "Arrokuda",
+    "altura": "0,5 m"
+  },
+  "847": {
+    "info_y": "Puede nadar a más de 100 nudos. Entabla encarnizadas batallas contra manadas de Finizen por la comida.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Hace girar la aleta caudal para impulsarse fuera del agua y devorar con violencia a los Wingull que anden volando cerca de la superficie.",
+    "peso": "30,0 kg",
+    "nombre": "Barraskewda",
+    "altura": "1,3 m"
+  },
+  "848": {
+    "info_y": "Es egoísta y caprichoso. Almacena veneno y electricidad en dos bolsas internas distintas.",
+    "tipo": [
+      "Eléctrico",
+      "Veneno"
+    ],
+    "info_x": "Puede beber aguas emponzoñadas sin problema. Las filtra mediante un órgano interno para crear un veneno al que él mismo es inmune.",
+    "peso": "11,0 kg",
+    "nombre": "Toxel",
+    "altura": "0,4 m"
+  },
+  "849": {
+    "info_y": "Cuando produce electricidad en su cuerpo tras beber agua estancada, emite un sonido rítmico similar al de un bajo que resuena a su alrededor.",
+    "tipo": [
+      "Eléctrico",
+      "Veneno"
+    ],
+    "info_x": "Posee un órgano en el pecho que genera electricidad. Al hacerlo, emite un sonido que recuerda al de un bajo eléctrico.",
+    "peso": "40,0 kg",
+    "nombre": "Toxtricity",
+    "altura": "1,6 m"
+  },
+  "850": {
+    "info_y": "Oprime a sus presas con su cuerpo candente. Una vez bien tostadas, las devora con fruición.",
+    "tipo": [
+      "Fuego",
+      "Bicho"
+    ],
+    "info_x": "Genera calor consumiendo el gas inflamable que almacena en su cuerpo. Los círculos amarillos del abdomen están particularmente calientes.",
+    "peso": "1,0 kg",
+    "nombre": "Sizzlipede",
+    "altura": "0,7 m"
+  },
+  "851": {
+    "info_y": "Posee una naturaleza agresiva. El peligro que entraña su cuerpo candente es considerable, aunque sus afilados colmillos no le van a la zaga.",
+    "tipo": [
+      "Fuego",
+      "Bicho"
+    ],
+    "info_x": "Cuando genera calor, su temperatura corporal alcanza aproximadamente los 800 °C. Usa el cuerpo a modo de látigo para lanzarse al ataque.",
+    "peso": "120,0 kg",
+    "nombre": "Centiskorch",
+    "altura": "3,0 m"
+  },
+  "852": {
+    "info_y": "Su inteligencia es similar a la de un niño de tres años. Sus tentáculos se desprenden a menudo, pero ni se inmuta, ya que se regeneran solos.",
+    "tipo": [
+      "Lucha"
+    ],
+    "info_x": "Emerge a tierra firme en busca de alimento. Su extrema curiosidad lo induce a golpear con los tentáculos todo lo que entra en su campo visual.",
+    "peso": "4,0 kg",
+    "nombre": "Clobbopus",
+    "altura": "0,6 m"
+  },
+  "853": {
+    "info_y": "Se aventura en tierra firme para buscar rivales contra los que luchar para medir su valía. Tras terminar el combate, regresa al mar.",
+    "tipo": [
+      "Lucha"
+    ],
+    "info_x": "Todo su cuerpo es una mole de puro músculo. Utiliza los tentáculos para ejecutar técnicas de estrangulamiento con una formidable potencia.",
+    "peso": "39,0 kg",
+    "nombre": "Grapploct",
+    "altura": "1,6 m"
+  },
+  "854": {
+    "info_y": "Si alguien lo bebe, entra en su cuerpo y le arrebata la energía vital desde dentro. Posee, además, un sabor espantoso.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Surgen cuando el alma de alguien que haya muerto en soledad posee un té a medio beber. Aparecen en hoteles y residencias.",
+    "peso": "0,2 kg",
+    "nombre": "Sinistea",
+    "altura": "0,1 m"
+  },
+  "855": {
+    "info_y": "Se esconde dentro de teteras y se vierte en tés a medio beber para generar un Sinistea y así propagar la especie.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Su cuerpo, hecho de té, tiene un sabor particular pero agradable. Sin embargo, beber demasiado puede resultar mortal.",
+    "peso": "0,4 kg",
+    "nombre": "Polteageist",
+    "altura": "0,2 m"
+  },
+  "856": {
+    "info_y": "Percibe los sentimientos de otros seres vivos. Hay que cuidar que no se exponga a emociones intensas mucho tiempo, pues le resulta agotador.",
+    "tipo": [
+      "Psíquico"
+    ],
+    "info_x": "Las emociones de los seres vivos que tiene alrededor fluyen en su cabeza constantemente, por lo que prefiere los entornos solitarios.",
+    "peso": "3,4 kg",
+    "nombre": "Hatenna",
+    "altura": "0,4 m"
+  },
+  "857": {
+    "info_y": "En cuanto encuentra a alguien que transmite emociones intensas, lo golpea con sus mechones para dejarlo sin sentido y acallarlas.",
+    "tipo": [
+      "Psíquico"
+    ],
+    "info_x": "Parece que percibe cualquier emoción exaltada como si fuera un ruido intolerable, incluso la felicidad.",
+    "peso": "4,8 kg",
+    "nombre": "Hattrem",
+    "altura": "0,6 m"
+  },
+  "858": {
+    "info_y": "Hay que ir con cuidado al adentrarse en un bosque en el que no haya indicio de seres vivos, pues puede tratarse del territorio de Hatterene.",
+    "tipo": [
+      "Psíquico",
+      "Hada"
+    ],
+    "info_x": "Inmoviliza con un rayo y destroza con su garra reforzada con poder psíquico a todo aquel que se adentre en el bosque que habita.",
+    "peso": "5,1 kg",
+    "nombre": "Hatterene",
+    "altura": "2,1 m"
+  },
+  "859": {
+    "info_y": "Forman manadas en las cuales se hacen rabiar los unos a los otros a base de trastadas para pulir sus desvergonzadas habilidades.",
+    "tipo": [
+      "Siniestro",
+      "Hada"
+    ],
+    "info_x": "Trata mal a aquellos por los que siente apego porque se irrita si no absorbe sentimientos negativos.",
+    "peso": "5,5 kg",
+    "nombre": "Impidimp",
+    "altura": "0,4 m"
+  },
+  "860": {
+    "info_y": "Este Pokémon absorbe los sentimientos negativos y los transforma en energía. Es popular entre los pesimistas.",
+    "tipo": [
+      "Siniestro",
+      "Hada"
+    ],
+    "info_x": "Recurre a ataques por sorpresa u otras estrategias ruines porque carece de confianza en su fuerza física.",
+    "peso": "12,5 kg",
+    "nombre": "Morgrem",
+    "altura": "0,8 m"
+  },
+  "861": {
+    "info_y": "Vive en lo más profundo del bosque. A pesar de haber evolucionado, no abandona las pequeñas bromas y las trastadas.",
+    "tipo": [
+      "Siniestro",
+      "Hada"
+    ],
+    "info_x": "Controla su cabello a placer. Suele enrollarse el pelo por todo el cuerpo para que le sirva de soporte muscular.",
+    "peso": "61,0 kg",
+    "nombre": "Grimmsnarl",
+    "altura": "1,5 m"
+  },
+  "862": {
+    "info_y": "Evoluciona tras haber librado numerosas peleas. El grito de guerra que profiere mientras pone los brazos en cruz atemoriza a cualquier rival.",
+    "tipo": [
+      "Siniestro",
+      "Normal"
+    ],
+    "info_x": "La potencia de su voz es realmente pasmosa. La técnica que usa para intimidar al rival mientras grita recibe el nombre de Obstrucción.",
+    "peso": "46,0 kg",
+    "nombre": "Obstagoon",
+    "altura": "1,6 m"
+  },
+  "863": {
+    "info_y": "Su devoción por la lucha ha propiciado que evolucionara y le ha conferido unas peligrosas garras que se convierten en dagas al extenderse.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "El pelo de la cabeza se le ha endurecido hasta el punto de parecer un yelmo de hierro. Posee un temperamento muy combativo.",
+    "peso": "28,0 kg",
+    "nombre": "Perrserker",
+    "altura": "0,8 m"
+  },
+  "864": {
+    "info_y": "Conviene tener cuidado con el cuerpo espectral que recubre su alma, pues quien lo toque podría acabar inerte como una piedra.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Su energía espiritual ha aumentado hasta hacerlo desprenderse de su base caliza. Protege el alma del núcleo con su cuerpo espectral.",
+    "peso": "0,4 kg",
+    "nombre": "Cursola",
+    "altura": "1,0 m"
+  },
+  "865": {
+    "info_y": "Repele ataques con las hojas de su duro puerro y contraataca con su tallo afilado. El puerro que le sirve de armamento sigue siendo comestible.",
+    "tipo": [
+      "Lucha"
+    ],
+    "info_x": "Los ejemplares que superan numerosos combates evolucionan y adoptan esta forma. Abandonan el terreno de combate en cuanto el puerro se seca.",
+    "peso": "117,0 kg",
+    "nombre": "Sirfetch’d",
+    "altura": "0,8 m"
+  },
+  "866": {
+    "info_y": "Se ha granjeado la simpatía de todo el mundo por sus cómicos movimientos. Emite poderes psíquicos por el motivo de su barriga.",
+    "tipo": [
+      "Hielo",
+      "Psíquico"
+    ],
+    "info_x": "Es un bailarín consumado de claqué. Agita su bastón de hielo mientras exhibe su destreza con gráciles pasos.",
+    "peso": "58,2 kg",
+    "nombre": "Mr. Rime",
+    "altura": "1,5 m"
+  },
+  "867": {
+    "info_y": "Su cuerpo, similar a una sombra, no debe tocarse bajo ningún concepto o se visualizarán los horribles recuerdos impregnados en la imagen.",
+    "tipo": [
+      "Tierra",
+      "Fantasma"
+    ],
+    "info_x": "Una poderosa maldición pesa sobre esta antigua imagen grabada, que ha cobrado vida tras adueñarse del alma de Yamask.",
+    "peso": "66,6 kg",
+    "nombre": "Runerigus",
+    "altura": "1,6 m"
+  },
+  "868": {
+    "info_y": "Si recibe un ataque, carga contra su rival y huye, ya sea gracias a haberlo cegado al recubrirlo de nata o a haberlo abrumado con su suculencia.",
+    "tipo": [
+      "Hada"
+    ],
+    "info_x": "Su cuerpo va aumentando de tamaño conforme absorbe aromas dulces, pero se desinfla al perder energía.",
+    "peso": "0,3 kg",
+    "nombre": "Milcery",
+    "altura": "0,2 m"
+  },
+  "869": {
+    "info_y": "La nata que producen los Alcremie tratados con cariño es un manjar tan exquisito que todos sus Entrenadores los colman de atenciones.",
+    "tipo": [
+      "Hada"
+    ],
+    "info_x": "Los dulces decorados por Alcremie hacen feliz a todo aquel que los ingiere gracias a la suma dulzura que los caracteriza.",
+    "peso": "0,5 kg",
+    "nombre": "Alcremie",
+    "altura": "0,3 m"
+  },
+  "870": {
+    "info_y": "El líder utiliza su cuerno, capaz de expandirse y contraerse, para ordenar a los demás que cambien la formación.",
+    "tipo": [
+      "Lucha"
+    ],
+    "info_x": "Este Pokémon consta de cinco subalternos y un líder, cuyas órdenes obedecen sin rechistar.",
+    "peso": "62,0 kg",
+    "nombre": "Falinks",
+    "altura": "3,0 m"
+  },
+  "871": {
+    "info_y": "Es tan cobarde que le basta con rozar un alga a la deriva para asustarse y liberar descargas. Sus labios no conducen la electricidad.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Produce electricidad al digerir los alimentos. Raspa las algas de las rocas con los cinco duros dientes que tiene para comérselas.",
+    "peso": "1,0 kg",
+    "nombre": "Pincurchin",
+    "altura": "0,3 m"
+  },
+  "872": {
+    "info_y": "Amplifica en sus órganos internos el frío que consigue al comer nieve y lo usa para crear sus púas como carámbanos.",
+    "tipo": [
+      "Hielo",
+      "Bicho"
+    ],
+    "info_x": "Se alimenta de la nieve acumulada en el terreno. Como adora la suave nieve virgen, irá comiendo montaña arriba hasta llegar a la cima.",
+    "peso": "3,8 kg",
+    "nombre": "Snom",
+    "altura": "0,3 m"
+  },
+  "873": {
+    "info_y": "Cuando revolotea, provoca ventiscas con sus enormes alas que liberan frío. Le encanta el agua limpia del deshielo.",
+    "tipo": [
+      "Hielo",
+      "Bicho"
+    ],
+    "info_x": "Puede percibir con sus antenas las corrientes atmosféricas. Impregna sus escamas de frío y las hace caer como si fuera nieve.",
+    "peso": "42,0 kg",
+    "nombre": "Frosmoth",
+    "altura": "1,3 m"
+  },
+  "874": {
+    "info_y": "Pasa el día observando el recorrido del sol. Se pasea con tranquilidad por las praderas con sus rocosas patas de más de 200 kg.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "Los elementos que componen las rocas de su cuerpo se han encontrado en lechos de roca muy alejados de su hábitat.",
+    "peso": "520,0 kg",
+    "nombre": "Stonjourner",
+    "altura": "2,5 m"
+  },
+  "875": {
+    "info_y": "El hielo que le recubre la cara es ligeramente salado. Llegó desde unas lejanas tierras gélidas transportado por las corrientes marinas.",
+    "tipo": [
+      "Hielo"
+    ],
+    "info_x": "En días calurosos, se reúne con sus congéneres y juntan el hielo de la cabeza para refrescarse los unos a los otros.",
+    "peso": "89,0 kg",
+    "nombre": "Eiscue",
+    "altura": "1,4 m"
+  },
+  "876": {
+    "info_y": "Siempre permanece junto a su Entrenador. Usa sus poderes psíquicos para predecir su conducta y atiende todas sus necesidades.",
+    "tipo": [
+      "Psíquico",
+      "Normal"
+    ],
+    "info_x": "Percibe con los cuernos los sentimientos positivos de otros seres vivos y los utiliza como energía.",
+    "peso": "28,0 kg",
+    "nombre": "Indeedee",
+    "altura": "0,9 m"
+  },
+  "877": {
+    "info_y": "Debido al pequeño tamaño de su estómago, si no come constantemente las semillas que guarda en los bolsillos, le entra hambre de inmediato.",
+    "tipo": [
+      "Eléctrico",
+      "Siniestro"
+    ],
+    "info_x": "Come semillas continuamente para aplacar el apetito, pero, cuando tiene demasiada hambre, pierde los estribos y se pone hecho una furia.",
+    "peso": "3,0 kg",
+    "nombre": "Morpeko",
+    "altura": "0,3 m"
+  },
+  "878": {
+    "info_y": "Puede levantar cargas de cinco toneladas. Al amanecer, se dirigen en manada a las cuevas en busca de los minerales de los que se alimentan.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "Raspa con la trompa puntiaguda las rocas duras para alimentarse de ellas. Es dócil y presta ayuda a los humanos con tareas que requieran fuerza.",
+    "peso": "100,0 kg",
+    "nombre": "Cufant",
+    "altura": "1,2 m"
+  },
+  "879": {
+    "info_y": "Es orgulloso y difícil de tratar. Aquellos con un tono de piel verde más vivo se ganan el respeto de sus congéneres.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "Llegó a Paldea hace mucho tiempo gracias a personas de una tierra lejana. Con su fuerza, puede arrastrar un avión sin problemas.",
+    "peso": "650,0 kg",
+    "nombre": "Copperajah",
+    "altura": "3,0 m"
+  },
+  "880": {
+    "info_y": "Produce electricidad con la robusta musculatura de la cola. El tamaño de la parte superior del cuerpo palidece en comparación con la inferior.",
+    "tipo": [
+      "Eléctrico",
+      "Dragón"
+    ],
+    "info_x": "La robustez de su tren inferior lo hacía invencible en la antigüedad, pero se extinguió tras comerse todas las plantas de las que se nutría.",
+    "peso": "190,0 kg",
+    "nombre": "Dracozolt",
+    "altura": "1,8 m"
+  },
+  "881": {
+    "info_y": "Antiguamente vivía en el mar y usaba el hielo del cuerpo para conservar los alimentos. Su extrema lentitud, sin embargo, lo condenó a la extinción.",
+    "tipo": [
+      "Eléctrico",
+      "Hielo"
+    ],
+    "info_x": "La parte superior del cuerpo está congelada y, al temblar, genera electricidad. Camina con suma dificultad.",
+    "peso": "150,0 kg",
+    "nombre": "Arctozolt",
+    "altura": "2,3 m"
+  },
+  "882": {
+    "info_y": "Exhibe con orgullo su inmensa capacidad motriz, que le permite superar los 60 km/h, pero solo puede respirar bajo el agua.",
+    "tipo": [
+      "Agua",
+      "Dragón"
+    ],
+    "info_x": "Su excelente capacidad motriz y la fuerza de su mandíbula lo hacían antaño invencible, pero dar caza a todas sus presas propició su extinción.",
+    "peso": "215,0 kg",
+    "nombre": "Dracovish",
+    "altura": "2,3 m"
+  },
+  "883": {
+    "info_y": "Aunque la piel de su rostro era capaz de resistir cualquier ataque, su dificultad para respirar acabó provocando su extinción.",
+    "tipo": [
+      "Agua",
+      "Hielo"
+    ],
+    "info_x": "Atrapa a sus presas congelando su entorno, pero la ubicación de la boca encima de la cabeza le genera dificultades para deglutirlas.",
+    "peso": "175,0 kg",
+    "nombre": "Arctovish",
+    "altura": "2,0 m"
+  },
+  "884": {
+    "info_y": "Su cuerpo metálico es robusto, pero acumula calor con tanta facilidad que se ve obligado a liberarlo a través de las rendijas de la cola.",
+    "tipo": [
+      "Acero",
+      "Dragón"
+    ],
+    "info_x": "Su cuerpo, compuesto de un metal especial, es tan liso como si tuviese un acabado de espejo. Además de ligero, es resistente a las rayaduras.",
+    "peso": "40,0 kg",
+    "nombre": "Duraludon",
+    "altura": "1,8 m"
+  },
+  "885": {
+    "info_y": "Se lanza a morder a los Clauncher a pesar de no alimentarse de ellos. Se dice que este hábito es un vestigio de cuando estaba vivo.",
+    "tipo": [
+      "Dragón",
+      "Fantasma"
+    ],
+    "info_x": "Al atardecer, recorren en manada la superficie marina a toda velocidad y juegan a darles golpecitos a los Pokémon que hay en el agua.",
+    "peso": "2,0 kg",
+    "nombre": "Dreepy",
+    "altura": "0,5 m"
+  },
+  "886": {
+    "info_y": "Almacena en los pulmones energía que luego expulsa. Lucha junto a un Dreepy y cuida de él hasta que alcanza la madurez.",
+    "tipo": [
+      "Dragón",
+      "Fantasma"
+    ],
+    "info_x": "Vuela a 200 km/h. Si pierde un combate, el Dreepy que lo acompaña no dudará un segundo en emprender la huida.",
+    "peso": "11,0 kg",
+    "nombre": "Drakloak",
+    "altura": "1,4 m"
+  },
+  "887": {
+    "info_y": "El más veloz de la manada siempre está rodeado de Dreepy deseosos de volar a velocidades supersónicas.",
+    "tipo": [
+      "Dragón",
+      "Fantasma"
+    ],
+    "info_x": "Es capaz de volver todo su cuerpo transparente al agudizar la mente. Los Dreepy que residen en sus cuernos también se vuelven invisibles.",
+    "peso": "50,0 kg",
+    "nombre": "Dragapult",
+    "altura": "3,0 m"
+  },
+  "888": {
+    "info_y": "Hay quien lo considera una suerte de figura fraterna a la par que rival de Zamazenta, un Pokémon sumido en un profundo letargo.",
+    "tipo": [
+      "Hada",
+      "Acero"
+    ],
+    "info_x": "Este Pokémon está considerado como un héroe de leyenda. Absorbe el metal para transformarlo y emplearlo como armamento.",
+    "peso": "110,0 kg",
+    "nombre": "Zacian",
+    "altura": "2,8 m"
+  },
+  "889": {
+    "info_y": "Con la apariencia de una estatua de piedra, este Pokémon se sumió en un letargo tan profundo que acabó cayendo en el olvido.",
+    "tipo": [
+      "Lucha",
+      "Acero"
+    ],
+    "info_x": "Este Pokémon se erigió en salvador de Galar, tras unir fuerzas con un rey de los hombres. Absorbe el metal para utilizarlo en combate.",
+    "peso": "210,0 kg",
+    "nombre": "Zamazenta",
+    "altura": "2,9 m"
+  },
+  "890": {
+    "info_y": "Fue hallado en el interior de un meteorito caído hace 20 000 años. Por lo visto, está relacionado con el misterio que rodea al fenómeno Dinamax.",
+    "tipo": [
+      "Veneno",
+      "Dragón"
+    ],
+    "info_x": "Se alimenta de la energía que brota de la tierra de Galar absorbiéndola por el núcleo del pecho.",
+    "peso": "950,0 kg",
+    "nombre": "Eternatus",
+    "altura": "20,0 m"
+  },
+  "891": {
+    "info_y": "Al tirar de los mechones blancos de la cabeza, acrecienta su espíritu luchador y empieza a acumular fuerza en el órgano de su bajo vientre.",
+    "tipo": [
+      "Lucha"
+    ],
+    "info_x": "Perfecciona su técnica mediante una estricta disciplina. Según la corriente marcial que siga, adoptará una forma u otra al evolucionar.",
+    "peso": "12,0 kg",
+    "nombre": "Kubfu",
+    "altura": "0,6 m"
+  },
+  "892": {
+    "info_y": "Vive en zonas montañosas en áreas recónditas, donde entrena corriendo por escarpados riscos para fortalecer sus piernas y refinar su técnica.",
+    "tipo": [
+      "Lucha",
+      "Siniestro",
+      "Agua"
+    ],
+    "info_x": "Su estilo de lucha se basa en abatir a sus rivales de un solo golpe. Se abalanza sobre ellos con su puño cincelado por el entrenamiento.",
+    "peso": "105,0 kg",
+    "nombre": "Urshifu",
+    "altura": "1,9 m"
+  },
+  "893": {
+    "info_y": "Las lianas que le brotan del cuerpo nutren y fertilizan el mantillo del bosque cuando se le desprenden.",
+    "tipo": [
+      "Siniestro",
+      "Planta"
+    ],
+    "info_x": "Viven en manada en la selva. Debido a su marcada agresividad, son muy temidos por otros Pokémon selváticos.",
+    "peso": "70,0 kg",
+    "nombre": "Zarude",
+    "altura": "1,8 m"
+  },
+  "894": {
+    "info_y": "Todo su cuerpo es un órgano electrógeno, cuya potencia sería suficiente para abastecer la región de Galar por completo.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Su cuerpo entero es energía eléctrica. Por lo visto, quitarle los anillos que lleva libera su poder oculto.",
+    "peso": "145,0 kg",
+    "nombre": "Regieleki",
+    "altura": "1,2 m"
+  },
+  "895": {
+    "info_y": "Todo su cuerpo es una gema de energía dragón cristalizada. Se cree que posee los poderes de todos los Pokémon dragón.",
+    "tipo": [
+      "Dragón"
+    ],
+    "info_x": "Cierta teoría afirma que la forma de sus brazos representa la cabeza de un Pokémon dragón ancestral, aunque esto no ha podido verificarse.",
+    "peso": "200,0 kg",
+    "nombre": "Regidrago",
+    "altura": "2,1 m"
+  },
+  "896": {
+    "info_y": "Cuenta con una fuerza física sobrecogedora. La máscara de hielo que le cubre el rostro es cien veces más dura que el diamante.",
+    "tipo": [
+      "Hielo"
+    ],
+    "info_x": "Libera un potente vaho gélido por las pezuñas. Un ser violento que no duda en tomar a la fuerza todo cuanto desea.",
+    "peso": "800,0 kg",
+    "nombre": "Glastrier",
+    "altura": "2,2 m"
+  },
+  "897": {
+    "info_y": "Amante de la quietud y la soledad, galopa por las tinieblas nocturnas absorbiendo la energía vital de toda criatura que esté durmiendo.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Examina su entorno con todos los sentidos, salvo la vista. Se dice que sus coces son capaces de robarle el alma a quien las recibe.",
+    "peso": "44,5 kg",
+    "nombre": "Spectrier",
+    "altura": "2,0 m"
+  },
+  "898": {
+    "info_y": "Legendario monarca del antiguo Galar. Posee el poder de sanar el espíritu y de hacer brotar la vegetación.",
+    "tipo": [
+      "Psíquico",
+      "Planta",
+      "Hielo",
+      "Fantasma"
+    ],
+    "info_x": "Un Pokémon muy compasivo agraciado con el poder de la curación. Reinó en Galar en tiempos remotos.",
+    "peso": "7,7 kg",
+    "nombre": "Calyrex",
+    "altura": "1,1 m"
+  },
+  "899": {
+    "info_y": "Sus orbes negros brillan con un fulgor misterioso cuando erige muros invisibles. El pelaje que se desprende de sus barbas es muy codiciado para crear cálidos ropajes para el invierno.",
+    "tipo": [
+      "Normal",
+      "Psíquico"
+    ],
+    "info_x": "Sus orbes negros brillan con un fulgor misterioso cuando erige muros invisibles. El pelaje que se desprende de sus barbas es muy codiciado para crear cálidos ropajes para el invierno.",
+    "peso": "95,1 kg",
+    "nombre": "Wyrdeer",
+    "altura": "1,8 m"
+  },
+  "900": {
+    "info_y": "Un Pokémon violento, tosco y rudo. Blande sus enormes y pesadas hachas de piedra para acabar con sus presas.",
+    "tipo": [
+      "Bicho",
+      "Roca"
+    ],
+    "info_x": "Gracias a un mineral extremadamente escaso que se encuentra en zonas volcánicas, parte de su cuerpo se volvió pétreo al evolucionar.",
+    "peso": "89,0 kg",
+    "nombre": "Kleavor",
+    "altura": "1,8 m"
+  },
+  "901": {
+    "info_y": "Tengo la teoría de que el terreno pantanoso de Hisui favoreció el desarrollo de su constitución robusta, así como su capacidad de manipular la turba a voluntad.",
+    "tipo": [
+      "Tierra",
+      "Normal"
+    ],
+    "info_x": "Tengo la teoría de que el terreno pantanoso de Hisui favoreció el desarrollo de su constitución robusta, así como su capacidad de manipular la turba a voluntad.",
+    "peso": "290,0 kg",
+    "nombre": "Ursaluna",
+    "altura": "2,4 m"
+  },
+  "902": {
+    "info_y": "Su capacidad de salto es asombrosa. La ira de sus camaradas caídos le confiere un tono rojizo a su cuerpo.",
+    "tipo": [
+      "Agua",
+      "Fantasma"
+    ],
+    "info_x": "Su cuerpo está envuelto en las almas de los compañeros que perecieron durante el arduo viaje para regresar al río que los vio nacer.",
+    "peso": "110,0 kg",
+    "nombre": "Basculegion",
+    "altura": "3,0 m"
+  },
+  "903": {
+    "info_y": "Gracias a su fortaleza física y potente veneno, ninguna especie de las alturas heladas le planta cara. Es de personalidad solitaria y no forma manadas.",
+    "tipo": [
+      "Lucha",
+      "Veneno"
+    ],
+    "info_x": "Gracias a su fortaleza física y potente veneno, ninguna especie de las alturas heladas le planta cara. Es de personalidad solitaria y no forma manadas.",
+    "peso": "43,0 kg",
+    "nombre": "Sneasler",
+    "altura": "1,3 m"
+  },
+  "904": {
+    "info_y": "Posee un carácter feroz y agresivo. Las puntas de sus púas venenosas son dentadas, por lo que no resulta fácil extraerlas una vez que se clavan.",
+    "tipo": [
+      "Siniestro",
+      "Veneno"
+    ],
+    "info_x": "Sus púas tóxicas reaccionan como acto reflejo ante cualquier movimiento, por lo que ensartará todo lo que se acerque incluso mientras duerme.",
+    "peso": "60,5 kg",
+    "nombre": "Overqwil",
+    "altura": "2,5 m"
+  },
+  "905": {
+    "info_y": "Su llegada de allende el mar significa el fin del duro invierno. De acuerdo con el folclore, su amor siempre trae consigo un soplo de vida nueva a Hisui.",
+    "tipo": [
+      "Hada",
+      "Volador"
+    ],
+    "info_x": "Su llegada de allende el mar significa el fin del duro invierno. De acuerdo con el folclore, su amor siempre trae consigo un soplo de vida nueva a Hisui.",
+    "peso": "48,0 kg",
+    "nombre": "Enamorus",
+    "altura": "1,6 m"
+  },
+  "906": {
+    "info_y": "Su cuerpo desprende una dulce fragancia que embriaga a quien tiene a su alrededor. Esta se intensifica al exponerse a los rayos del sol.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Su sedoso pelaje se asemeja en composición a las plantas. Se lava la cara con diligencia para que no se le seque.",
+    "peso": "4,1 kg",
+    "nombre": "Sprigatito",
+    "altura": "0,4 m"
+  },
+  "907": {
+    "info_y": "La dureza de su pelaje cambia según su estado de ánimo. Cuando se prepara para combatir, se vuelve duro y punzante como agujas.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Maneja diestramente la vid oculta bajo su largo pelaje y propina latigazos al enemigo con el capullo endurecido de la punta.",
+    "peso": "12,2 kg",
+    "nombre": "Floragato",
+    "altura": "0,9 m"
+  },
+  "908": {
+    "info_y": "Después de desviar hábilmente la atención del oponente, le lanza sus bombas florales rellenas de polen y las hace estallar sin que se dé cuenta.",
+    "tipo": [
+      "Planta",
+      "Siniestro"
+    ],
+    "info_x": "Se sirve de la luz que reflejan los tricomas de su manto de hojas para camuflar la vid y crear la ilusión óptica de que la flor flota en el aire.",
+    "peso": "31,2 kg",
+    "nombre": "Meowscarada",
+    "altura": "1,5 m"
+  },
+  "909": {
+    "info_y": "Como su saca de fuego es pequeña, la energía ígnea que rebosa se libera por la muesca de su cabeza en forma de una trémula llama.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "Yace sobre rocas calientes, cuyo calor transforma en energía ígnea tras absorberlo por sus escamas rectangulares.",
+    "peso": "9,8 kg",
+    "nombre": "Fuecoco",
+    "altura": "0,4 m"
+  },
+  "910": {
+    "info_y": "Sus cuerdas vocales y la válvula de su saca de fuego están estrechamente relacionadas. Emite sonidos guturales al expeler llamas.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "La mezcla de energía ígnea con el exceso de su propia fuerza vital ha tomado la forma de una bola de fuego de aspecto oval sobre su cabeza.",
+    "peso": "30,7 kg",
+    "nombre": "Crocalor",
+    "altura": "1,0 m"
+  },
+  "911": {
+    "info_y": "Su dulce canto calma el espíritu de quien lo oye. Achicharra a sus enemigos con llamas que llegan a alcanzar los 3000 ºC.",
+    "tipo": [
+      "Fuego",
+      "Fantasma"
+    ],
+    "info_x": "Se dice que el pájaro flamígero al que da forma su canto es un espíritu que moraba en la bola de fuego que le coronaba la cabeza.",
+    "peso": "326,5 kg",
+    "nombre": "Skeledirge",
+    "altura": "1,6 m"
+  },
+  "912": {
+    "info_y": "La fuerza de sus patas le permite nadar incluso por las más fuertes corrientes fluviales. Adora la pulcritud y peca de inflexible en su actitud.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Un Pokémon llegado hace tiempo desde tierras lejanas y ya establecido en la región. El gel que secreta por las plumas repele el agua y la mugre.",
+    "peso": "6,1 kg",
+    "nombre": "Quaxly",
+    "altura": "0,5 m"
+  },
+  "913": {
+    "info_y": "Un Pokémon diligente que ha creado su propio estilo de danza tras observar los movimientos de humanos y Pokémon de varias regiones.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Fortalece las extremidades corriendo con tesón por los bajíos. Compite con los suyos para ver cuál posee una técnica más grácil con las patas.",
+    "peso": "21,5 kg",
+    "nombre": "Quaxwell",
+    "altura": "1,2 m"
+  },
+  "914": {
+    "info_y": "Embelesa a quien lo ve con una danza que rebosa de exotismo y corta a sus rivales con sus plumas ornamentales hechas de agua.",
+    "tipo": [
+      "Agua",
+      "Lucha"
+    ],
+    "info_x": "Realiza una exótica danza mientras controla la tremenda fuerza de sus extremidades, capaces de hacer volcar un camión de una patada.",
+    "peso": "61,9 kg",
+    "nombre": "Quaquaval",
+    "altura": "1,8 m"
+  },
+  "915": {
+    "info_y": "Se alimenta únicamente de los más selectos manjares. Su cuerpo despide un olor herbáceo que los Pokémon de tipo Bicho detestan.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Posee un olfato muy desarrollado que emplea únicamente para buscar comida, actividad a la que dedica el día entero.",
+    "peso": "10,2 kg",
+    "nombre": "Lechonk",
+    "altura": "0,5 m"
+  },
+  "916": {
+    "info_y": "Emana una fragancia dulce y almizclada por todo el cuerpo que desarma por completo a los Pokémon hembra.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Su piel suave y lustrosa es su mayor orgullo. Desprende una fragancia concentrada por la punta de la cola.",
+    "peso": "120,0 kg",
+    "nombre": "Oinkologne",
+    "altura": "1,0 m"
+  },
+  "917": {
+    "info_y": "El hilo que secreta por la parte trasera es fuerte como el alambre. Su resistencia es un misterio que a día de hoy aún se sigue estudiando.",
+    "tipo": [
+      "Bicho"
+    ],
+    "info_x": "La bola de hilo que le rodea el cuerpo es lo bastante elástica como para repeler las guadañas de los Scyther, su enemigo natural.",
+    "peso": "4,0 kg",
+    "nombre": "Tarountula",
+    "altura": "0,3 m"
+  },
+  "918": {
+    "info_y": "Protege su territorio cubriéndolo con una tela de hilo resistente y pegajoso que actúa como una trampa frente a los intrusos.",
+    "tipo": [
+      "Bicho"
+    ],
+    "info_x": "Se adhiere con su hilo a ramas y techos, por los que se desplaza en silencio. Acaba con su presa antes de que esta se percate de su presencia.",
+    "peso": "16,5 kg",
+    "nombre": "Spidops",
+    "altura": "1,0 m"
+  },
+  "919": {
+    "info_y": "Su estilo de lucha característico aprovecha su formidable capacidad de salto para esquivar los ataques del rival mientras lo va dañando.",
+    "tipo": [
+      "Bicho"
+    ],
+    "info_x": "Mantiene plegado su tercer par de patas, cuya fuerza le permite saltar a más de 10 m de altura para huir en caso de apuro.",
+    "peso": "1,0 kg",
+    "nombre": "Nymble",
+    "altura": "0,2 m"
+  },
+  "920": {
+    "info_y": "Es incapaz de mantener durante mucho tiempo su modo asalto, con el tercer par de patas extendido, por el agotamiento que le produce.",
+    "tipo": [
+      "Bicho",
+      "Siniestro"
+    ],
+    "info_x": "Cuando decide luchar sin cuartel, se alza con su tercer par de patas y entra en modo asalto. Acaba con el rival en un abrir y cerrar de ojos.",
+    "peso": "17,5 kg",
+    "nombre": "Lokix",
+    "altura": "1,0 m"
+  },
+  "921": {
+    "info_y": "Sus almohadillas le permiten liberar electricidad. Cuando logra erguirse sobre las patas traseras, usa las palmas para soltar descargas eléctricas.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Como las bolsas de sus mejillas están poco desarrolladas, genera electricidad frotándolas con las almohadillas de sus patas delanteras.",
+    "peso": "2,5 kg",
+    "nombre": "Pawmi",
+    "altura": "0,3 m"
+  },
+  "922": {
+    "info_y": "Usa un arte marcial caracterizado por emplear las patas delanteras para asestar golpes y liberar descargas eléctricas al mismo tiempo.",
+    "tipo": [
+      "Eléctrico",
+      "Lucha"
+    ],
+    "info_x": "Cuando su manada se ve amenazada, atacan a la vanguardia usando un arte marcial caracterizado por el empleo de descargas eléctricas.",
+    "peso": "6,5 kg",
+    "nombre": "Pawmo",
+    "altura": "0,4 m"
+  },
+  "923": {
+    "info_y": "Su mullido pelaje actúa como una batería. Es capaz de almacenar tanta electricidad como un coche eléctrico.",
+    "tipo": [
+      "Eléctrico",
+      "Lucha"
+    ],
+    "info_x": "Este Pokémon es normalmente bastante calmado, pero, una vez en combate, derriba a sus rivales con movimientos de una velocidad vertiginosa.",
+    "peso": "41,0 kg",
+    "nombre": "Pawmot",
+    "altura": "0,9 m"
+  },
+  "924": {
+    "info_y": "Siempre van en pareja. Cuando encuentran comida, la dividen en dos partes idénticas para compartirla.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Cuando encuentran un material que les parece útil para su nido, lo recortan con sus incisivos y lo acarrean, todo en perfecta compenetración.",
+    "peso": "1,8 kg",
+    "nombre": "Tandemaus",
+    "altura": "0,3 m"
+  },
+  "925": {
+    "info_y": "En combate, los dos más grandes luchan a la vez que defienden a las crías. Cuando se enfrentan a adversarios fuertes, todos se unen a la refriega.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Dos crías aparecieron de la noche a la mañana. Podrían ser familia, pero no se sabe a ciencia cierta.",
+    "peso": "2,8 kg",
+    "nombre": "Maushold",
+    "altura": "0,3 m"
+  },
+  "926": {
+    "info_y": "La levadura de su aliento es muy útil en la cocina, por lo que la gente ha cuidado de este Pokémon desde hace mucho tiempo.",
+    "tipo": [
+      "Hada"
+    ],
+    "info_x": "Resulta húmedo y suave al tacto. Hace fermentar las cosas a su alrededor con la levadura de su aliento.",
+    "peso": "10,9 kg",
+    "nombre": "Fidough",
+    "altura": "0,3 m"
+  },
+  "927": {
+    "info_y": "La superficie de su piel se endurece cuando se expone a un calor intenso. Su cuerpo desprende un fragante aroma.",
+    "tipo": [
+      "Hada"
+    ],
+    "info_x": "El fragante aroma que despide su cuerpo favorece el crecimiento del trigo, por lo que lo aprecian mucho en las comunidades agrícolas.",
+    "peso": "14,9 kg",
+    "nombre": "Dachsbun",
+    "altura": "0,5 m"
+  },
+  "928": {
+    "info_y": "Convierte los nutrientes de su dieta en aceite, que almacena en el fruto de la cabeza. Puede pasar una semana sin beber ni comer nada.",
+    "tipo": [
+      "Planta",
+      "Normal"
+    ],
+    "info_x": "Se defiende de sus rivales segregando por el fruto de su cabeza un aceite tan amargo y agrio que cualquiera daría un respingo al probarlo.",
+    "peso": "6,5 kg",
+    "nombre": "Smoliv",
+    "altura": "0,3 m"
+  },
+  "929": {
+    "info_y": "Cuando los frutos de su cabeza han madurado lo suficiente tras haber estado expuesto al sol, abandona los asentamientos humanos.",
+    "tipo": [
+      "Planta",
+      "Normal"
+    ],
+    "info_x": "No duda en compartir su delicioso aceite de fresco aroma. Convive con los seres humanos desde hace mucho tiempo.",
+    "peso": "11,9 kg",
+    "nombre": "Dolliv",
+    "altura": "0,6 m"
+  },
+  "930": {
+    "info_y": "Repele a sus enemigos disparando su exquisito y fragante aceite a una presión que bastaría para partir una roca.",
+    "tipo": [
+      "Planta",
+      "Normal"
+    ],
+    "info_x": "Es pacífico y compasivo. Comparte su delicioso y nutritivo aceite con los Pokémon que han perdido las fuerzas.",
+    "peso": "48,2 kg",
+    "nombre": "Arboliva",
+    "altura": "1,4 m"
+  },
+  "931": {
+    "info_y": "Los Squawkabilly de plumas verdes son los predominantes. Arman mucho ruido al buscar comida por las mañanas y las noches.",
+    "tipo": [
+      "Normal",
+      "Volador"
+    ],
+    "info_x": "Prefieren vivir en las ciudades. Forman bandadas según el color de su plumaje y libran disputas por el control de los territorios.",
+    "peso": "2,4 kg",
+    "nombre": "Squawkabilly",
+    "altura": "0,6 m"
+  },
+  "932": {
+    "info_y": "Arrastra el cuerpo por el suelo al desplazarse, por lo que deja un rastro de sal. La fabrica y repone continuamente en su interior.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "Surgen de estratos salinos subterráneos. Antaño se los tenía en alta estima, pues compartían su sal, un mineral por entonces muy preciado.",
+    "peso": "16,0 kg",
+    "nombre": "Nacli",
+    "altura": "0,4 m"
+  },
+  "933": {
+    "info_y": "Comprime sal de roca en el interior del cuerpo y crea unos proyectiles salinos capaces de perforar placas de metal.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "Escupe sal para recubrir con ella a sus presas y someterlas a un proceso de salazón que extrae la humedad de sus cuerpos.",
+    "peso": "105,0 kg",
+    "nombre": "Naclstack",
+    "altura": "0,6 m"
+  },
+  "934": {
+    "info_y": "Muchos Pokémon se arremolinan alrededor de Garganacl para lamer su sal rica en minerales.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "Cuando encuentra a un Pokémon herido, frota las puntas de los dedos para rociarlo con sal y curar rápidamente incluso las heridas más graves.",
+    "peso": "240,0 kg",
+    "nombre": "Garganacl",
+    "altura": "2,3 m"
+  },
+  "935": {
+    "info_y": "Sus potentes llamas alcanzan los 1000 ºC cuando combate. Siente predilección por las bayas con un alto contenido graso.",
+    "tipo": [
+      "Fuego"
+    ],
+    "info_x": "Nació de unos restos de carbón consumidos por las llamas. Reta a rivales poderosos para saciar su ardiente espíritu combativo.",
+    "peso": "10,5 kg",
+    "nombre": "Charcadet",
+    "altura": "0,6 m"
+  },
+  "936": {
+    "info_y": "Porta una armadura reforzada con energía psíquica e ígnea. Ataca lanzando bolas de fuego incandescentes.",
+    "tipo": [
+      "Fuego",
+      "Psíquico"
+    ],
+    "info_x": "Evolucionó al portar la armadura de un guerrero de renombre. Este Pokémon destaca por su gran lealtad.",
+    "peso": "85,0 kg",
+    "nombre": "Armarouge",
+    "altura": "1,5 m"
+  },
+  "937": {
+    "info_y": "Evolucionó al portar una vieja armadura cargada de rencor. Despedaza a sus enemigos sin piedad alguna.",
+    "tipo": [
+      "Fuego",
+      "Fantasma"
+    ],
+    "info_x": "Las afiladas llamas que cubren sus brazos están avivadas por la frustración de un espadachín que cayó antes de poder cumplir su cometido.",
+    "peso": "62,0 kg",
+    "nombre": "Ceruledge",
+    "altura": "1,6 m"
+  },
+  "938": {
+    "info_y": "Flota en el aire gracias a la electricidad almacenada en su cuerpo. Con nubarrones de tormenta, lo hace a mayor altura de lo habitual.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Produce electricidad agitando la cola. Si siente peligro, hace parpadear su cabeza para alertar a sus compañeros.",
+    "peso": "0,4 kg",
+    "nombre": "Tadbulb",
+    "altura": "0,3 m"
+  },
+  "939": {
+    "info_y": "Los órganos que parecen ojos sirven en realidad para descargar toda la electricidad generada por la dinamo de su ombligo.",
+    "tipo": [
+      "Eléctrico"
+    ],
+    "info_x": "Puede generar grandes cantidades de energía expandiendo y contrayendo su elástico cuerpo gracias a la dinamo de su ombligo.",
+    "peso": "113,0 kg",
+    "nombre": "Bellibolt",
+    "altura": "1,2 m"
+  },
+  "940": {
+    "info_y": "Anida en acantilados costeros. Su nido se considera un auténtico manjar debido a su extraña textura chisporroteante.",
+    "tipo": [
+      "Eléctrico",
+      "Volador"
+    ],
+    "info_x": "Los huesos de sus alas producen electricidad con las corrientes de aire. Para cazar, se zambulle en el mar y electrocuta a su presa.",
+    "peso": "3,6 kg",
+    "nombre": "Wattrel",
+    "altura": "0,4 m"
+  },
+  "941": {
+    "info_y": "Almacena la electricidad generada por sus alas en el saco gular. Su plumaje apenas contiene aceite, por lo que es un pésimo nadador.",
+    "tipo": [
+      "Eléctrico",
+      "Volador"
+    ],
+    "info_x": "Aumenta la intensidad de su electricidad al inflar su saco gular. Es capaz de recorrer 700 km en un día impulsado por las corrientes de aire.",
+    "peso": "38,6 kg",
+    "nombre": "Kilowattrel",
+    "altura": "1,4 m"
+  },
+  "942": {
+    "info_y": "Tanto su mandíbula como sus colmillos están tan desarrollados que pueden triturar rocas. Su densa capa de grasa le proporciona una buena defensa.",
+    "tipo": [
+      "Siniestro"
+    ],
+    "info_x": "Mantiene el ceño fruncido para que sus rivales lo tomen en serio, pero hasta el niño más llorón estallaría en carcajadas al ver su mueca.",
+    "peso": "16,0 kg",
+    "nombre": "Maschiff",
+    "altura": "0,5 m"
+  },
+  "943": {
+    "info_y": "Le encanta jugar con los niños. Normalmente es afable, pero, cuando ha de proteger a su familia, adopta un aspecto amenazante.",
+    "tipo": [
+      "Siniestro"
+    ],
+    "info_x": "Almacena energía en la papada y la libera toda de golpe para arrasar con sus rivales.",
+    "peso": "61,0 kg",
+    "nombre": "Mabosstiff",
+    "altura": "1,1 m"
+  },
+  "944": {
+    "info_y": "Pinta marcas alrededor de su nido con un líquido venenoso de fuerte olor acre para mantener a los enemigos alejados de su territorio.",
+    "tipo": [
+      "Veneno",
+      "Normal"
+    ],
+    "info_x": "Es manso, pero muerde y paraliza a quien lo enfada con sus afilados incisivos impregnados de toxinas.",
+    "peso": "0,7 kg",
+    "nombre": "Shroodle",
+    "altura": "0,2 m"
+  },
+  "945": {
+    "info_y": "Cada individuo pinta un patrón único y distintivo que irá replicando de forma constante a lo largo de toda su vida.",
+    "tipo": [
+      "Veneno",
+      "Normal"
+    ],
+    "info_x": "El color de su saliva venenosa varía según su alimentación. Se embadurna los dedos con ella para pintar motivos en los árboles del bosque.",
+    "peso": "27,2 kg",
+    "nombre": "Grafaiai",
+    "altura": "0,7 m"
+  },
+  "946": {
+    "info_y": "Rueda por los páramos a merced del viento, sin que él mismo sepa dónde recalará. No soporta mojarse.",
+    "tipo": [
+      "Planta",
+      "Fantasma"
+    ],
+    "info_x": "Se dice que este Pokémon nace cuando las almas en pena terminan enredadas en la hierba seca tras ser arrastradas por el viento.",
+    "peso": "0,6 kg",
+    "nombre": "Bramblin",
+    "altura": "0,6 m"
+  },
+  "947": {
+    "info_y": "Suele deambular por zonas áridas. En muy raras ocasiones, aparecen en masa y llegan a sepultar un pueblo entero.",
+    "tipo": [
+      "Planta",
+      "Fantasma"
+    ],
+    "info_x": "Despliega las ramas para engullir a sus presas. Cuando ha terminado de absorber su energía vital, las escupe.",
+    "peso": "6,0 kg",
+    "nombre": "Brambleghast",
+    "altura": "1,2 m"
+  },
+  "948": {
+    "info_y": "Guarda cierto parecido con los Tentacool, pero son dos especies no relacionadas. Sus delgadas extremidades le permiten alcanzar los 50 km/h.",
+    "tipo": [
+      "Tierra",
+      "Planta"
+    ],
+    "info_x": "Los pliegues ondulados que se desprenden de su cuerpo cuentan con una textura curiosa y un sabor delicioso. Habita en bosques húmedos.",
+    "peso": "33,0 kg",
+    "nombre": "Toedscool",
+    "altura": "0,9 m"
+  },
+  "949": {
+    "info_y": "Constriñe a sus víctimas con sus diez tentáculos y les absorbe los nutrientes. Los pliegues en torno al sombrero son un manjar muy preciado.",
+    "tipo": [
+      "Tierra",
+      "Planta"
+    ],
+    "info_x": "Forma colonias de varios ejemplares en lo más profundo de los bosques. No soporta las visitas indeseadas de extraños.",
+    "peso": "58,0 kg",
+    "nombre": "Toedscruel",
+    "altura": "1,9 m"
+  },
+  "950": {
+    "info_y": "Habita en acantilados escarpados. Evade los ataques enemigos echándose a un lado y luego apunta a sus puntos vitales con las pinzas.",
+    "tipo": [
+      "Roca"
+    ],
+    "info_x": "Acecha a sus presas colgado cabeza abajo de los acantilados, pero no puede aguantar así mucho tiempo porque se le sube la sangre a la cabeza.",
+    "peso": "79,0 kg",
+    "nombre": "Klawf",
+    "altura": "1,3 m"
+  },
+  "951": {
+    "info_y": "En Paldea es común emplear los incisivos caídos de los Capsakid como ingrediente, lo que aporta un toque muy picante a los platos.",
+    "tipo": [
+      "Planta"
+    ],
+    "info_x": "Cuanto más se expone al sol, más aumenta la cantidad de capsaicinoides de su cuerpo y, por lo tanto, la pungencia de sus movimientos.",
+    "peso": "3,0 kg",
+    "nombre": "Capsakid",
+    "altura": "0,3 m"
+  },
+  "952": {
+    "info_y": "La cabeza verde es mucho más despiadada por el efecto de los capsaicinoides sobre su cerebro. Cuando enloquece, no hay forma de detenerla.",
+    "tipo": [
+      "Planta",
+      "Fuego"
+    ],
+    "info_x": "La personalidad y la forma de combatir de cada cabeza son distintas, pero, a la hora de luchar, se compenetran a la perfección.",
+    "peso": "15,0 kg",
+    "nombre": "Scovillain",
+    "altura": "0,9 m"
+  },
+  "953": {
+    "info_y": "Hace rodar la bola de barro para madurar energía hasta que alcanza el grado necesario para su evolución.",
+    "tipo": [
+      "Bicho"
+    ],
+    "info_x": "Mezcla tierra, arena y energía psíquica para crear una bola de barro que atesora por encima de su propia vida.",
+    "peso": "1,0 kg",
+    "nombre": "Rellor",
+    "altura": "0,2 m"
+  },
+  "954": {
+    "info_y": "Mece la bola suavemente con las patas para asegurar el plácido sueño de la crisálida que duerme en su interior.",
+    "tipo": [
+      "Bicho",
+      "Psíquico"
+    ],
+    "info_x": "El cuerpo que sostiene la bola apenas se mueve, por lo que se cree que el cuerpo en el interior de esta es quien controla sus acciones.",
+    "peso": "3,5 kg",
+    "nombre": "Rabsca",
+    "altura": "0,3 m"
+  },
+  "955": {
+    "info_y": "Pasa los días correteando por los páramos. Si alguien le roba sus adoradas bayas, lo persigue sin descanso para vengarse.",
+    "tipo": [
+      "Psíquico"
+    ],
+    "info_x": "La punta de sus extremidades levita a 1 cm del suelo a causa del poder psíquico que emiten los volantes de su abdomen.",
+    "peso": "1,5 kg",
+    "nombre": "Flittle",
+    "altura": "0,2 m"
+  },
+  "956": {
+    "info_y": "Emite energía psíquica por los huecos entre sus volantes multicolor y alcanza los 200 km/h en carrera.",
+    "tipo": [
+      "Psíquico"
+    ],
+    "info_x": "Baña al rival con el poder psíquico que emana de sus grandes ojos y lo inmoviliza. A pesar de su aspecto, posee un temperamento feroz.",
+    "peso": "90,0 kg",
+    "nombre": "Espathra",
+    "altura": "1,9 m"
+  },
+  "957": {
+    "info_y": "Forja su martillo golpeando residuos metálicos. Repite este proceso todas las veces que sean necesarias hasta que le satisfaga el resultado.",
+    "tipo": [
+      "Hada",
+      "Acero"
+    ],
+    "info_x": "Agita su martillo forjado a mano para ahuyentar a posibles amenazas, pero los Pokémon que se alimentan a base de metal suelen robárselo.",
+    "peso": "8,9 kg",
+    "nombre": "Tinkatink",
+    "altura": "0,4 m"
+  },
+  "958": {
+    "info_y": "Convierte montañas de chatarra en su guarida. Estos Pokémon suelen medir la fuerza de sus martillos golpeándolos contra los de los demás.",
+    "tipo": [
+      "Hada",
+      "Acero"
+    ],
+    "info_x": "Asalta el séquito entero de un Bisharp para reunir metal con el que forjar su enorme y robusto martillo.",
+    "peso": "59,1 kg",
+    "nombre": "Tinkatuff",
+    "altura": "0,7 m"
+  },
+  "959": {
+    "info_y": "Blande sin esfuerzo su pesado martillo de más de 100 kg. Cuando quiere algo, lo roba y se lo lleva de vuelta a su guarida.",
+    "tipo": [
+      "Hada",
+      "Acero"
+    ],
+    "info_x": "Posee una notable inteligencia y una exacerbada personalidad. Si ve Corviknight volando, golpea y lanza rocas con su martillo para derribarlos.",
+    "peso": "112,8 kg",
+    "nombre": "Tinkaton",
+    "altura": "0,7 m"
+  },
+  "960": {
+    "info_y": "Aunque se parezca a un Diglett, se trata de una especie distinta. El parecido es el resultado fortuito de su adaptación al entorno.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Puede percibir el olor de los Veluza a 20 m de distancia, lo que le permite ocultarse bajo la arena a tiempo.",
+    "peso": "1,8 kg",
+    "nombre": "Wiglett",
+    "altura": "1,2 m"
+  },
+  "961": {
+    "info_y": "Una variedad de Pokémon pez. En el pasado se creía erróneamente que podía ser una forma regional de Dugtrio.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Es de temperamento agresivo, aunque no lo parezca. Envuelve a sus presas con sus largos cuerpos y las arrastra a su nido.",
+    "peso": "5,4 kg",
+    "nombre": "Wugtrio",
+    "altura": "1,2 m"
+  },
+  "962": {
+    "info_y": "Usa la bolsa del pecho para envolver comida y transportarla a su nido. Le encanta dejar caer objetos que hacen mucho ruido.",
+    "tipo": [
+      "Volador",
+      "Siniestro"
+    ],
+    "info_x": "Mete cosas en su bolsa, fabricada con el plumón de su pecho y con plumas mudadas, para luego dejarlas caer desde las alturas por diversión.",
+    "peso": "42,9 kg",
+    "nombre": "Bombirdier",
+    "altura": "1,5 m"
+  },
+  "963": {
+    "info_y": "Su anillo de agua está compuesto por una mezcla de agua marina y de un líquido aglutinante que segrega por el espiráculo.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Le gusta jugar con sus congéneres con el anillo de agua de su aleta caudal. Utiliza ultrasonidos para percibir las emociones de otros seres.",
+    "peso": "60,2 kg",
+    "nombre": "Finizen",
+    "altura": "1,3 m"
+  },
+  "964": {
+    "info_y": "Posee la misma fortaleza física que un Finizen, pero, cuando se transforma para ayudar a un compañero en apuros, se vuelve más fuerte.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Cambia de forma en cuanto recibe una señal de socorro de sus compañeros. Nunca se transforma delante de nadie.",
+    "peso": "60,2 kg",
+    "nombre": "Palafin",
+    "altura": "1,3 m"
+  },
+  "965": {
+    "info_y": "La parte metálica es su verdadero cuerpo. Se adhiere a rocas para procesar sus minerales y generar energía para moverse.",
+    "tipo": [
+      "Acero",
+      "Veneno"
+    ],
+    "info_x": "Se dice que surgió cuando un misterioso Pokémon venenoso tomó posesión de un motor abandonado en un desguace.",
+    "peso": "35,0 kg",
+    "nombre": "Varoom",
+    "altura": "1,0 m"
+  },
+  "966": {
+    "info_y": "Produce un ruido estrepitoso por los tubos de escape para intimidar. Saca la lengua por su boca cilíndrica y esparce un líquido venenoso.",
+    "tipo": [
+      "Acero",
+      "Veneno"
+    ],
+    "info_x": "Posee ocho cilindros, con los que genera energía haciendo estallar el gas que produce al mezclar los minerales de las rocas con su veneno.",
+    "peso": "120,0 kg",
+    "nombre": "Revavroom",
+    "altura": "1,8 m"
+  },
+  "967": {
+    "info_y": "Puede correr a 120 km/h con una persona a cuestas. El calor corporal del jinete calienta su lomo y le da energía.",
+    "tipo": [
+      "Dragón",
+      "Normal"
+    ],
+    "info_x": "Según parece, ha permitido que los humanos monten en él desde tiempos remotos. Aparece en pinturas rupestres de hace diez mil años.",
+    "peso": "63,0 kg",
+    "nombre": "Cyclizar",
+    "altura": "1,6 m"
+  },
+  "968": {
+    "info_y": "Habita en desiertos áridos. Se alimenta del hierro del suelo para mantener su cuerpo férreo.",
+    "tipo": [
+      "Acero"
+    ],
+    "info_x": "Cuando lo atacan, usa los pelos de su cuerpo a modo de puños y hace llover un aluvión de puñetazos sobre sus enemigos.",
+    "peso": "310,0 kg",
+    "nombre": "Orthworm",
+    "altura": "2,5 m"
+  },
+  "969": {
+    "info_y": "Sus cristales tóxicos se asemejan a los pétalos de una flor. Se protege esparciendo un polvo venenoso como si de polen se tratara.",
+    "tipo": [
+      "Roca",
+      "Veneno"
+    ],
+    "info_x": "Absorbe nutrientes de las paredes de las cuevas. Cubre su cuerpo con pétalos hechos de energía venenosa cristalizada.",
+    "peso": "8,0 kg",
+    "nombre": "Glimmet",
+    "altura": "0,7 m"
+  },
+  "970": {
+    "info_y": "Sus pétalos están hechos de energía venenosa cristalizada. Recientemente se ha puesto de manifiesto su parecido con las joyas Teracristal.",
+    "tipo": [
+      "Roca",
+      "Veneno"
+    ],
+    "info_x": "Despliega sus grandes pétalos repletos de toxinas y repele a los rivales con la ayuda de los Glimmet.",
+    "peso": "45,0 kg",
+    "nombre": "Glimmora",
+    "altura": "1,5 m"
+  },
+  "971": {
+    "info_y": "Un Pokémon muy afable que no soporta la soledad. Seguirá para siempre a quien le dé una mínima muestra de atención.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Se cree que es la reencarnación de un Pokémon perro vagabundo que murió sin haber tenido contacto con humanos.",
+    "peso": "35,0 kg",
+    "nombre": "Greavard",
+    "altura": "0,6 m"
+  },
+  "972": {
+    "info_y": "La reencarnación de un Pokémon muy querido y llorado. Odia que le toquen la protuberancia de la cabeza.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Pasa la mayor parte del tiempo durmiendo en cementerios. De todos los Pokémon perro, es el que profesa una mayor lealtad por su Entrenador.",
+    "peso": "15,0 kg",
+    "nombre": "Houndstone",
+    "altura": "2,0 m"
+  },
+  "973": {
+    "info_y": "Este Pokémon presenta una conducta sincrónica que permite a la colonia entera atacar simultáneamente como una única entidad.",
+    "tipo": [
+      "Volador",
+      "Lucha"
+    ],
+    "info_x": "Al parecer, se anudan la base del cuello para impedir que la energía que tienen almacenada en el estómago escape por el pico.",
+    "peso": "37,0 kg",
+    "nombre": "Flamigo",
+    "altura": "1,6 m"
+  },
+  "974": {
+    "info_y": "Viven en manadas de unos cinco individuos en regiones gélidas. Les encantan los minerales presentes en la nieve y el hielo.",
+    "tipo": [
+      "Hielo"
+    ],
+    "info_x": "Los miembros de esta especie, emparentada al parecer con los Wailmer, abandonaron hace ya mucho tiempo el mar para vivir en tierra firme.",
+    "peso": "45,0 kg",
+    "nombre": "Cetoddle",
+    "altura": "1,2 m"
+  },
+  "975": {
+    "info_y": "Acumula energía gélida en el cuerno del maxilar superior, que llega a alcanzar temperaturas muy bajas y congelar sus alrededores.",
+    "tipo": [
+      "Hielo"
+    ],
+    "info_x": "Este Pokémon vive en áreas cubiertas de nieve y hielo. Se protege con su fuerte musculatura y una gruesa capa de grasa subcutánea.",
+    "peso": "700,0 kg",
+    "nombre": "Cetitan",
+    "altura": "4,5 m"
+  },
+  "976": {
+    "info_y": "Posee una magnífica capacidad regenerativa. Se desprende de carne que no necesita para ganar agilidad y arremeter contra sus presas.",
+    "tipo": [
+      "Agua",
+      "Psíquico"
+    ],
+    "info_x": "Al desechar la carne que no necesita, agudiza la mente y sus poderes psíquicos se incrementan. Dicha carne tiene un sabor suave pero exquisito.",
+    "peso": "90,0 kg",
+    "nombre": "Veluza",
+    "altura": "2,5 m"
+  },
+  "977": {
+    "info_y": "Idolatra a Tatsugiri y lo trata como a un líder. Posee una fuerza descomunal, pero no destaca precisamente por su gran intelecto.",
+    "tipo": [
+      "Agua"
+    ],
+    "info_x": "Le gusta mucho comer, pero no se le da bien cazar, por lo que aúna fuerzas con Tatsugiri con el fin de capturar presas.",
+    "peso": "220,0 kg",
+    "nombre": "Dondozo",
+    "altura": "12,0 m"
+  },
+  "978": {
+    "info_y": "Es un Pokémon de gran astucia. Atrae a sus presas fingiendo estar débil para otorgarle a su compañero la oportunidad de atacar.",
+    "tipo": [
+      "Dragón",
+      "Agua"
+    ],
+    "info_x": "Libra auténticas batallas contra sus congéneres por el control del Dondozo que habrá de ser su compañero.",
+    "peso": "8,0 kg",
+    "nombre": "Tatsugiri",
+    "altura": "0,3 m"
+  },
+  "979": {
+    "info_y": "Machaca sin piedad a sus rivales concentrando en los puños hasta el último ápice de ira albergada en su corazón.",
+    "tipo": [
+      "Lucha",
+      "Fantasma"
+    ],
+    "info_x": "Cuando su ira explosiva rebasó el punto crítico, adquirió un poder que lo libró para siempre de las limitaciones de su cuerpo material.",
+    "peso": "56,0 kg",
+    "nombre": "Annihilape",
+    "altura": "1,2 m"
+  },
+  "980": {
+    "info_y": "Vive en el fondo de los estanques y pantanos. Nada con Wooper sobre el lomo para ayudarlos a cruzar de una orilla a otra.",
+    "tipo": [
+      "Veneno",
+      "Tierra"
+    ],
+    "info_x": "Cuando se siente amenazado, repele al enemigo con sus gruesas púas retráctiles. Esta técnica tan peligrosa es un arma de doble filo.",
+    "peso": "223,0 kg",
+    "nombre": "Clodsire",
+    "altura": "1,8 m"
+  },
+  "981": {
+    "info_y": "La dura cabeza de la cola protege a la principal cuando agita su largo cuello para propinar cabezazos a sus enemigos.",
+    "tipo": [
+      "Normal",
+      "Psíquico"
+    ],
+    "info_x": "Las ondas cerebrales de la cola y la cabeza van al compás, lo que le confiere poderes psíquicos diez veces más potentes que los de los Girafarig.",
+    "peso": "160,0 kg",
+    "nombre": "Farigiraf",
+    "altura": "3,2 m"
+  },
+  "982": {
+    "info_y": "Para expulsar a los intrusos de su madriguera, infla sus largos y finos pulmones y luego libera el aire de golpe en una intensa y explosiva ráfaga.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Usa su dura cola para horadar el lecho rocoso en las profundidades de la tierra y establecer su madriguera, cuyos túneles se extienden 10 km.",
+    "peso": "39,2 kg",
+    "nombre": "Dudunsparce",
+    "altura": "3,6 m"
+  },
+  "983": {
+    "info_y": "Cuenta con un enorme ejército a sus órdenes. Sin embargo, debido a sus escasas dotes como estratega, termina recurriendo a la fuerza bruta.",
+    "tipo": [
+      "Siniestro",
+      "Acero"
+    ],
+    "info_x": "Solo el Bisharp más destacado entre las filas de cada gran ejército tiene el honor de evolucionar a Kingambit.",
+    "peso": "120,0 kg",
+    "nombre": "Kingambit",
+    "altura": "2,0 m"
+  },
+  "984": {
+    "info_y": "Su aspecto recuerda al de un extraño Pokémon de origen primitivo que apareció en un artículo de cierta revista esotérica.",
+    "tipo": [
+      "Tierra",
+      "Lucha"
+    ],
+    "info_x": "Testigos afirman haberlo visto recientemente. El nombre Colmilargo está tomado de una criatura mencionada en cierto libro.",
+    "peso": "320,0 kg",
+    "nombre": "Colmilargo",
+    "altura": "2,2 m"
+  },
+  "985": {
+    "info_y": "Guarda similitud con el supuesto aspecto que, según una revista esotérica, tenía Jigglypuff hace mil millones de años.",
+    "tipo": [
+      "Hada",
+      "Psíquico"
+    ],
+    "info_x": "Solo se había avistado una vez en el pasado. Su aspecto se asemeja al de una misteriosa criatura descrita en cierto diario antiguo.",
+    "peso": "8,0 kg",
+    "nombre": "Colagrito",
+    "altura": "1,2 m"
+  },
+  "986": {
+    "info_y": "Guarda un leve parecido con un Pokémon mitad dinosaurio y mitad seta que apareció en un artículo de cierta revista de dudosa veracidad.",
+    "tipo": [
+      "Planta",
+      "Siniestro"
+    ],
+    "info_x": "Es posible que se trate de la criatura que se menciona en cierto libro bajo el nombre de Furioseta.",
+    "peso": "21,0 kg",
+    "nombre": "Furioseta",
+    "altura": "1,2 m"
+  },
+  "987": {
+    "info_y": "Sus rasgos distintivos se asemejan a los del espíritu de un reptil volador mencionado en una revista esotérica.",
+    "tipo": [
+      "Fantasma",
+      "Hada"
+    ],
+    "info_x": "Sus rasgos distintivos encajan con la descripción de una criatura mencionada en cierto libro bajo el nombre de Melenaleteo.",
+    "peso": "4,0 kg",
+    "nombre": "Melenaleteo",
+    "altura": "1,4 m"
+  },
+  "988": {
+    "info_y": "Guarda un ligero parecido con un supuesto antepasado de Volcarona publicado en cierta revista de dudosa veracidad.",
+    "tipo": [
+      "Bicho",
+      "Lucha"
+    ],
+    "info_x": "Un misterioso Pokémon que presenta ciertas similitudes con Reptalada, una criatura descrita en un tomo antiguo.",
+    "peso": "92,0 kg",
+    "nombre": "Reptalada",
+    "altura": "3,2 m"
+  },
+  "989": {
+    "info_y": "Su aspecto recuerda ligeramente a un supuesto Magneton que ha vivido 10 000 años y cuya imagen se publicó en una revista esotérica.",
+    "tipo": [
+      "Eléctrico",
+      "Tierra"
+    ],
+    "info_x": "Nunca se había capturado uno, ergo los datos al respecto escasean. Su descripción coincide con la de una criatura mencionada en cierto diario.",
+    "peso": "60,0 kg",
+    "nombre": "Pelarena",
+    "altura": "2,3 m"
+  },
+  "990": {
+    "info_y": "Se han constatado avistamientos en los últimos años. Su aspecto se asemeja al de un misterioso objeto descrito en un diario antiguo.",
+    "tipo": [
+      "Tierra",
+      "Acero"
+    ],
+    "info_x": "Su aspecto recuerda al de un arma científica de origen extraterrestre que apareció en un artículo de una revista esotérica.",
+    "peso": "240,0 kg",
+    "nombre": "Ferrodada",
+    "altura": "0,9 m"
+  },
+  "991": {
+    "info_y": "Su aspecto encaja con la descripción de un objeto mencionado en unos viejos escritos. Ha habido solo dos avistamientos hasta la fecha.",
+    "tipo": [
+      "Hielo",
+      "Agua"
+    ],
+    "info_x": "Tiene una forma similar a la del robot construido por una civilización antigua mencionado en cierto artículo de una revista esotérica.",
+    "peso": "11,0 kg",
+    "nombre": "Ferrosaco",
+    "altura": "0,6 m"
+  },
+  "992": {
+    "info_y": "Este Pokémon comparte muchas características con Ferropalmas, un objeto descrito en cierto diario.",
+    "tipo": [
+      "Lucha",
+      "Eléctrico"
+    ],
+    "info_x": "Guarda parecido con un atleta, supuestamente transformado en cíborg, que apareció entre las exclusivas de una revista esotérica.",
+    "peso": "380,7 kg",
+    "nombre": "Ferropalmas",
+    "altura": "1,8 m"
+  },
+  "993": {
+    "info_y": "Es posible que se trate de Ferrocuello, un objeto mencionado en unos viejos escritos.",
+    "tipo": [
+      "Siniestro",
+      "Volador"
+    ],
+    "info_x": "Se asemeja a un Pokémon que apareció en una revista esotérica descrito como “el fruto de un romance entre un Hydreigon y un robot”.",
+    "peso": "111,0 kg",
+    "nombre": "Ferrocuello",
+    "altura": "1,3 m"
+  },
+  "994": {
+    "info_y": "Nunca se había capturado uno, ergo los datos son escasos. Su descripción coincide con la de un objeto mencionado en unos viejos escritos.",
+    "tipo": [
+      "Fuego",
+      "Veneno"
+    ],
+    "info_x": "Se asemeja a un extraño objeto descrito en una revista esotérica como “un ovni enviado con el objetivo de espiar a la raza humana”.",
+    "peso": "36,0 kg",
+    "nombre": "Ferropolilla",
+    "altura": "1,2 m"
+  },
+  "995": {
+    "info_y": "Algunos de sus rasgos distintivos coinciden con los de Ferropúas, un objeto que aparece mencionado en cierto diario.",
+    "tipo": [
+      "Roca",
+      "Eléctrico"
+    ],
+    "info_x": "Guarda similitudes con el supuesto aspecto que, según cierta revista de dudosa veracidad, tendrá Tyranitar dentro de mil millones de años.",
+    "peso": "303,0 kg",
+    "nombre": "Ferropúas",
+    "altura": "1,6 m"
+  },
+  "996": {
+    "info_y": "Vive en bosques y entornos pedregosos. Se vale del poder de su placa dorsal para refrigerar su madriguera como si fuera un frigorífico.",
+    "tipo": [
+      "Dragón",
+      "Hielo"
+    ],
+    "info_x": "Absorbe el calor a través de la placa dorsal y lo convierte en energía gélida. Cuanto más alta es la temperatura, más energía acumula.",
+    "peso": "17,0 kg",
+    "nombre": "Frigibax",
+    "altura": "0,5 m"
+  },
+  "997": {
+    "info_y": "Gracias a su poderoso tren inferior, da saltos mortales hacia delante y ataca a sus enemigos con las cuchillas de su placa dorsal.",
+    "tipo": [
+      "Dragón",
+      "Hielo"
+    ],
+    "info_x": "Congela el aire a su alrededor para cubrirse el rostro con una máscara de hielo protectora y dotar su placa dorsal de cuchillas glaciales.",
+    "peso": "30,0 kg",
+    "nombre": "Arctibax",
+    "altura": "0,8 m"
+  },
+  "998": {
+    "info_y": "Se coloca boca abajo y se propulsa con su aliento gélido para cargar contra sus rivales, a los que remata con la hoja de su placa dorsal.",
+    "tipo": [
+      "Dragón",
+      "Hielo"
+    ],
+    "info_x": "Exhala un aliento gélido capaz de solidificar hasta el magma. Con él congela a sus rivales para luego pulverizarlos de un coletazo.",
+    "peso": "210,0 kg",
+    "nombre": "Baxcalibur",
+    "altura": "2,1 m"
+  },
+  "999": {
+    "info_y": "Vive en el interior de un viejo cofre desgastado. Al no tomarlo por un Pokémon, a veces termina a la venta por error en tiendas de antigüedades.",
+    "tipo": [
+      "Fantasma"
+    ],
+    "info_x": "Vive oculto en un cofre macizo, lo cual le otorga una excelente defensa, pero también le entorpece el desplazamiento a causa del gran peso.",
+    "peso": "5,0 kg",
+    "nombre": "Gimmighoul",
+    "altura": "0,3 m"
+  },
+  "1000": {
+    "info_y": "Su cuerpo está compuesto de monedas unidas entre sí, por lo que es muy resistente. Abruma a sus enemigos disparándolas en ráfagas.",
+    "tipo": [
+      "Acero",
+      "Fantasma"
+    ],
+    "info_x": "Se dice que su cuerpo está formado por 1000 monedas. Es capaz de hacer buenas migas con cualquiera rápidamente por su sociabilidad.",
+    "peso": "30,0 kg",
+    "nombre": "Gholdengo",
+    "altura": "1,2 m"
+  },
+  "1001": {
+    "info_y": "Absorbe la energía de la vegetación, lo que hace que los bosques cercanos se marchiten a su paso y que la tierra de los campos se vuelva estéril.",
+    "tipo": [
+      "Siniestro",
+      "Planta"
+    ],
+    "info_x": "Este Pokémon nació al imbuirse en hojas marchitas el rencor de una persona castigada por enumerar las fechorías de su rey en unas tablillas.",
+    "peso": "74,2 kg",
+    "nombre": "Wo-Chien",
+    "altura": "1,5 m"
+  },
+  "1002": {
+    "info_y": "Este Pokémon nació al imbuirse en las nieves el odio que sentían aquellos que perecieron ante la espada en tiempos inmemoriales.",
+    "tipo": [
+      "Siniestro",
+      "Hielo"
+    ],
+    "info_x": "Controla a su voluntad masas de nieve de hasta cien toneladas. Se divierte zambulléndose y saltando felizmente en los aludes que provoca.",
+    "peso": "152,2 kg",
+    "nombre": "Chien-Pao",
+    "altura": "1,9 m"
+  },
+  "1003": {
+    "info_y": "Su cabeza es tan pesada que es capaz de crear enormes grietas de 50 m de profundidad al blandirla lentamente contra el suelo.",
+    "tipo": [
+      "Siniestro",
+      "Tierra"
+    ],
+    "info_x": "Este Pokémon nació al imbuirse en tierra y rocas el miedo vertido en un caldero que se utilizaba en rituales antiguos.",
+    "peso": "699,7 kg",
+    "nombre": "Ting-Lu",
+    "altura": "2,7 m"
+  },
+  "1004": {
+    "info_y": "Este Pokémon nació al imbuirse en llamas la envidia acumulada en ciertos abalorios que desencadenaron un gran número de conflictos.",
+    "tipo": [
+      "Siniestro",
+      "Fuego"
+    ],
+    "info_x": "Controla a su voluntad llamas de hasta 3000 ºC. Nada tranquilamente por los mares de magma que crea al derretir las rocas y la grava a su paso.",
+    "peso": "4,9 kg",
+    "nombre": "Chi-Yu",
+    "altura": "0,4 m"
+  },
+  "1005": {
+    "info_y": "Según un artículo publicado en cierta revista de dudosa veracidad, este Pokémon guarda relación con un fenómeno que tiene lugar en otra región.",
+    "tipo": [
+      "Dragón",
+      "Siniestro"
+    ],
+    "info_x": "Podría tratarse de la criatura que aparece bajo el nombre de Bramaluna en cierto diario repleto de incógnitas.",
+    "peso": "380,0 kg",
+    "nombre": "Bramaluna",
+    "altura": "2,0 m"
+  },
+  "1006": {
+    "info_y": "Podría tratarse del objeto que se menciona con el nombre de Ferropaladín en cierto diario.",
+    "tipo": [
+      "Hada",
+      "Lucha"
+    ],
+    "info_x": "Comparte varios rasgos con el invento de un científico loco que apareció en un artículo de una revista esotérica.",
+    "peso": "35,0 kg",
+    "nombre": "Ferropaladín",
+    "altura": "1,4 m"
+  },
+  "1007": {
+    "info_y": "Pese a sus similitudes con los Cyclizar, es mucho más violento y fornido. Se desconoce totalmente su relación con el entorno y otros seres vivos.",
+    "tipo": [
+      "Lucha",
+      "Dragón"
+    ],
+    "info_x": "Parece tratarse de Reyalado, la criatura que, según lo narrado en un antiguo diario, fue capaz de dividir la tierra con sus puños.",
+    "peso": "303,0 kg",
+    "nombre": "Koraidon",
+    "altura": "2,5 m"
+  },
+  "1008": {
+    "info_y": "Parece tratarse de la criatura Ferromandra, que, según unos viejos escritos, transformó la tierra en cenizas con sus rayos.",
+    "tipo": [
+      "Eléctrico",
+      "Dragón"
+    ],
+    "info_x": "Pese a las similitudes con los Cyclizar, es mucho más fuerte y despiadado que ellos. Está rodeado de incógnitas.",
+    "peso": "240,0 kg",
+    "nombre": "Miraidon",
+    "altura": "3,5 m"
+  },
+  "1009": {
+    "info_y": "Se asemeja a la ilustración de un Suicune de tiempos inmemoriales que apareció publicada en cierta revista esotérica.",
+    "tipo": [
+      "Agua",
+      "Dragón"
+    ],
+    "info_x": "Una criatura violenta rodeada de misterio, cuyo nombre se inspira en cierto monstruo acuático mencionado en un viejo diario de exploración.",
+    "peso": "280,0 kg",
+    "nombre": "Ondulagua",
+    "altura": "3,5 m"
+  },
+  "1010": {
+    "info_y": "Unos pocos testimonios afirman haberlo visto cortar en tiras árboles y rocas de gran tamaño mediante sus espadas luminosas.",
+    "tipo": [
+      "Planta",
+      "Psíquico"
+    ],
+    "info_x": "Presenta numerosas características en común con el Virizion del futuro que apareció publicado en cierta revista esotérica.",
+    "peso": "125,0 kg",
+    "nombre": "Ferroverdor",
+    "altura": "1,5 m"
+  },
+  "1011": {
+    "info_y": "Exterappli, el que saca la cabeza, e Interappli, el que saca la cola, viven juntos dentro de la manzana y se ayudan el uno al otro.",
+    "tipo": [
+      "Planta",
+      "Dragón"
+    ],
+    "info_x": "Ha evolucionado gracias a una manzana especial que solo se cultiva en cierta zona. Este Pokémon está formado por dos individuos.",
+    "peso": "4,4 kg",
+    "nombre": "Dipplin",
+    "altura": "0,4 m"
+  },
+  "1012": {
+    "info_y": "Si bien parece una forma regional de Sinistea, recientemente se ha demostrado que ambos Pokémon no guardan ninguna relación entre sí.",
+    "tipo": [
+      "Planta",
+      "Fantasma"
+    ],
+    "info_x": "Según se dice, el resquemor de un practicante de la ceremonia del té que murió sin perfeccionar el arte poseyó el matcha y dio lugar a un Pokémon.",
+    "peso": "1,1 kg",
+    "nombre": "Poltchageist",
+    "altura": "0,1 m"
+  },
+  "1013": {
+    "info_y": "Prefiere los lugares fríos y oscuros, como el fondo de las estanterías o bajo el suelo de las casas. Vaga en pos de presas tras el ocaso.",
+    "tipo": [
+      "Planta",
+      "Fantasma"
+    ],
+    "info_x": "Se hace pasar por té matcha para que algún incauto lo beba y así absorber su energía vital, pero su plan suele fracasar.",
+    "peso": "2,2 kg",
+    "nombre": "Sinistcha",
+    "altura": "0,2 m"
+  },
+  "1014": {
+    "info_y": "Un Pokémon violento al que se le sube la sangre a la cabeza enseguida. Hace girar en círculos la cadena que lleva al cuello para golpearlo todo.",
+    "tipo": [
+      "Veneno",
+      "Lucha"
+    ],
+    "info_x": "Las toxinas de la cadena que lleva al cuello producen una estimulación muscular que le ha conferido un cuerpo de lo más robusto.",
+    "peso": "92,2 kg",
+    "nombre": "Okidogi",
+    "altura": "1,8 m"
+  },
+  "1015": {
+    "info_y": "Utiliza sus poderes psíquicos desde un lugar seguro para provocar fuertes mareos a sus enemigos y divertirse a su costa.",
+    "tipo": [
+      "Veneno",
+      "Psíquico"
+    ],
+    "info_x": "Las toxinas de la cadena, capaces de sacar a relucir su potencial, le han estimulado el cerebro y le han hecho desarrollar poderes psíquicos.",
+    "peso": "12,2 kg",
+    "nombre": "Munkidori",
+    "altura": "1,0 m"
+  },
+  "1016": {
+    "info_y": "Al agitar sus majestuosas alas, libera unas feromonas que dejan embelesados tanto a humanos como a Pokémon.",
+    "tipo": [
+      "Veneno",
+      "Hada"
+    ],
+    "info_x": "Ha desarrollado una forma y una voz muy bellas gracias a la estimulación causada por las toxinas de la cadena que lleva en torno al cuerpo.",
+    "peso": "30,1 kg",
+    "nombre": "Fezandipiti",
+    "altura": "1,4 m"
+  },
+  "1017": {
+    "info_y": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta.",
+    "tipo": [
+      "Planta",
+      "Agua",
+      "Fuego",
+      "Roca"
+    ],
+    "info_x": "Cambia de tipo según la máscara que lleve. Se vale de sus rápidos movimientos y patadas para jugar a su antojo con sus enemigos.",
+    "peso": "39,8 kg",
+    "nombre": "Ogerpon",
+    "altura": "1,2 m"
+  },
+  "1018": {
+    "info_y": "Excava hoyos en las montañas para procurarse alimento. Su robustez es tal que apenas se inmuta aunque lo afecte de lleno un derrumbe.",
+    "tipo": [
+      "Acero",
+      "Dragón"
+    ],
+    "info_x": "Acumula la electricidad estática de su entorno. El rayo que dispara cuando está a cuatro patas posee una potencia colosal.",
+    "peso": "60,0 kg",
+    "nombre": "Archaludon",
+    "altura": "2,0 m"
+  },
+  "1019": {
+    "info_y": "Unos Viborappli caprichosos que comparten morada. En raras ocasiones se ponen de acuerdo y son capaces de mostrar su verdadera fuerza.",
+    "tipo": [
+      "Planta",
+      "Dragón"
+    ],
+    "info_x": "Se trata de siete seres llamados Viborappli que viven juntos en una manzana de caramelo. El del centro es el líder del grupo.",
+    "peso": "93,0 kg",
+    "nombre": "Hydrapple",
+    "altura": "1,8 m"
+  },
+  "1020": {
+    "info_y": "Se asemeja a un supuesto Pokémon descrito en una revista esotérica como “un Entei restaurado a partir de un fósil”.",
+    "tipo": [
+      "Fuego",
+      "Dragón"
+    ],
+    "info_x": "Apenas constan avistamientos de este Pokémon, pero existe una breve grabación donde aparece desbocado y escupiendo ráfagas de fuego.",
+    "peso": "590,0 kg",
+    "nombre": "Flamariete",
+    "altura": "3,5 m"
+  },
+  "1021": {
+    "info_y": "Recuerda a un presunto antepasado de Raikou que dio bastante que hablar durante un tiempo tras aparecer en una revista esotérica.",
+    "tipo": [
+      "Eléctrico",
+      "Dragón"
+    ],
+    "info_x": "Se dice que calcina todo cuanto lo rodea con los rayos que libera su pelaje. Aparte de eso, se sabe muy poco sobre esta criatura.",
+    "peso": "480,0 kg",
+    "nombre": "Electrofuria",
+    "altura": "5,2 m"
+  },
+  "1022": {
+    "info_y": "Su cuerpo parece estar compuesto enteramente de metal. Debe su nombre a un objeto descrito en un tomo antiguo.",
+    "tipo": [
+      "Roca",
+      "Psíquico"
+    ],
+    "info_x": "Recuerda a un Pokémon descrito en cierta revista de dudosa veracidad como “un Terrakion modificado por una malvada organización”.",
+    "peso": "162,5 kg",
+    "nombre": "Ferromole",
+    "altura": "1,5 m"
+  },
+  "1023": {
+    "info_y": "Se dice que puede cortarlo todo a su alrededor lanzando afiladas hojas luminosas, pero nada más se sabe acerca de esta criatura.",
+    "tipo": [
+      "Acero",
+      "Psíquico"
+    ],
+    "info_x": "Se asemeja a un extraño objeto descrito en una revista esotérica como “un arma de tecnología punta con forma de Cobalion”.",
+    "peso": "156,0 kg",
+    "nombre": "Ferrotesta",
+    "altura": "1,6 m"
+  },
+  "1024": {
+    "info_y": "Se creía que este Pokémon de la Paldea antigua se había extinguido, víctima de alteraciones en la corteza terrestre debidas a la actividad tectónica.",
+    "tipo": [
+      "Normal"
+    ],
+    "info_x": "Se vale de su capacidad para transformar energía en duros cristales para protegerse. Este Pokémon dio origen a la teracristalización.",
+    "peso": "6,5 kg",
+    "nombre": "Terapagos",
+    "altura": "0,2 m"
+  },
+  "1025": {
+    "info_y": "Su caparazón con forma de melocotón alberga un potente veneno con el que prepara un mochi tóxico que ofrece a humanos y Pokémon.",
+    "tipo": [
+      "Veneno",
+      "Fantasma"
+    ],
+    "info_x": "Hace comer a su objetivo un mochi tóxico que saca a relucir todo su potencial y su ambición, para después controlarlo con sus cadenas.",
+    "peso": "0,3 kg",
+    "nombre": "Pecharunt",
+    "altura": "0,3 m"
   }
 }

@@ -4,7 +4,7 @@ var pk_types = ["Normal","Fuego","Agua","Eléctrico","Planta","Hielo","Lucha","V
 
 var pk_dict, ev_dict, cp_dict, xp_dict;
 
-var last_pokemon = 807;
+var last_pokemon = 1025;
 
 function setPkDict(filePath) {
 	xmlhttp.open("GET", filePath, true);

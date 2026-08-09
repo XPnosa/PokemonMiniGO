@@ -58,6 +58,8 @@ function fitContent() {
 			var offset_1 = elemRect.top - bodyRect.top, offset_2 = elemRect.left - bodyRect.left;
 			document.getElementById("n"+i).style.top = offset_1+"px";
 			document.getElementById("n"+i).style.left = offset_2+"px";
+			document.getElementById("n"+i).style.width = elemRect.width+"px";
+			document.getElementById("n"+i).style.height = elemRect.height+"px";
 			document.getElementById("n"+i).style.opacity = "0.333";
 		}
 	} catch(err) { null; }

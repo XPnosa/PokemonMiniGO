@@ -1,6 +1,6 @@
 var initial = 0;
 
-var choices = 21;
+var choices = 27;
 
 var app = {
 	initialize: function() {
@@ -81,6 +81,12 @@ function getInitial(idx) {
 		case 19: return "722";
 		case 20: return "725";
 		case 21: return "728";
+		case 22: return "810";
+		case 23: return "813";
+		case 24: return "816";
+		case 25: return "906";
+		case 26: return "909";
+		case 27: return "912";
 		default: return "025";
 	}
 }
