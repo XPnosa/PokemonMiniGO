@@ -86,7 +86,7 @@ td {
 	border-bottom: 3px solid darkred;
 }
 .cell {
-	width: 30%;
+	width: 22%;
 	height: 30px;
 }
 .stock {
@@ -257,6 +257,9 @@ td {
 	background: whitesmoke;
 	border: 3px outset silver;
 }
+#totalrow {
+	display: contents;
+}
 #comprar, #caramelos {
 	background: goldenrod;
 	border: 3px outset darkgoldenrod;
@@ -268,6 +271,9 @@ td {
 }
 #caramelos {
 	margin: 5px 10px 0px;
+	font-size: 2.5em;
+	border-width: 5px;
+	border-radius: 25px;
 }
 #resumen {
 	color: white;
@@ -293,7 +299,8 @@ td {
 	text-overflow: ellipsis;
 }
 .bolsa {
-	display: none;
+	display: table-cell;
+	width: 22%;
 }
 .disabled {
 	opacity: 0.5;
@@ -497,11 +504,6 @@ td {
 		display: table-cell;
 		width: 25%;
 	}
-	#caramelos {
-		font-size: 2.5em;
-		border-width: 5px;
-		border-radius: 25px;
-	}
 	table {
 		margin-top: 1em;
 	}
@@ -598,7 +600,7 @@ td {
 		font-size: 1.5em;
 	}
 	.candy {
-		width: 25%;
+		width: 30%;
 	}
 	.black, .white {
 		border-radius: 10px;
@@ -609,8 +611,19 @@ td {
 	td.cell {
 		height: 90px;
 	}
-	#fondos, #precio {
+	#fondos {
+		display: block;
 		width: 90%;
+		box-sizing: border-box;
+	}
+	#totalrow {
+		display: block;
+		padding: 0 10px;
+		box-sizing: border-box;
+	}
+	#precio {
+		width: 80%;
+		box-sizing: border-box;
 	}
 	#set > center > div > img {
 		padding: 0 1px;
@@ -637,7 +650,7 @@ td {
 		width: 45%;
 	}
 	.candy {
-		width: 15%;
+		width: 13.5%;
 	}
 	#fondos, #precio {
 		width: 30%;

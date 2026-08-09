@@ -34,10 +34,10 @@ function printShop() {
 	"</td><td class='cell'><span id='p2' title='600'>600</span></td><td class='cell'><span id='c2' title='0'>0</span></td><td class='cell bolsa'><span id='t2' title='"+sb+"'>"+sb.toLocaleString()+"</span>" +
 	"</td><td><input onclick='mas(2);' class='stock' type='button' value='+'><br><input onclick='menos(2);' class='stock' type='button' value='-'></td></tr>" +
 	"<td class='cell'><img style='height:50px' src='img/ball_3.png'>" +
-	"</td><td class='cell'><span id='p3' title='1200'>1.200</span></td><td class='cell'><span id='c3' title='0'>0</span></td><td class='cell bolsa'><span id='t3' title='"+ub+"'>"+ub.toLocaleString()+"</span>" +
+	"</td><td class='cell'><span id='p3' title='1200'>1200</span></td><td class='cell'><span id='c3' title='0'>0</span></td><td class='cell bolsa'><span id='t3' title='"+ub+"'>"+ub.toLocaleString()+"</span>" +
 	"</td><td><input onclick='mas(3);' class='stock' type='button' value='+'><br><input onclick='menos(3);' class='stock' type='button' value='-'></td></tr>" +
 	"</tbody></table><center><div id='fondos'>Dinero: " + parseInt(window.localStorage.getItem("dinero"),10).toLocaleString() + 
-	"</div><div id='precio'>Total: 0</div><div onclick='comprar()' id='comprar'>👛</div></center>"
+	"</div><div id='totalrow'><div id='precio'>Total: 0</div><div onclick='comprar()' id='comprar'>👛</div></div></center>"
 	document.getElementById("shop").innerHTML = content;
 	document.getElementById("shop").style.display = "";
 }
