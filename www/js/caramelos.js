@@ -34,6 +34,7 @@ function printCandy() {
 	content += '</center></div>';
 	document.getElementById("content").innerHTML = content;
 	document.getElementById("bag").style.opacity = 1;
+	document.getElementById("content").addEventListener('scroll', fitContent);
 	fitContent();
 }
 

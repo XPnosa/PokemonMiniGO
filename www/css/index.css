@@ -142,6 +142,9 @@ td {
 	height: 30px;
 	display: inline-block;
 }
+.pokeball {
+	height: 25px;
+}
 
 /* MENU COLORS */
 .red { background-color: #ECC; color: #911; }
@@ -201,9 +204,7 @@ td {
 	margin-top: 5px;
 	font-size: 20px;
 	font-weight: bold;
-	white-space: nowrap;
-	overflow-x: hidden;
-	text-overflow: ellipsis;
+	overflow-wrap: break-word;
 }
 .altura, .peso {
 	display: none;
@@ -535,6 +536,9 @@ td {
 	}
 	::-webkit-scrollbar {
 		width: 0.75em;
+	}
+	.pokeball {
+		height: 50px;
 	}
 }
 
