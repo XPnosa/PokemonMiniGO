@@ -17,6 +17,10 @@ fieldset {
 }
 legend {
 	font-size: 20px;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
 }
 table {
 	width: 100%;
@@ -61,7 +65,7 @@ td {
 }
 .active > div {
 	transform: scale(0.75);
-	width: 90px;
+	width: 80px;
 	text-align: center;
 }
 .inactive > div {
@@ -505,7 +509,7 @@ td {
 		padding: 3px;
 	}
 	.active > div {
-		width: 150px;
+		width: 120px;
 	}
 	legend {
 		font-size: 2em;
