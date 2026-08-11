@@ -92,7 +92,7 @@ function printBox(idx) {
 		window.localStorage.setItem("st"+idx, "ok");
 	}
 	cp = parseInt(window.localStorage.getItem("cp"+idx),10);
-	var pokemon = "<div id='id_"+idx+"' title='"+pkmn+"' class='pkmn'>";
+	var pokemon = "<div id='id_"+idx+"' title='"+pkmn.padStart(4, '0')+"' class='pkmn'>";
 	pokemon += "<img onclick='setLeader("+idx+")' class='pk_img' src='pkmn/"+pkmn+".png' />"
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name' value='Nivel: "+lv+"' />";
 	pokemon += "<input type='button' onclick='setLeader("+idx+")' class='pk_name pk_cp' value='CP: "+(cp*lv).toLocaleString()+"' />";

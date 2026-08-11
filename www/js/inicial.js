@@ -111,6 +111,7 @@ function saveData(pkmn) {
 		window.localStorage.setItem("lider", 0);
 		window.localStorage.setItem("ganar", 0);
 		window.localStorage.setItem("total", 0);
+		window.localStorage.setItem("tiempoJuego", 0);
 	}
 	bye();
 }

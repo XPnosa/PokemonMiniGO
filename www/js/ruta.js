@@ -95,10 +95,10 @@ function encounter() {
 		retry++;
 	}
 	wild_pkmn = [pkmn,lvl,cp]
-	var item = Math.floor( Math.random() * 50 );
-	if ( item < 2 ) wildCandy(pk_dict[pkmn]["tipo"]);
-	else if ( item < 4 ) wildMoney(my_lv);
-	else if ( item < 5 ) wildBalls(my_lv);
+	var item = Math.floor( Math.random() * 30 );
+	if ( item == 0 ) wildCandy(pk_dict[pkmn]["tipo"]);
+	else if ( item == 1 ) wildMoney(my_lv);
+	else if ( item == 2 ) wildBalls(my_lv);
 	else wildEnter(pkmn,lvl,cp);
 }
 
@@ -133,9 +133,9 @@ function wildMoney(nivel) {
 
 function wildBalls(nivel) {
 	var idx, tipo, balls;
-	if ( nivel < 25 ) { idx = 1; tipo = "pokeball"; balls = Math.floor( nivel / 5 ); }
-	else if ( nivel < 50 ) { idx = 2; tipo = "superball"; balls = Math.floor( nivel / 10 ); }
-	else { idx = 3; tipo = "ultraball"; balls = Math.floor( nivel / 20 ); }
+	if ( nivel <= 33 ) { idx = 1; tipo = "pokeball"; balls = Math.floor( Math.random() * ( Math.floor( nivel / 6 ) ) ) + 1; }
+	else if ( nivel <= 66 ) { idx = 2; tipo = "superball"; balls = Math.floor( Math.random() * ( Math.floor( nivel / 12 ) ) ) + 1; }
+	else { idx = 3; tipo = "ultraball"; balls = Math.floor( Math.random() * ( Math.floor( nivel / 18 ) ) ) + 1; }
 	var fix = ( balls > 1 )?"s":"";
 	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Has encontrado "+balls+" "+cap(tipo+fix).replace('Poke','Poké')+"!</b></center>";
 	document.getElementById("msg").innerHTML = message;

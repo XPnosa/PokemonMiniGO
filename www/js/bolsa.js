@@ -30,6 +30,12 @@ function printBag() {
 	var vistas = getVistas();
 	var capturadas = getCapturadas();
 	var comptelado = Math.floor((100*(vistas+capturadas))/(last_pokemon*2))
+	var tiempoJuego = parseInt(window.localStorage.getItem("tiempoJuego"),10);
+	if (isNaN(tiempoJuego)) tiempoJuego = 0;
+	var tj_h = Math.floor(tiempoJuego/3600);
+	var tj_m = Math.floor((tiempoJuego%3600)/60);
+	var tj_s = tiempoJuego%60;
+	var tiempoTexto = tj_h + ":" + (tj_m<10?"0"+tj_m:tj_m) + ":" + (tj_s<10?"0"+tj_s:tj_s);
 	var content = '<table class="status">' +
 	'<tr><td style="width:64%"><b>Dinero en la bolsa</b>:</td><td>'+dinero.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
 	'<tr><td style="width:64%"><b>Pokéballs restantes</b>:</td><td>'+pokeball.toLocaleString()+'</td></tr>' + 
@@ -40,7 +46,8 @@ function printBag() {
 	'<tr><td style="width:64%"><b>Pokémon liberados</b>:</td><td>'+libre.toLocaleString()+'</td></tr></table><hr><table class="status">' + 
 	'<tr><td style="width:64%"><b>Especies vistas</b>:</td><td>'+vistas+'/'+last_pokemon+'</td></tr>' + 
 	'<tr><td style="width:64%"><b>Especies capturadas</b>:</td><td>'+capturadas+'/'+last_pokemon+'</td></tr>' + 
-	'<tr><td style="width:64%"><b>Pokédex completada</b>:</td><td>'+comptelado+'%</td></tr></table>';
+	'<tr><td style="width:64%"><b>Pokédex completada</b>:</td><td>'+comptelado+'%</td></tr></table><hr><table class="status">' +
+	'<tr><td style="width:64%"><b>Tiempo de juego</b>:</td><td>'+tiempoTexto+'</td></tr></table>';
 	var buttons = '<center><div onclick="getCandy()" id="caramelos">🍬</div></center>';
 	document.getElementById("content").innerHTML = content;
 	document.getElementById("bag").innerHTML += buttons;

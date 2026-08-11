@@ -6,6 +6,18 @@ var pk_dict, ev_dict, cp_dict, xp_dict;
 
 var last_pokemon = 1025;
 
+var appActive = true;
+var PLAYTIME_MAX = 999*3600 + 59*60 + 59;
+document.addEventListener('pause', function() { appActive = false; }, false);
+document.addEventListener('resume', function() { appActive = true; }, false);
+setInterval(function() {
+	if (!appActive) return;
+	var t = parseInt(window.localStorage.getItem("tiempoJuego"),10);
+	if (isNaN(t)) t = 0;
+	if (t < PLAYTIME_MAX) t++;
+	window.localStorage.setItem("tiempoJuego", t);
+}, 1000);
+
 function setPkDict(filePath) {
 	xmlhttp.open("GET", filePath, true);
 	xmlhttp.onreadystatechange = function() {
