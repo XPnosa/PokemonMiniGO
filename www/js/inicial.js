@@ -35,7 +35,7 @@ function printInitials() {
 	var lot = "<center style='height:100%;'>";
 	for (i=1;i<=choices;i++) {
 		lot += "<div style='margin-left: -1px; height: 100%; display: inline-block;' onclick='showInitial("+i+");'>";
-		lot += "<img id='i"+i+"' style='margin: 10px; height: 75px; transition: 250ms; filter: grayscale(100%);' src='img/ball_5.png'><br />";
+		lot += "<img id='i"+i+"' style='margin: 10px; height: 75px; transition: 250ms; filter: grayscale(100%);' src='img/ball_0.png'><br />";
 		lot += "<img id='j"+i+"' style='margin: 10px; height: 75px; transition: 250ms; filter: brightness(50%) saturate(50%); position: relative; top: -100px; opacity: .5;' src='img/type_"+(((i-1)%3)+1)+".png'></div>"; 
 	}
 	lot += "</center>";
