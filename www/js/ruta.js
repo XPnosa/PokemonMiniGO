@@ -76,7 +76,7 @@ function encounter() {
 	var libre = getLibres();
 	var help = Math.floor( ( ganar + total + libre ) / 1000 ) + 1;
 	var pkmn = getRandId(last_pokemon);
-	var lvl = Math.floor( Math.random() * Math.floor( my_lv / 2 ) ) + Math.floor( my_lv / 2 ) + 1;
+	var lvl = Math.floor( Math.random() * Math.floor( my_lv / 2 ) ) + Math.floor( my_lv / 2 );
 	var cp = cp_dict[pkmn]["CP"] * lvl;
 	var ev = ev_dict[pkmn]["form"]
 	var ratio = 2;
@@ -106,7 +106,7 @@ function encounter() {
 
 function wildCandy(tipos) {
 	var tipo = ( tipos.length == 2 )?tipos[1]:tipos[0]
-	var caramelos = Math.floor( ( wild_pkmn[1] - 1 ) / 10 ) + 1;
+	var caramelos = Math.floor( ( wild_pkmn[1] - 1 ) / 11 ) + 1;
 	var fix_name = ( caramelos == 1 )?"Caramelo":"Caramelos";
 	var message = "<center style='height:99%;font-size: 20px;position: relative;top: +15px;'><b id='msg_txt'>¡Recibes "+caramelos+" "+fix_name+" "+tipo+"!</b></center>";
 	document.getElementById("msg").innerHTML = message;
