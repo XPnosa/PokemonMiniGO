@@ -90,8 +90,8 @@ td {
 	height: 30px;
 }
 .stock {
-	width: 30px;
-	height: 30px;
+	width: 45px;
+	height: 45px;
 	background: whitesmoke;
 	font-size: 1em;
 }
@@ -136,7 +136,7 @@ td {
 }
 .pk_evol {
 	right: 30px;
-	width: 30px;
+	width: 45px;
 }
 .pk_img {
 	float: left;
@@ -257,9 +257,6 @@ td {
 	background: whitesmoke;
 	border: 3px outset silver;
 }
-#totalrow {
-	display: contents;
-}
 #comprar, #caramelos {
 	background: goldenrod;
 	border: 3px outset darkgoldenrod;
@@ -378,6 +375,9 @@ td {
 #content {
 	font-size: 1em;
 }
+#content.caramelos {
+	font-size: 1.25em;
+}
 #wild, #partner {
 	height: auto;
 }
@@ -430,6 +430,11 @@ td {
 @media (max-width: 400px) {
 	.pk_types {
 		display: none;
+	}
+	#pkdex .pk_name {
+		left: 40px;
+		right: 5px;
+		text-align: left;
 	}
 	.summary > tbody > tr > td {
 		line-height: 0.5;
@@ -491,7 +496,13 @@ td {
 	#info {
 		font-size: 1.75em;
 	}
-	#content, #shop {
+	#content {
+		font-size: 1.5em;
+	}
+	#content.caramelos {
+		font-size: 1.25em;
+	}
+	#shop {
 		font-size: 1.5em;
 	}
 	td.cell {
@@ -536,10 +547,6 @@ td {
 	#loading-mini {
 		height: 1.5em;
 	}
-	.stock {
-		width: 45px;
-		height: 45px;
-	}
 	::-webkit-scrollbar {
 		width: 0.75em;
 	}
@@ -571,7 +578,10 @@ td {
 	th.cell {
 		height: 60px !important;
 	}
-	#info, #content {
+	#info {
+		font-size: 2em;
+	}
+	#content {
 		font-size: 2em;
 	}
 	#set > center > div > img {
@@ -581,6 +591,41 @@ td {
 
 /* VERTICAL */
 @media (orientation: portrait) {
+	.stock {
+		width: 40px;
+		height: 40px;
+	}
+	#shop > center {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: auto auto;
+		gap: 5px;
+	}
+	#shop > center > #fondos, #shop > center > #precio {
+		width: auto;
+		margin: 0;
+	}
+	#shop > center > #fondos {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	#shop > center > #precio {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	#shop > center > #comprar {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+		width: auto;
+		height: 100%;
+		aspect-ratio: 1 / 1;
+		box-sizing: border-box;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2.5em;
+	}
 	.menu {
 		width: 90%;
 		height: 10%;
@@ -611,20 +656,6 @@ td {
 	td.cell {
 		height: 90px;
 	}
-	#fondos {
-		display: block;
-		width: 90%;
-		box-sizing: border-box;
-	}
-	#totalrow {
-		display: block;
-		padding: 0 10px;
-		box-sizing: border-box;
-	}
-	#precio {
-		width: 80%;
-		box-sizing: border-box;
-	}
 	#set > center > div > img {
 		padding: 0 1px;
 	}
@@ -654,6 +685,9 @@ td {
 	}
 	#fondos, #precio {
 		width: 30%;
+	}
+	#fondos, #precio, #comprar {
+		line-height: 1.275em;
 	}
 	.cell {
 		width: 20%;
