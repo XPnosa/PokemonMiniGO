@@ -12,6 +12,8 @@ var click = false;
 
 var last_message;
 
+var candy_gained = 0;
+
 var app = {
 	initialize: function() {
 		this.bindEvents();
@@ -236,10 +238,10 @@ function wildRun() {
 			var lvl = window.localStorage.getItem("lv"+lider);
 			var msg = "¡" + pkm  + " subió al nivel " + lvl + "!";
 			document.getElementById("msg_txt").innerHTML = msg;
-			state = 3;
+			state = ( candy_gained > 0 )?3:4;
 			setTimeout(function() { click = true; }, 500);
 		} else if ( state == 3 ) {
-			var msg = "¡Has obtenido 3 Caramelos!";
+			var msg = "¡Has obtenido " + candy_gained + " Caramelo" + ( candy_gained == 1?"":"s" ) + "!";
 			document.getElementById("msg_txt").innerHTML = msg;
 			state = 4;
 			setTimeout(function() { click = true; }, 500);
@@ -272,17 +274,21 @@ function updateLevel(xp) {
 	if ( exp+xp >= xp_dict[lvl+1] ) {
 		window.localStorage.setItem("lv"+lider, lvl+1);
 		if ( lvl == 99 ) window.localStorage.setItem("xp"+lider, xp_dict[lvl+1]);
-		if ( tipos.length == 1 ) {
-			var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+3;
-			if ( cantidad > 999 ) cantidad = 999;
-			window.localStorage.setItem("caramelo"+tipos[0],cantidad);
-		} else {
-			var cantidad1 = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+2;
-			if ( cantidad1 > 999 ) cantidad1 = 999;
-			window.localStorage.setItem("caramelo"+tipos[0],cantidad1);
-			var cantidad2 = parseInt(window.localStorage.getItem("caramelo"+tipos[1]))+1;
-			if ( cantidad2 > 999 ) cantidad2 = 999;
-			window.localStorage.setItem("caramelo"+tipos[1],cantidad2);
+		var tramo = ( lvl+1 <= 33 )?3:( lvl+1 <= 66 )?6:( lvl+1 <= 99 )?9:0;
+		candy_gained = tramo;
+		if ( tramo > 0 ) {
+			if ( tipos.length == 1 ) {
+				var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+tramo;
+				if ( cantidad > 999 ) cantidad = 999;
+				window.localStorage.setItem("caramelo"+tipos[0],cantidad);
+			} else {
+				var cantidad1 = parseInt(window.localStorage.getItem("caramelo"+tipos[0]))+tramo*2/3;
+				if ( cantidad1 > 999 ) cantidad1 = 999;
+				window.localStorage.setItem("caramelo"+tipos[0],cantidad1);
+				var cantidad2 = parseInt(window.localStorage.getItem("caramelo"+tipos[1]))+tramo/3;
+				if ( cantidad2 > 999 ) cantidad2 = 999;
+				window.localStorage.setItem("caramelo"+tipos[1],cantidad2);
+			}
 		}
 		return true;
 	} else return false;
