@@ -172,7 +172,7 @@ function freePkmn() {
 			window.localStorage.setItem("st"+idx, "ko");
 			getCandy(idx);
 		}
-		for ( c = 0 ; c < candies.length ; c++ ) if ( candies[c] > 999 ) candies[c] = 999;
+		for ( c = 0 ; c < candies.length ; c++ ) if ( candies[c] > 9999 ) candies[c] = 9999;
 		location.href = './resumen.html?caramelos='+candies;
 	}
 }
@@ -184,7 +184,7 @@ function getCandy(idx) {
 		var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[0]));
 		var obtenido = Math.pow(2, nivel) * 3;
 		total = cantidad + obtenido;
-		if ( total > 999 ) total = 999;
+		if ( total > 9999 ) total = 9999;
 		window.localStorage.setItem("caramelo"+tipos[0],total);
 		candies[pk_types.indexOf(tipos[0])] += obtenido;
 	}
@@ -192,7 +192,7 @@ function getCandy(idx) {
 		var cantidad = parseInt(window.localStorage.getItem("caramelo"+tipos[j]));
 		var obtenido = Math.pow(2, nivel) * (2-j);
 		total = cantidad + obtenido;
-		if ( total > 999 ) total = 999;
+		if ( total > 9999 ) total = 9999;
 		window.localStorage.setItem("caramelo"+tipos[j],total);
 		candies[pk_types.indexOf(tipos[j])] += obtenido;
 	}

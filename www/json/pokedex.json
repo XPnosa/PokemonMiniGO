@@ -9310,8 +9310,7 @@
   "888": {
     "info_y": "Hay quien lo considera una suerte de figura fraterna a la par que rival de Zamazenta, un Pokémon sumido en un profundo letargo.",
     "tipo": [
-      "Hada",
-      "Acero"
+      "Hada"
     ],
     "info_x": "Este Pokémon está considerado como un héroe de leyenda. Absorbe el metal para transformarlo y emplearlo como armamento.",
     "peso": "110,0 kg",
@@ -9321,8 +9320,7 @@
   "889": {
     "info_y": "Con la apariencia de una estatua de piedra, este Pokémon se sumió en un letargo tan profundo que acabó cayendo en el olvido.",
     "tipo": [
-      "Lucha",
-      "Acero"
+      "Lucha"
     ],
     "info_x": "Este Pokémon se erigió en salvador de Galar, tras unir fuerzas con un rey de los hombres. Absorbe el metal para utilizarlo en combate.",
     "peso": "210,0 kg",
@@ -9354,8 +9352,7 @@
     "info_y": "Vive en zonas montañosas en áreas recónditas, donde entrena corriendo por escarpados riscos para fortalecer sus piernas y refinar su técnica.",
     "tipo": [
       "Lucha",
-      "Siniestro",
-      "Agua"
+      "Siniestro"
     ],
     "info_x": "Su estilo de lucha se basa en abatir a sus rivales de un solo golpe. Se abalanza sobre ellos con su puño cincelado por el entrenamiento.",
     "peso": "105,0 kg",
@@ -9417,9 +9414,7 @@
     "info_y": "Legendario monarca del antiguo Galar. Posee el poder de sanar el espíritu y de hacer brotar la vegetación.",
     "tipo": [
       "Psíquico",
-      "Planta",
-      "Hielo",
-      "Fantasma"
+      "Planta"
     ],
     "info_x": "Un Pokémon muy compasivo agraciado con el poder de la curación. Reinó en Galar en tiempos remotos.",
     "peso": "7,7 kg",
@@ -10686,10 +10681,7 @@
   "1017": {
     "info_y": "Es bromista y extremadamente curioso. A la hora de combatir, se sirve del tipo de energía que contenga la máscara que lleve puesta.",
     "tipo": [
-      "Planta",
-      "Agua",
-      "Fuego",
-      "Roca"
+      "Planta"
     ],
     "info_x": "Cambia de tipo según la máscara que lleve. Se vale de sus rápidos movimientos y patadas para jugar a su antojo con sus enemigos.",
     "peso": "39,8 kg",
